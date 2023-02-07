@@ -135,6 +135,12 @@ section h1::after {
     justify-content: center;
 }
 
+.about-section h1 {
+    height: fit-content;
+    transform-origin: top;
+    transform: perspective(300px) rotateX(30deg);
+}
+
 
 @keyframes slideUp {
     from {position: relative;

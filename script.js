@@ -3,4 +3,8 @@ $('nav a').hover(function() {
   }, function() {
     $(this).removeClass('expand');
   });
+
+$('body').scroll(function() {
+  alert('hi')
+})
   
