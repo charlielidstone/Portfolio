@@ -4,7 +4,8 @@ $('nav a').hover(function() {
     $(this).removeClass('expand');
   });
 
-$('body').scroll(function() {
-  alert('hi')
-})
+window.onscroll = function() {
+  console.log(scrollY)
+  $('.about-section h1').css({'transform': `perspective(300px) rotateX(${-((scrollY/10)-67.9)}deg)`})
+};
   
