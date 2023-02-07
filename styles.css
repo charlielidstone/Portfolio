@@ -93,6 +93,11 @@ section h1 {
     font-family: 'Archivo Black', 'Poppins', sans-serif;
 }
 
+section h1::after {
+    content: '.';
+    color: var(--yellow);
+}
+
 .main-section {
     padding: 25vh 0 0 10vw;
     height: 100vh;
