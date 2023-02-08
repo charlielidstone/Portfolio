@@ -20,6 +20,15 @@ html, body {
     font-family: 'Raleway', sans-serif;
 }
 
+.hidden {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.to-be-hidden {
+    transition: 0.9s ease-in-out;
+}
+  
 header {
     position: absolute;
     width: 100%;
@@ -99,7 +108,7 @@ section h1::after {
 
 .main-section {
     padding: 25vh 0 0 10vw;
-    height: 100vh;
+    height: 85vh;
     box-sizing: border-box;
 }
 
@@ -132,7 +141,9 @@ section h1::after {
 
 .about-section {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     padding-bottom: 1000px;
 }
 
@@ -143,6 +154,10 @@ section h1::after {
     transform: perspective(300px) rotateX(30deg);
 }
 
+.about-section div {
+    font-size: 4em;
+    font-weight: bold;
+}
 
 @keyframes slideUp {
     from {position: relative;
@@ -177,6 +192,7 @@ section h1::after {
     .main-section {
         display: flex;
         align-items: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
         padding: 10vh 0 0 0;
     }
@@ -191,7 +207,12 @@ section h1::after {
     }
 
     .main-section h3 {
-        max-width: 90vw;
+        max-width: fit-content;
         text-align: justify;
+    }
+
+    .about-section h1 {
+        font-size: 3.5em;
+        text-align: center;
     }
 }
