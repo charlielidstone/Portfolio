@@ -32,6 +32,10 @@ effectNames.forEach(effectName => {
 const behaviors = {
   rotate: function(element) {
     element.style.transform = `perspective(300px) rotateX(${-((window.scrollY/10)-element.offsetTop+(window.innerHeight/2.5))}deg)`
+  },
+  grow: function(element) {
+    element.style.transform = `scale(${window.scrollY/400}) translateY(${window.scrollY/5}px)`
+    element.style.opacity = `${(-0.00125)*window.scrollY+1.25}`
   }
 }
 
@@ -52,6 +56,7 @@ let previousScroll = 0;
 
 window.onscroll = function() {
   const currentScroll = window.scrollY;
+  console.log(currentScroll)
 
   const behaviorNames = Object.getOwnPropertyNames(behaviors);
   behaviorNames.forEach(behaviorName => {
