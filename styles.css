@@ -20,13 +20,17 @@ html, body {
     font-family: 'Raleway', sans-serif;
 }
 
-.hidden {
-    opacity: 0;
-    transform: scale(0);
+.dynamic {
+    transition: 0.9s ease-in-out;
 }
 
-.to-be-hidden {
-    transition: 0.9s ease-in-out;
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    transform: scale(1) translate(0) translateX(0) !important;
+    opacity: 1;
 }
   
 header {
@@ -151,12 +155,13 @@ section h1::after {
     font-size: 10em;
     height: fit-content;
     transform-origin: center;
-    transform: perspective(300px) rotateX(30deg);
+    /* transform: perspective(300px) rotateX(30deg); */
 }
 
 .about-section div {
     font-size: 4em;
     font-weight: bold;
+    padding: 5vw;
 }
 
 @keyframes slideUp {
@@ -177,6 +182,10 @@ section h1::after {
         letter-spacing: 1;
         position: relative;
         left: 0;}
+}
+
+footer {
+    padding: 50vh;
 }
 
 @media screen and (max-width: 500px) {
