@@ -31,11 +31,21 @@ effectNames.forEach(effectName => {
 
 const behaviors = {
   rotate: function(element) {
-    element.style.transform = `perspective(300px) rotateX(${-((window.scrollY/10)-element.offsetTop+(window.innerHeight/2.5))}deg)`
+    element.style.transform = `perspective(300px) rotateX(${-((window.scrollY/20)-element.offsetTop+(window.innerHeight/2.1))}deg)`
   },
   grow: function(element) {
     element.style.transform = `scale(${window.scrollY/400}) translateY(${window.scrollY/5}px)`
     element.style.opacity = `${(-0.00125)*window.scrollY+1.25}`
+  },
+  growRotate: function(element) {
+    const elementHeight = element.offsetHeight;
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
+    const elementPosition = element.offsetTop + elementHeight / 2;
+    const distance = Math.abs(scrollPosition - elementPosition);
+    const maxDistance = window.innerHeight / 2 + elementHeight / 2;
+    const scale = 1 * (1 - distance / maxDistance);
+    // element.style.transform = ` scale(${scale})`;
+    element.style.transform = `scale(${scale}) perspective(300px) rotateX(${-((window.scrollY/20)-element.offsetTop+(window.innerHeight/2.1))}deg)`
   }
 }
 
