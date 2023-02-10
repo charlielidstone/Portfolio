@@ -45,7 +45,7 @@ const behaviors = {
     const maxDistance = window.innerHeight / 2 + elementHeight / 2;
     const scale = 1 * (1 - distance / maxDistance);
     // element.style.transform = ` scale(${scale})`;
-    element.style.transform = `scale(${scale}) perspective(300px) rotateX(${-((window.scrollY/20)-element.offsetTop+(window.innerHeight/2.2))}deg)`
+    element.style.transform = `scale(${scale}) perspective(300px) rotateX(${-((window.scrollY/20)-element.offsetTop+(window.innerHeight/2))}deg)`
   }
 }
 
