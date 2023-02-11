@@ -8,8 +8,17 @@ const effects = {
   zoomIn: function(element) {
     element.style.transform = 'scale(0.8)';
   },
-  slideIn: function(element) {
+  slideRight: function(element) {
     element.style.transform = 'translateX(-5vw)';
+  },
+  slideLeft: function(element) {
+    element.style.transform = 'translateX(5vw)';
+  },
+  slideUp: function(element) {
+    element.style.transform = 'translateY(5vh)';
+  },
+  slideDown: function(element) {
+    element.style.transform = 'translateY(-5vh)';
   },
   zoomOut: function(element) {
     element.style.transform = 'scale(1.2)'
