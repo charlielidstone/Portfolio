@@ -9,7 +9,7 @@ const effects = {
     element.style.transform = 'scale(0.8)';
   },
   slideIn: function(element) {
-    element.style.transform = 'translateX(-20vw)';
+    element.style.transform = 'translateX(-5vw)';
   },
   zoomOut: function(element) {
     element.style.transform = 'scale(1.2)'
@@ -44,8 +44,11 @@ const behaviors = {
     const distance = Math.abs(scrollPosition - elementPosition);
     const maxDistance = window.innerHeight / 2 + elementHeight / 2;
     const scale = 1 * (1 - distance / maxDistance);
-    // element.style.transform = ` scale(${scale})`;
-    element.style.transform = `scale(${scale}) perspective(300px) rotateX(${-((window.scrollY/20)-element.offsetTop+(window.innerHeight/1.9))}deg)`
+    const rotate = (-250 + element.getBoundingClientRect().top) / 8.3
+    // element.style.transform = `scale(${scale}) perspective(300px) rotateX(${-((window.scrollY/20)-element.offsetTop+(window.innerHeight/2))}deg)`
+    element.style.transform = `scale(${scale}) perspective(300px) rotateX(${rotate}deg)`
+    console.log("from top:", element.getBoundingClientRect().top)
+
   }
 }
 
@@ -66,7 +69,6 @@ let previousScroll = 0;
 
 window.onscroll = function() {
   const currentScroll = window.scrollY;
-  console.log(currentScroll)
 
   const behaviorNames = Object.getOwnPropertyNames(behaviors);
   behaviorNames.forEach(behaviorName => {

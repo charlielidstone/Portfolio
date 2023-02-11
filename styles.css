@@ -152,7 +152,7 @@ section h1::after {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-bottom: 1000px;
+    height: fit-content;
 }
 
 .about-section h1 {
