@@ -27,6 +27,14 @@ const effects = {
   }
 };
 
+// for every other .project-item, delay the transition by 0.2s
+const projectItems = document.getElementsByClassName('project-item');
+for (let i = 0; i < projectItems.length; i++) {
+  if (i % 2 === 1) {
+    projectItems[i].style.transitionDelay = '0.2s';
+  }
+}
+
 function applyEffect(effectName) {
   const elements = document.getElementsByClassName(effectName);
   for (let i = 0; i < elements.length; i++) {
@@ -56,9 +64,7 @@ const behaviors = {
     const maxDistance = window.innerHeight / 2 + elementHeight / 2;
     const scale = 1 * (1 - distance / maxDistance);
     const rotate = (-250 + element.getBoundingClientRect().top) / 8.3
-    // element.style.transform = `scale(${scale}) perspective(300px) rotateX(${-((window.scrollY/20)-element.offsetTop+(window.innerHeight/2))}deg)`
-    element.style.transform = `scale(${scale}) perspective(300px) rotateX(${rotate}deg)`
-    console.log("from top:", element.getBoundingClientRect().top)
+    
 
   }
 }

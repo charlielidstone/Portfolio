@@ -194,7 +194,7 @@ section h1::after {
     justify-content: center;
     align-items: center;
     height: fit-content;
-    padding: 10vh 0;
+    padding: 0 0 10vh 0;
 }
 
 .projects-section h1 {
@@ -202,7 +202,6 @@ section h1::after {
     height: fit-content;
 }
 
-/* make a list where the list items expand until there is no more room, at which point they wrap */
 .projects-section .project-list {
     list-style: none;
     padding: 0;
@@ -221,7 +220,7 @@ section h1::after {
     justify-content: center;
     align-items: center;
     height: fit-content;
-    width: 30%;
+    width: 30vw;
     margin: 5vh;
     padding: 20px;
     border-radius: 10px;
@@ -234,39 +233,16 @@ section h1::after {
     box-shadow: 10px 10px 0px 0 var(--yellow);
 }
 
-.projects-section .project-item:nth-child(1) {
-    transition-delay: 0;
+#alilius-project {
+    background: black;
+    
 }
 
-.projects-section .project-item:nth-child(2) {
-    transition-delay: 0.1s;
+#alilius-project h2 {
+    color: white;
+    font-family: 'Righteous';
+    font-size: 3em;
 }
-
-.projects-section .project-item:nth-child(3) {
-    transition-delay: 0.2s;
-}
-
-.projects-section .project-item:nth-child(4) {
-    transition-delay: 0.3s;
-}
-
-
-.projects-section .project-item:nth-child(5) {
-    transition-delay: 0;
-}
-
-.projects-section .project-item:nth-child(6) {
-    transition-delay: 0.1s;
-}
-
-.projects-section .project-item:nth-child(7) {
-    transition-delay: 0.2s;
-}
-
-.projects-section .project-item:nth-child(8) {
-    transition-delay: 0.3s;
-}
-
 
 footer {
     padding: 50vh;
