@@ -15,10 +15,12 @@ const effects = {
     element.style.transform = 'translateX(5vw)';
   },
   slideUp: function(element) {
-    element.style.transform = 'translateY(5vh)';
+    element.style.transform = 'translateY(12vh)';
+    element.style.lineHeight = "1.5em";
   },
   slideDown: function(element) {
     element.style.transform = 'translateY(-5vh)';
+    element.style.lineHeight = "1.5em";
   },
   zoomOut: function(element) {
     element.style.transform = 'scale(1.2)'

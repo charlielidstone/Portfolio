@@ -34,7 +34,8 @@ body {
 
 .visible {
     transform: scale(1) translate(0) translateX(0) !important;
-    opacity: 1;
+    opacity: 1 !important;
+    line-height: normal !important;
 }
   
 header {
@@ -158,8 +159,7 @@ section h1::after {
 .about-section h1 {
     font-size: 10em;
     height: fit-content;
-    /* transform-origin: center; */
-    /* transform: perspective(300px) rotateX(30deg); */     
+    margin: 0.3em
 }
 
 .about-section div {
@@ -187,6 +187,86 @@ section h1::after {
         position: relative;
         left: 0;}
 }
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 10vh 0;
+}
+
+.projects-section h1 {
+    font-size: 6em;
+    height: fit-content;
+}
+
+/* make a list where the list items expand until there is no more room, at which point they wrap */
+.projects-section .project-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80vw;
+    height: fit-content;
+}
+
+.projects-section .project-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 30%;
+    margin: 5vh;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid var(--dark-grey);
+    transition: 0.9s ease-in-out, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.projects-section .project-item:hover {
+    box-shadow: 10px 10px 0px 0 var(--yellow);
+}
+
+.projects-section .project-item:nth-child(1) {
+    transition-delay: 0;
+}
+
+.projects-section .project-item:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.projects-section .project-item:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.projects-section .project-item:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+
+.projects-section .project-item:nth-child(5) {
+    transition-delay: 0;
+}
+
+.projects-section .project-item:nth-child(6) {
+    transition-delay: 0.1s;
+}
+
+.projects-section .project-item:nth-child(7) {
+    transition-delay: 0.2s;
+}
+
+.projects-section .project-item:nth-child(8) {
+    transition-delay: 0.3s;
+}
+
 
 footer {
     padding: 50vh;
