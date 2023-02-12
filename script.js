@@ -1,7 +1,11 @@
-$('nav a').hover(function() {
-  $(this).addClass('expand');
-}, function() {
-  $(this).removeClass('expand');
+const navA = document.querySelectorAll('nav a');
+navA.forEach(a => {
+  a.addEventListener('mouseenter', function() {
+    a.classList.add('expand');
+  });
+  a.addEventListener('mouseleave', function() {
+    a.classList.remove('expand');
+  });
 });
 
 const effects = {
@@ -15,38 +19,55 @@ const effects = {
     element.style.transform = 'translateX(5vw)';
   },
   slideUp: function(element) {
-    element.style.transform = 'translateY(12vh)';
-    element.style.lineHeight = "1.5em";
+    element.style.transform = 'translateY(1em)';
   },
   slideDown: function(element) {
-    element.style.transform = 'translateY(-5vh)';
-    element.style.lineHeight = "1.5em";
+    element.style.position = 'relative';
+    element.style.transform = 'translateY(100%)';
   },
   zoomOut: function(element) {
     element.style.transform = 'scale(1.2)'
-  }
+  },
+  slideUpText: function(element) {
+    element.style.transform = 'translateY(1em)';
+    element.style.lineHeight = "1.5em";
+  },
 };
 
-// for every other .project-item, delay the transition by 0.2s
+const effectNames = Object.getOwnPropertyNames(effects);
+effectNames.forEach(effectName => {
+  const elements = document.getElementsByClassName(effectName);
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].classList.add('dynamic')
+    effects[effectName](elements[i]);
+  }
+})
+
+function updateEffects() {
+  const currentScroll = window.scrollY;
+  const dynamicElements = document.getElementsByClassName('dynamic');
+  for (let i = 0; i < dynamicElements.length; i++) {
+    if (isInViewport(dynamicElements[i])) {
+      setTimeout(() => {
+        dynamicElements[i].classList.remove('hidden');
+        dynamicElements[i].classList.add('visible');
+      }, 200);
+    } else if (!isInViewport(dynamicElements[i]) && currentScroll < previousScroll && currentScroll < dynamicElements[i].offsetTop) {
+      dynamicElements[i].classList.add('hidden');
+      dynamicElements[i].classList.remove('visible');
+    }
+  }
+}
+
+let previousScroll = 0;
+updateEffects();
+
 const projectItems = document.getElementsByClassName('project-item');
 for (let i = 0; i < projectItems.length; i++) {
   if (i % 2 === 1) {
     projectItems[i].style.transitionDelay = '0.2s';
   }
 }
-
-function applyEffect(effectName) {
-  const elements = document.getElementsByClassName(effectName);
-  for (let i = 0; i < elements.length; i++) {
-    elements[i].classList.add('dynamic')
-    effects[effectName](elements[i]);
-  }
-}
-
-const effectNames = Object.getOwnPropertyNames(effects);
-effectNames.forEach(effectName => {
-  applyEffect(effectName)
-})
 
 const behaviors = {
   rotate: function(element) {
@@ -65,8 +86,6 @@ const behaviors = {
     const scale = 1 * (1 - distance / maxDistance);
     const rotate = (-250 + element.getBoundingClientRect().top) / 8.3
     element.style.transform = `scale(${scale}) perspective(300px) rotateX(${rotate}deg)`
-    console.log("from top:", element.getBoundingClientRect().top)
-
   }
 }
 
@@ -77,13 +96,19 @@ function applyBehavior(behaviorName) {
   }
 }
 
-// const behaviorNames = Object.getOwnPropertyNames(effects);
-// behaviorNames.forEach(behaviorName => {
-//   applyBehavior(behaviorName)
-// })
+const mainSection = document.getElementsByClassName('main-section')[0];
+const mainSectionH1 = document.getElementsByClassName('main-section')[0].getElementsByTagName('h1')[0];
+const mainSectionH2 = document.getElementsByClassName('main-section')[0].getElementsByTagName('h2')[0];
+const mainSectionH3 = document.getElementsByClassName('main-section')[0].getElementsByTagName('h3')[0];
 
-
-let previousScroll = 0;
+if (window.innerWidth < 500) {
+  mainSectionH1.classList.remove('slideUpText');
+  mainSectionH1.classList.add('slideRight');
+  mainSectionH2.classList.remove('slideUpText');
+  mainSectionH2.classList.add('slideRight');
+  mainSectionH3.classList.remove('slideUpText');
+  mainSectionH3.classList.add('slideRight');
+}
 
 window.onscroll = function() {
   const currentScroll = window.scrollY;
@@ -93,20 +118,7 @@ window.onscroll = function() {
       applyBehavior(behaviorName)
   })
 
-  // $('.about-section h1').css({'transform': `perspective(300px) rotateX(${-((currentScroll/10)-67.9)}deg)`})
-
-  const dynamicElements = document.getElementsByClassName('dynamic');
-  for (let i = 0; i < dynamicElements.length; i++) {
-    if (isInViewport(dynamicElements[i])) {
-      setTimeout(() => {
-        dynamicElements[i].classList.remove('hidden');
-        dynamicElements[i].classList.add('visible');
-      }, 200);
-    } else if (!isInViewport(dynamicElements[i]) && currentScroll < previousScroll && currentScroll < dynamicElements[i].offsetTop) {
-      dynamicElements[i].classList.add('hidden');
-      dynamicElements[i].classList.remove('visible');
-    }
-  }
+  updateEffects();
 
   previousScroll = currentScroll;
 };

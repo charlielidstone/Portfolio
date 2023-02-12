@@ -20,6 +20,7 @@ body {
 }
 
 * {
+    position: relative;
     color: var(--light);
     font-family: 'Raleway', sans-serif;
 }
@@ -46,6 +47,7 @@ header {
     align-items: center;
     justify-content: flex-end;
     padding: 2vw 2vw;
+    z-index: 1;
 }
 
 nav {
@@ -63,20 +65,20 @@ nav ul {
 nav li {
     margin: 0 2em;
     display: inline-block;
-    animation: slideUp 0.4s ease forwards;
+    transition: 0.3s ease;
     opacity: 0;
 }
 
 nav li:nth-child(1) {
-    animation-delay: 2.6s;
+    transition-delay: 2.6s;
 }
 
 nav li:nth-child(2) {
-    animation-delay: 2.7s;
+    transition-delay: 2.7s;
 }
 
 nav li:nth-child(3) {
-    animation-delay: 2.8s;
+    transition-delay: 2.8s;
 }
 
 nav a {
@@ -117,7 +119,6 @@ section h1::after {
 
 .main-section {
     padding: 25vh 0 0 10vw;
-    height: 85vh;
     box-sizing: border-box;
 }
 
@@ -135,47 +136,18 @@ section h1::after {
 .main-section h2 {
     margin: 0;
     color: var(--yellow);
-    animation: slideUp 0.3s ease-out forwards;
-    animation-delay: 1s;
     opacity: 0;
+    transition: 0.3s ease-out;
+    transition-delay: 0.8s;
 }
 
 .main-section h3 {
     color: var(--light-grey);
     max-width: 30vw;
-    animation: slideUp 0.5s ease-out forwards;
-    animation-delay: 2s;
+    transition: 0.3s ease-out;
+    transition-delay: 2s;
     opacity: 0;
 }
-
-.about-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: fit-content;
-}
-
-.about-section h1 {
-    font-size: 10em;
-    height: fit-content;
-    margin: 0.3em
-}
-
-.about-section div {
-    font-size: 4em;
-    font-weight: bold;
-    padding: 5vw;
-}
-
-@keyframes slideUp {
-    from {position: relative;
-          top: 25px;
-          opacity: 0;}
-    to {position: relative;
-        top: 0px;
-        opacity: 1;}
-  }
 
 @keyframes slideIn {
     from {opacity: 0;
@@ -186,6 +158,27 @@ section h1::after {
         letter-spacing: 1;
         position: relative;
         left: 0;}
+}
+
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+}
+
+.about-section h1 {
+    font-size: 6em;
+    height: fit-content;
+    margin: 0.3em
+}
+
+.about-section div {
+    font-size: 4em;
+    font-weight: bold;
+    padding: 5vw;
 }
 
 .projects-section {
@@ -257,15 +250,16 @@ footer {
     }
 
     body {
-        padding: 0 5vw;
+        padding: 0;
     }
 
     .main-section {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        flex-wrap: wrap;
-        padding: 10vh 0 0 0;
+        padding: 10vh 4vw; 
+        height: fit-content;
     }
     
     .main-section h1 {
@@ -278,8 +272,11 @@ footer {
     }
 
     .main-section h3 {
-        max-width: fit-content;
+        max-width: 100%;
         text-align: justify;
+        padding: 0;
+        margin: 10px 0;
+        line-height: 1.3em;
     }
 
     .about-section h1 {
