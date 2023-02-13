@@ -113,14 +113,16 @@ if (window.innerWidth < 500) {
 
   const menuButton = document.getElementsByClassName('menu-button')[0];
   const navLis = document.querySelectorAll('nav li');
-  menuButton.addEventListener('click', function() {
-    nav.classList.toggle('nav-hidden');
-  });
   navLis.forEach(li => {
     li.addEventListener('click', function() {
       nav.classList.add('nav-hidden');
     });
+    // remove slide up effect for li's
+    li.style.transitionDelay = '0s';
   })
+  menuButton.addEventListener('click', function() {
+    nav.classList.toggle('nav-hidden');
+  });
 }
 
 window.onscroll = function() {
