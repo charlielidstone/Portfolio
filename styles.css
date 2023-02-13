@@ -1,6 +1,7 @@
 :root {
     --dark: #131316;
-    --dark-grey: #3d3d40;
+    --dark-grey: #2d2d30;
+    --darker-grey: #3d3d40;
     --light-grey: #8f8f97;
     --light: #dfe2fc;
     --yellow: #d0a616;
@@ -36,7 +37,7 @@ body {
 .visible {
     transform: scale(1) translate(0) translateX(0) !important;
     opacity: 1 !important;
-    line-height: normal !important;
+    line-height: normal;
 }
   
 header {
@@ -139,6 +140,9 @@ section h1::after {
     opacity: 0;
     transition: 0.3s ease-out;
     transition-delay: 0.8s;
+    font-family: monospace;
+    font-weight: normal;
+    font-size: 2em;
 }
 
 .main-section h3 {
@@ -217,7 +221,7 @@ section h1::after {
     margin: 5vh;
     padding: 20px;
     border-radius: 10px;
-    border: 3px solid var(--dark-grey);
+    border: 3px solid var(--darker-grey);
     transition: 0.9s ease-in-out, box-shadow 0.3s ease;
     cursor: pointer;
 }
@@ -245,8 +249,44 @@ footer {
     
     * {}
 
-    header {
-        display: none;
+    header {}
+
+    .menu-button {
+        display: inline-block;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 3vw;
+        right: 3vw;
+    }
+
+    .nav-hidden {
+        transform: translateX(100%);
+    }
+
+    nav {
+        background-color: var(--dark-grey);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 70vw;
+        transition: transform 0.3s ease-in-out, opactiy 0s;;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+        width: 100%;
+        padding: 20vh 50px;
+    }
+
+    nav li {
+        font-size: 1.4em;
+        margin: 1em 0;
     }
 
     body {
@@ -256,14 +296,14 @@ footer {
     .main-section {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: flex-start;
-        padding: 10vh 4vw; 
-        height: fit-content;
+        padding: 20vh 5vw 0 5vw; 
+        height: 100vh;
     }
     
     .main-section h1 {
-        font-size: 2em;
+        font-size: 3.2em;
     }
 
     .main-section h2 {
@@ -273,10 +313,10 @@ footer {
 
     .main-section h3 {
         max-width: 100%;
-        text-align: justify;
         padding: 0;
-        margin: 10px 0;
-        line-height: 1.3em;
+        margin: 20px 0;
+        line-height: 1.6em !important;
+        font-size: 1em;
     }
 
     .about-section h1 {

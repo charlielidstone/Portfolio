@@ -100,6 +100,7 @@ const mainSection = document.getElementsByClassName('main-section')[0];
 const mainSectionH1 = document.getElementsByClassName('main-section')[0].getElementsByTagName('h1')[0];
 const mainSectionH2 = document.getElementsByClassName('main-section')[0].getElementsByTagName('h2')[0];
 const mainSectionH3 = document.getElementsByClassName('main-section')[0].getElementsByTagName('h3')[0];
+const nav = document.getElementsByTagName('nav')[0];
 
 if (window.innerWidth < 500) {
   mainSectionH1.classList.remove('slideUpText');
@@ -108,6 +109,12 @@ if (window.innerWidth < 500) {
   mainSectionH2.classList.add('slideRight');
   mainSectionH3.classList.remove('slideUpText');
   mainSectionH3.classList.add('slideRight');
+  nav.classList.add('nav-hidden');
+
+  const menuButton = document.getElementsByClassName('menu-button')[0];
+  menuButton.addEventListener('click', function() {
+    nav.classList.toggle('nav-hidden');
+  });
 }
 
 window.onscroll = function() {
