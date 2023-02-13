@@ -112,9 +112,15 @@ if (window.innerWidth < 500) {
   nav.classList.add('nav-hidden');
 
   const menuButton = document.getElementsByClassName('menu-button')[0];
+  const navLi = document.querySelector('nav li');
   menuButton.addEventListener('click', function() {
     nav.classList.toggle('nav-hidden');
   });
+  navLi.addEventListener('click', function() {
+    nav.classList.add('nav-hidden');
+  });
+  // make nav li slide in when nav is opened
+  
 }
 
 window.onscroll = function() {

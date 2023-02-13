@@ -255,7 +255,7 @@ footer {
         display: inline-block;
         background-color: transparent;
         border: none;
-        position: absolute;
+        position: fixed;
         top: 3vw;
         right: 3vw;
     }
@@ -267,9 +267,9 @@ footer {
     nav {
         background-color: var(--dark-grey);
         position: fixed;
-        top: 0;
+        top: -10vh;
         right: 0;
-        bottom: 0;
+        bottom: -10vh;
         width: 70vw;
         transition: transform 0.3s ease-in-out, opactiy 0s;;
     }
