@@ -120,6 +120,12 @@ if (window.innerWidth < 500) {
   })
   menuButton.addEventListener('click', function() {
     nav.classList.toggle('nav-hidden');
+    menuImg =  menuButton.getElementsByTagName('img')[0]
+    if (menuImg.src.includes('menu')) {
+      menuImg.src = 'close_FILL0_wght400_GRAD0_opsz48.svg';
+    } else {
+      menuImg.src = 'menu_FILL0_wght400_GRAD0_opsz48.svg';
+    }
   });
 }
 
