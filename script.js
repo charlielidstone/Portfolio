@@ -117,8 +117,6 @@ if (window.innerWidth < 500) {
     li.addEventListener('click', function() {
       nav.classList.add('nav-hidden');
     });
-    // remove slide up effect for li's
-    li.style.transitionDelay = '0s';
   })
   menuButton.addEventListener('click', function() {
     nav.classList.toggle('nav-hidden');

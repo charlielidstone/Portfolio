@@ -51,6 +51,10 @@ header {
     z-index: 1;
 }
 
+.menu-button {
+    display: none;
+}
+
 nav {
     width: fit-content;
 }
@@ -71,15 +75,15 @@ nav li {
 }
 
 nav li:nth-child(1) {
-    transition-delay: 2.6s;
+    transition-delay: 0s;
 }
 
 nav li:nth-child(2) {
-    transition-delay: 2.7s;
+    transition-delay: 0.1s;
 }
 
 nav li:nth-child(3) {
-    transition-delay: 2.8s;
+    transition-delay: 0.2s;
 }
 
 nav a {
