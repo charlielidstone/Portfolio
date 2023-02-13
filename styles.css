@@ -37,7 +37,7 @@ body {
 .visible {
     transform: scale(1) translate(0) translateX(0) !important;
     opacity: 1 !important;
-    line-height: normal;
+    line-height: normal !important;
 }
   
 header {

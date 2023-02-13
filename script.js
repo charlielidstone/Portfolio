@@ -14,23 +14,29 @@ const effects = {
   },
   slideRight: function(element) {
     element.style.transform = 'translateX(-5vw)';
+    element.style.opacity = '0';
   },
   slideLeft: function(element) {
     element.style.transform = 'translateX(5vw)';
+    element.style.opacity = '0';
   },
   slideUp: function(element) {
     element.style.transform = 'translateY(1em)';
+    element.style.opacity = '0';
   },
   slideDown: function(element) {
     element.style.position = 'relative';
     element.style.transform = 'translateY(100%)';
+    element.style.opacity = '0';
   },
   zoomOut: function(element) {
     element.style.transform = 'scale(1.2)'
+    element.style.opacity = '0';
   },
   slideUpText: function(element) {
     element.style.transform = 'translateY(1em)';
     element.style.lineHeight = "1.5em";
+    element.style.opacity = '0';
   },
 };
 
