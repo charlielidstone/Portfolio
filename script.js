@@ -164,8 +164,6 @@ window.onscroll = function() {
 
   previousScroll = currentScroll;
 };
-  
-
 
 function isInViewport(element, margin = 100) {
   const rect = element.getBoundingClientRect();
