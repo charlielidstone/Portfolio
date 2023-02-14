@@ -113,7 +113,6 @@ section {
 }
 
 section h1 {
-    font-size: 3em;
     font-family: 'Archivo Black', 'Poppins', sans-serif;
 }
 
@@ -125,6 +124,8 @@ section h1::after {
 .main-section {
     padding: 25vh 0 0 10vw;
     box-sizing: border-box;
+    display: block;
+    height: 100vh;
 }
 
 .main-section h1 {
@@ -168,8 +169,36 @@ section h1::after {
         left: 0;}
 }
 
+.scroll-prompt {
+    position: absolute;
+    bottom: 8vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10vh;
+    height: 10vh;
+    box-sizing: border-box;
+    z-index: 1;
+    animation: hover 3s ease-in-out infinite, appear 0.5s ease-in-out forwards;
+    animation-delay: 3s;
+    opacity: 0;
+}
 
-.about-section {
+@keyframes hover {
+    0% {transform: translateY(0) translateX(-50%);}
+    50% {transform: translateY(3vh) translateX(-50%);}
+    100% {transform: translateY(0) translateX(-50%);}
+}
+
+@keyframes appear {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -177,7 +206,7 @@ section h1::after {
     height: fit-content;
 }
 
-.about-section h1 {
+section h1 {
     font-size: 6em;
     height: fit-content;
     margin: 0.3em
@@ -196,11 +225,6 @@ section h1::after {
     align-items: center;
     height: fit-content;
     padding: 0 0 10vh 0;
-}
-
-.projects-section h1 {
-    font-size: 6em;
-    height: fit-content;
 }
 
 .projects-section .project-list {
@@ -285,7 +309,7 @@ footer {
         align-items: flex-start;
         height: 100%;
         width: 100%;
-        padding: 20vh 50px;
+        padding: 25vh 50px;
     }
 
     nav li {
@@ -297,6 +321,18 @@ footer {
         padding: 0;
     }
 
+    section {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 5vw 0 5vw;
+    }
+
+    section h1 {
+        font-size: 3em;
+        margin: 0.3em 0;
+    }
+
     .main-section {
         display: flex;
         flex-direction: column;
@@ -304,6 +340,7 @@ footer {
         justify-content: flex-start;
         padding: 20vh 5vw 0 5vw; 
         height: 100vh;
+        position: relative;
     }
     
     .main-section h1 {
@@ -321,10 +358,5 @@ footer {
         margin: 20px 0;
         line-height: 1.6em !important;
         font-size: 1em;
-    }
-
-    .about-section h1 {
-        font-size: 3.5em;
-        text-align: center;
     }
 }

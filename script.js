@@ -9,6 +9,8 @@ navA.forEach(a => {
 });
 
 const effects = {
+  appear: function(element) {
+  },
   zoomIn: function(element) {
     element.style.transform = 'scale(0.8)';
   },
