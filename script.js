@@ -125,7 +125,7 @@ if (window.innerWidth < 500) {
   const overlay = document.getElementById('overlay');
   navLis.forEach(li => {
     li.addEventListener('click', function() {
-      nav.classList.add('nav-hidden');
+      toggleNav();
     });
   });
   var navIsOpen = false
@@ -137,15 +137,16 @@ if (window.innerWidth < 500) {
   });
   
   function toggleNav () {
-    nav.classList.toggle('nav-hidden');
     if (navIsOpen) {
       overlay.style.opacity = '0';
       overlay.style.zIndex = '0';
+      nav.classList.add('nav-hidden');
       menuImg.src = 'menu_FILL0_wght400_GRAD0_opsz48.svg';
       navIsOpen = false;
     } else if (!navIsOpen) {
       overlay.style.opacity = '1';
       overlay.style.zIndex = '1';
+      nav.classList.remove('nav-hidden');
       menuImg.src = 'close_FILL0_wght400_GRAD0_opsz48.svg';
       navIsOpen = true;
     }
