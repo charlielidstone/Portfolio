@@ -142,12 +142,14 @@ if (window.innerWidth < 700) {
       overlay.style.zIndex = '0';
       nav.classList.add('nav-hidden');
       menuImg.src = 'menu_FILL0_wght400_GRAD0_opsz48.svg';
+      menuButton.style.position = 'absolute'
       navIsOpen = false;
     } else if (!navIsOpen) {
       overlay.style.opacity = '1';
       overlay.style.zIndex = '1';
       nav.classList.remove('nav-hidden');
       menuImg.src = 'close_FILL0_wght400_GRAD0_opsz48.svg';
+      menuButton.style.position = 'fixed'
       navIsOpen = true;
     }
   }
