@@ -13,6 +13,7 @@ const effects = {
   },
   zoomIn: function(element) {
     element.style.transform = 'scale(0.8)';
+    element.style.opacity = '0';
   },
   slideRight: function(element) {
     element.style.transform = 'translateX(-5vw)';
@@ -23,7 +24,7 @@ const effects = {
     element.style.opacity = '0';
   },
   slideUp: function(element) {
-    element.style.transform = 'translateY(100%)';
+    element.style.transform = 'translateY(10%)';
     element.style.opacity = '0';
   },
   slideDown: function(element) {

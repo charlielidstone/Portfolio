@@ -54,6 +54,11 @@ header {
     z-index: 1;
 }
 
+header .logo {
+    width: 65px;
+    margin-right: auto;
+}
+
 #overlay {
     position: fixed;
     top: 0;
@@ -366,13 +371,18 @@ footer p {
     
     * {}
 
-    header {}
+    header .logo {
+        position: fixed;
+        left: 5vw;
+        top: 3vw;
+        width: 50px;
+    }
 
     .menu-button {
         display: inline-block;
         background-color: transparent;
         border: none;
-        position: absolute;
+        position: fixed;
         top: 3vw;
         right: 3vw;
     }
