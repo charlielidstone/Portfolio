@@ -23,7 +23,7 @@ const effects = {
     element.style.opacity = '0';
   },
   slideUp: function(element) {
-    element.style.transform = 'translateY(1em)';
+    element.style.transform = 'translateY(100%)';
     element.style.opacity = '0';
   },
   slideDown: function(element) {
@@ -36,7 +36,7 @@ const effects = {
     element.style.opacity = '0';
   },
   slideUpText: function(element) {
-    element.style.transform = 'translateY(1em)';
+    element.style.transform = 'translateY(1rem)';
     element.style.lineHeight = "1.5em";
     element.style.opacity = '0';
   },
@@ -110,7 +110,7 @@ const mainSectionH2 = document.getElementsByClassName('main-section')[0].getElem
 const mainSectionH3 = document.getElementsByClassName('main-section')[0].getElementsByTagName('h3')[0];
 const nav = document.getElementsByTagName('nav')[0];
 
-if (window.innerWidth < 500) {
+if (window.innerWidth < 700) {
   mainSectionH1.classList.remove('slideUpText');
   mainSectionH1.classList.add('slideRight');
   mainSectionH2.classList.remove('slideUpText');

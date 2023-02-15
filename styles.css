@@ -7,6 +7,7 @@
     --lightest-grey: #b3b3b8;
     --light: #dfe2fc;
     --yellow: #d0a616;
+    --light-yellow: #d5c592;
 }
 
 html {
@@ -29,7 +30,7 @@ body {
 }
 
 .dynamic {
-    transition: 0.9s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .hidden {
@@ -234,7 +235,7 @@ section p {
     position: relative;
     max-width: 50vw;
 }
-
+/* 
 section h1::before {
     content: '';
     display: block;
@@ -244,32 +245,43 @@ section h1::before {
     width: 1em;
     height: 0.1em;
     margin-left: 0.2em;
+} */
+
+.quote {
+    font-size: 2em;
+    color: var(--light-yellow);
+    text-align: left;
+    margin: 20px 0;
 }
 
+cite {
+    font-size: 1.5em;
+    color: var(--light-grey);
+    text-align: right;
+    margin: 4px 0;
+    font-family: monospace;
+    font-style: normal;
+}
+/* 
 .quote::before {
     content: '“';
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     color: var(--yellow);
     position: relative;
-    top: 0.2em;
-    right: 0.2em;
-}
-
-.quote {
-    font-style: italic;
-    font-size: 2em;
-    color: var(--light-grey);
+    top: 0.15em;
+    right: 0.1em;
 }
 
 .quote::after {
     content: '”';
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     color: var(--yellow);
-    top: 0.2em;
-    left: 0.2em;
-}
+    position: relative;
+    top: 0.15em;
+    right: 0.1em;
+} */
 
 .about-section div {
     font-size: 4em;
@@ -331,10 +343,26 @@ section h1::before {
 }
 
 footer {
-    padding: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 30vh 0 0 0;
+    padding: 20px 10vw;
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 
-@media screen and (max-width: 500px) {
+footer p {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    color: var(--light-grey);
+    font-size: 0.9em;
+}
+
+@media screen and (max-width: 700px) {
     
     * {}
 
@@ -431,7 +459,7 @@ footer {
         bottom: 15vh;
     }
 
-    .quote {
-        text-align: center;
+    footer {
+        align-items: center;
     }
 }
