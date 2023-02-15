@@ -301,9 +301,7 @@ cite {
     float: left;
 }
 
-.projects-section {
-
-}
+/* .projects-section {} */
 
 .projects-section .project-list {
     list-style: none;
@@ -369,12 +367,18 @@ footer p {
 
 @media screen and (max-width: 700px) {
     
-    * {}
+    /* * {} */
+
+    header {
+        backdrop-filter: blur(5px);
+        position: fixed;
+        padding: 3vw 5vw;
+    }
 
     header .logo {
-        position: fixed;
+        /* position: fixed;
         left: 5vw;
-        top: 3vw;
+        top: 3vw; */
         width: 50px;
     }
 
@@ -382,9 +386,9 @@ footer p {
         display: inline-block;
         background-color: transparent;
         border: none;
-        position: fixed;
+        /* position: fixed;
         top: 3vw;
-        right: 3vw;
+        right: 3vw; */
     }
 
     .nav-hidden {
@@ -394,10 +398,11 @@ footer p {
     nav {
         background-color: var(--darker-blue);
         position: fixed;
-        top: -10vh;
+        top: 0vh;
         right: 0;
-        bottom: -10vh;
+        bottom: 0vh;
         width: 70vw;
+        height: 100vh;
         transition: transform 0.3s ease-in-out, opactiy 0s;;
     }
 
