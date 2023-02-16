@@ -136,7 +136,24 @@ if (window.innerWidth < 700) {
   overlay.addEventListener('click', function() {
     toggleNav();
   });
+
+  // nav.addEventListener('touchstart', (e) => {
+  //   console.log('touchstart')
+  //   e.preventDefault();
+  //   const initialX = e.touches[0].pageX
+  // });
   
+  // nav.addEventListener('touchmove', (e) => {
+  //   console.log('touchmove')
+  //   e.preventDefault();
+  //   let x = e.touches[0].pageX;
+  //   let diff = initialX - x;
+  //   if (diff > 0) {
+  //     alert('hi')
+  //     nav.style.backgroundColor = 'red'
+  //   }
+  // });
+
   function toggleNav () {
     if (navIsOpen) {
       overlay.style.opacity = '0';
