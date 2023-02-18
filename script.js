@@ -8,6 +8,8 @@ navA.forEach(a => {
   });
 });
 
+// if ()
+
 const effects = {
   appear: function(element) {
   },

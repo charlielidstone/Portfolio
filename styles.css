@@ -232,6 +232,7 @@ section h1::after {
 }
 
 section p {
+    text-align: justify;
     font-size: 1.5em;
     font-weight: normal;
     line-height: 1.5em;
@@ -239,7 +240,7 @@ section p {
     padding: 1.5em 0 0 0;
     color: var(--lightest-grey);
     position: relative;
-    max-width: 50vw;
+    /* max-width: 50vw; */
 }
 /* 
 section h1::before {
@@ -260,7 +261,7 @@ section h1::before {
     margin: 20px 0;
 }
 
-cite {
+cite, cite * {
     font-size: 1.5em;
     color: var(--light-grey);
     text-align: right;
