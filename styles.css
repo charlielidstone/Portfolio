@@ -305,46 +305,48 @@ cite, cite * {
 
 /* .projects-section {} */
 
-.projects-section .project-list {
+.projects-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     width: 80vw;
     height: fit-content;
 }
 
-.projects-section .project-item {
+.project-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     height: fit-content;
     width: 30vw;
-    margin: 5vh;
+    margin: 0;
     padding: 20px;
-    border-radius: 10px;
-    border: 3px solid var(--darker-grey);
+    border-radius: 0;
+    background-color: var(--light-yellow);
     transition: 0.9s ease-in-out, box-shadow 0.3s ease;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
-.projects-section .project-item:hover {
-    box-shadow: 10px 10px 0px 0 var(--yellow);
+.project-wrapper * {
+    color: var(--dark-grey)
 }
 
-#alilius-project {
-    background: black;
-    
+.project-wrapper h2 {
+    font-size: 2em;
+    margin: 0;
 }
 
-#alilius-project h2 {
-    color: white;
+.projects-section .project-wrapper:hover {
+    /* box-shadow: 10px 10px 0px 0 var(--yellow); */
+}
+
+.alilius-logo {
     font-family: 'Righteous';
-    font-size: 3em;
 }
 
 footer {

@@ -8,7 +8,9 @@ navA.forEach(a => {
   });
 });
 
-// if ()
+function rotateArray (array) {
+  
+}
 
 const effects = {
   appear: function(element) {
