@@ -327,17 +327,16 @@ cite, cite * {
     margin: 0;
     padding: 20px;
     border-radius: 0;
-    background-color: var(--);
     transition: 0.9s ease-in-out, box-shadow 0.3s ease;
     /* cursor: pointer; */
 }
 
 .project-wrapper * {
-    color: var(--dark-grey)
+    color: var(--light);
 }
 
 .project-wrapper h2 {
-    font-size: 2em;
+    font-size: 4em;
     margin: 0;
 }
 
