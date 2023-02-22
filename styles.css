@@ -325,7 +325,7 @@ cite, cite * {
     height: fit-content;
     width: 30vw;
     margin: 0;
-    padding: 20px;
+    padding: 20px 0;
     border-radius: 0;
     transition: 0.9s ease-in-out, box-shadow 0.3s ease;
     /* cursor: pointer; */
@@ -333,6 +333,10 @@ cite, cite * {
 
 .project-wrapper * {
     color: var(--light);
+}
+
+.project-wrapper p {
+    text-align: left;
 }
 
 .project-wrapper h2 {
