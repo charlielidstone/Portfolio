@@ -180,6 +180,13 @@ if (window.innerWidth < 700) {
 window.onscroll = function() {
   const currentScroll = window.scrollY;
 
+  const header = document.querySelector('header');
+  if (isScrollDown()) {
+    header.classList.add('header-hidden');
+  } else if (isScrollUp()) {
+    header.classList.remove('header-hidden')
+  }
+
   const behaviorNames = Object.getOwnPropertyNames(behaviors);
   behaviorNames.forEach(behaviorName => {
       applyBehavior(behaviorName)
@@ -190,13 +197,31 @@ window.onscroll = function() {
   previousScroll = currentScroll;
 };
 
-function isInViewport(element, margin = 100) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= -margin &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + margin
-  );
+function isScrollDown() {
+  const currentScroll = window.scrollY;
+  if (currentScroll > previousScroll) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-  
+function isScrollUp() {
+  const currentScroll = window.scrollY;
+  if (currentScroll < previousScroll) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
+function isInViewport(element, margin = 0) {
+  const rect = element.getBoundingClientRect();
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  const partialHeight = windowHeight / 6;
+  return (
+    // rect.top >= -margin &&
+    // rect.bottom >= partialHeight - margin &&
+    rect.top <= windowHeight - partialHeight + margin
+  );
+}
