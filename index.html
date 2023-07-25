@@ -1,55 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
-    <link href="https://fonts.googleapis.com/css?family=Caveat|Poppins|Archivo Black|Raleway|Righteous" rel="stylesheet"> 
-    <link rel="stylesheet" href="styles.css?v=1">
-    <script defer src="script.js"></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Charlie Lidstone</title>
-</head>
-<body>
-    <div id="overlay"></div>
-    <header>
-        <img class="zoomIn logo" src="logo.png" alt="Logo" class="logo">
-        <nav>
-            <ul>
-                <li class="slideUpText"><a href="#about">About Me</a></li>
-                <li class="slideUpText"><a href="#projects">My Projects</a></li>
-                <li class="slideUpText"><a href="">Résumé</a></li>
-            </ul>
-        </nav>
-        <button class="zoomIn menu-button"><img src="menu_FILL0_wght400_GRAD0_opsz48.svg"></button>
-    </header>
-
-    <section class="main-section">
-        <h2 class="slideUpText">Hello there! My name is</h2>
-        <h1>Charlie Lidstone</h1>
-        <h3 class="slideUpText">I'm an amateur web developer and programmer, and I love making fun and immersive applications that scale well and are a pleasure to use. </h3>
-        <img class="scroll-prompt" onclick="window.scrollBy({top: window.innerHeight, left: 0, behavior: 'smooth'});" src="expand_more_FILL0_wght400_GRAD0_opsz48.svg">
-        
-        <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.384/build/spline-viewer.js"></script>
-<spline-viewer id="monitor" url="https://prod.spline.design/7yPllNa879Wv8ywN/scene.splinecode"></spline-viewer>
-    </section>
-
-    <section id="about" class="about-section">
-        <h1 class="slideUpText">About Me</h1>
-        
-    </section>
-    
-    <section id="projects" class="projects-section">
-        <h1 class="slideUpText">My Projects</h1>
-        <!-- <blockquote class="slideUpText quote">If at first you don't succeed, hide all evidence that you tried.</blockquote>
-        <cite class="slideUpText">H. Jon Benjamin</cite> -->
-        <ul class="projects-list">
-        </ul>
-    </section>
-
-    <footer>
-        <p>Created by Charlie Lidstone<a style="text-decoration: none;" href="https://private.charlie.ourtoprock.ca">,</a> 2023</p>
-    </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
