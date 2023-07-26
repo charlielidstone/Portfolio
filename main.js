@@ -1,11 +1,21 @@
 import './style.css';
 import { gsap } from "gsap";
 
-// gsap.from("#main__title", {
-//   duration: 2, 
-//   filter: "blur(1em)", 
-//   ease: "ease-out",
-// });
+gsap.to("#main__title", {
+  duration: 1,
+  scale: 1.5,
+  ease: "ease-out",
+  scrollTrigger: {
+    trigger: "header",
+    start: "bottom bottom",
+    end: "bottom top",
+    scrub: true,
+    pin: true,
+    markers: true,
+    toggleActions: "restart none none none"
+  }
+  
+});
 
 var mainTitle = document.getElementById("main__title");
 const fonts = ['VT323', 'Lisu Bosa', 'Caveat', 'Chokokutai', 'Handjet', 'Lugrasimo', 'Lumanosimo', 'Permanent Marker', 'Rowdies', 'Zeyada', 'Big Shoulders Inline Text', 'Press Start 2P', 'Kablammo', 'Moirai One', 'Monoton'];
