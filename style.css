@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lisu+Bosa&VT323&Caveat:wght@500&family=Chokokutai&family=Handjet:wght@500&family=Lugrasimo&family=Lumanosimo&family=Permanent+Marker&family=Rowdies&family=Zeyada&family=Big+Shoulders+Inline+Text&family=Press+Start+2P&family=Kablammo&family=Moirai+One&family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=REM&family=Grenze+Gotisch&family=Rye&family=Courier+Prime&family=Space+Mono&family=Lisu+Bosa&family=VT323&family=Caveat:wght@500&family=Chokokutai&family=Handjet:wght@500&family=Lugrasimo&family=Lumanosimo&family=Permanent+Marker&family=Rowdies&family=Zeyada&family=Big+Shoulders+Inline+Text&family=Press+Start+2P&family=Kablammo&family=Moirai+One&family=Monoton&family=UnifrakturCook:wght@700&display=swap');
 
 :root {
   color-scheme: light dark;
@@ -6,7 +6,9 @@
   background-color: #000000;
   font-synthesis: none;
 
-  --primary-font: 'Lumanosimo', sans-serif;
+  --primary-font: 'REM', monospace;
+  
+  --primary-text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5);
 
   font-family: var(--primary-font);
 }
@@ -33,6 +35,22 @@ body {
   padding: 0;
 }
 
+h1 {
+  font-size: 4em;
+  font-family: var(--primary-font);
+  text-shadow: var(--primary-text-shadow);
+  width: fit-content;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 header {
   height: 100vh;
   width: 100vw;
@@ -46,6 +64,7 @@ header {
 header::after {
   content: '';
   background-image: url(/public/images/noise.png);
+  filter: blur(100px);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -58,18 +77,21 @@ header::after {
 #main__title {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   text-transform: uppercase;
   width: fit-content;
+  height: 100%;
 }
 
 #main__title span {
-  font-size: 8em;
+  font-size: 6em;
   text-align: center;
+  cursor: default;
+  user-select: none;
+  text-shadow: var(--primary-text-shadow);
 }
 
-section {
-  height: 100vh;
-  width: 100vw;
+#main__title span:hover {
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
 }
