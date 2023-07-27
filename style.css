@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=REM&family=Grenze+Gotisch&family=Rye&family=Courier+Prime&family=Space+Mono&family=Lisu+Bosa&family=VT323&family=Caveat:wght@500&family=Chokokutai&family=Handjet:wght@500&family=Lugrasimo&family=Lumanosimo&family=Permanent+Marker&family=Rowdies&family=Zeyada&family=Big+Shoulders+Inline+Text&family=Press+Start+2P&family=Kablammo&family=Moirai+One&family=Monoton&family=UnifrakturCook:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=REM&family=Grenze+Gotisch&family=Rye&family=Courier+Prime&family=Space+Mono&family=Lisu+Bosa&family=VT323:wght@400&family=Caveat:wght@500&family=Chokokutai&family=Handjet:wght@500&family=Lugrasimo&family=Lumanosimo&family=Permanent+Marker&family=Rowdies&family=Zeyada&family=Big+Shoulders+Inline+Text&family=Press+Start+2P&family=Kablammo&family=Moirai+One&family=Monoton&family=UnifrakturCook:wght@700&display=swap');
+
+@font-face {
+  font-family: 'Old London';
+  src: url('/public/fonts/old_london/OldLondon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 :root {
   color-scheme: light dark;
@@ -6,11 +14,16 @@
   background-color: #000000;
   font-synthesis: none;
 
-  --primary-font: 'REM', monospace;
+  --primary-font: 'VT323', monospace;
+
+  --primary-heading-font: 'REM', monospace;
+  
+  --primary-display-font: 'Handjet', cursive;
   
   --primary-text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5);
 
   font-family: var(--primary-font);
+  font-weight: 100;
 }
 
 @media (prefers-color-scheme: light) {
@@ -35,6 +48,21 @@ body {
   padding: 0;
 }
 
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main {
+  width: 100vw;
+  width: 100%;
+  z-index: 99;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
 h1 {
   font-size: 4em;
   font-family: var(--primary-font);
@@ -44,7 +72,7 @@ h1 {
 
 section {
   min-height: 100vh;
-  width: 100vw;
+  grid-column: 1 / 13;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,25 +81,12 @@ section {
 
 header {
   height: 100vh;
-  width: 100vw;
+  grid-column: 1 / span 12;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-header::after {
-  content: '';
-  background-image: url(/public/images/noise.png);
-  filter: blur(100px);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.05;
-  z-index: 0;
 }
 
 #main__title {
@@ -81,16 +96,19 @@ header::after {
   justify-content: center;
   text-transform: uppercase;
   width: fit-content;
-  height: 100%;
+  height: fit-content;
+  font-size: 6em;
+  letter-spacing: 0.5em;
+  font-family: var(--primary-font);
+  display: none;
 }
 
 #main__title span {
-  font-size: 6em;
   text-align: center;
   cursor: default;
   user-select: none;
   text-shadow: var(--primary-text-shadow);
-  margin: 0 0.1em;
+  margin: 0 0.2em;
 }
 
 #main__title span:hover {

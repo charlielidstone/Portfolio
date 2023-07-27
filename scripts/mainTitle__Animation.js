@@ -1,4 +1,39 @@
-export function applyFontSwapAnim(element, fonts, defaultFont, duration = 2000, interval = 200) {
+const mainTitleAnimation = {
+  run: function() {
+    const mainTitle = document.getElementById("main__title");
+    const fonts = [
+      'VT323',
+      'Lisu Bosa', 
+      'Lugrasimo',
+      'Rowdies',
+      'Kablammo',
+      'Rye',
+      'Grenze Gotisch',
+      'UnifrakturCook',
+      'Old London',
+    ];
+    const mainTitleAnimationDuration = 4500;
+    
+    mainTitle.style.display = "flex"
+    
+    gsap.from("#main__title", {
+      opacity: 0,
+      duration: mainTitleAnimationDuration / 2000,
+      ease: "linear",
+      delay: 0.5,
+    });
+    
+    gsap.from("#main__title", {
+      scale: 0.9,
+      duration: mainTitleAnimationDuration / 1000 + 0.5,
+      ease: "linear",
+    });
+    
+    applyFontSwapAnim(mainTitle, fonts, "Handjet, monospace", mainTitleAnimationDuration, 300);
+  }
+};
+
+function applyFontSwapAnim(element, fonts, defaultFont, duration = 2000, interval = 200) {
   const text = element.innerText;
   const chars = text.split("");
   let totalTime = 0;
@@ -14,7 +49,8 @@ export function applyFontSwapAnim(element, fonts, defaultFont, duration = 2000, 
 
     charElement.addEventListener("mouseover", () => {
       const randomFontIndex = Math.floor(Math.random() * fonts.length);
-      charElement.style.fontFamily = fonts[randomFontIndex];
+      let randomFont = fonts[randomFontIndex];
+      charElement.style.fontFamily = randomFont;
     });
 
     charElement.addEventListener("mouseout", () => {
@@ -53,3 +89,5 @@ export function applyFontSwapAnim(element, fonts, defaultFont, duration = 2000, 
     totalTime += interval;
   }, interval);
 }
+
+export default mainTitleAnimation;
