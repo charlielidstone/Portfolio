@@ -64,10 +64,15 @@ main {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 7em;
   font-family: var(--primary-font);
   text-shadow: var(--primary-text-shadow);
   width: fit-content;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* make the backdrop-filter fade out */
+  padding: 0.2em 0.5em;
+  text-align: center;
 }
 
 section {
