@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const threeEffects = (function() {
 
@@ -28,6 +29,19 @@ const threeEffects = (function() {
     });
     const torus = new THREE.Mesh(geometry, material);
     scene.add(torus);
+
+
+    const loader = new GLTFLoader();
+    let torusCube;
+    loader.load('public/torus_cube.glb', function(gltf) {
+        torusCube = gltf.scene;
+        torusCube.position.set(0, 0, 0);
+        torusCube.scale.set(1, 1, 1);
+        scene.add(torusCube);
+    }, undefined, function (error) {
+        console.error( error );
+    });
+
 
     function addStar() {
         const geometry = new THREE.SphereGeometry(0.25, 24, 24);
