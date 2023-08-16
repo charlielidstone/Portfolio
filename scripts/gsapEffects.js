@@ -15,25 +15,7 @@ const gsapEffects = {
         end: "bottom top",
         scrub: 1,
         toggleActions: "restart pause resume pause"
-      }
-    });
-
-    const fontNames = document.querySelectorAll('.font-name');
-    fontNames.forEach((fontName) => {
-      gsap.from(fontName, {
-        opacity: 0,
-        filter: "blur(7px)",
-        x: -100,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: fontName,
-          start: "bottom bottom",
-          end: "bottom center",
-          scrub: 1,
-          toggleActions: "restart pause resume pause"
-        },
-      });
+      },
     });
 
     const sectionH1s = document.querySelectorAll('section h1');

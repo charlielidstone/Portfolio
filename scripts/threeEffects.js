@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const threeEffects = (function() {
 
@@ -18,7 +19,10 @@ const threeEffects = (function() {
     pointLight.position.set(5, 5, 5);
 
     const ambientLight = new THREE.AmbientLight(0x777777);
+
     scene.add(pointLight, ambientLight);
+
+    // const controls = new OrbitControls(camera, renderer.domElement);
 
     const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
     const material = new THREE.MeshBasicMaterial({
@@ -32,11 +36,28 @@ const threeEffects = (function() {
 
 
     const loader = new GLTFLoader();
-    let torusCube;
-    loader.load('public/torus_cube.glb', function(gltf) {
+    let torusCube,
+        mixer;
+    loader.load('torus_cube.glb', function(gltf) {
         torusCube = gltf.scene;
         torusCube.position.set(0, 0, 0);
         torusCube.scale.set(1, 1, 1);
+
+        mixer = new THREE.AnimationMixer(torusCube);
+        const animation = gltf.animations[0];
+        const action = mixer.clipAction(animation);
+        action.play();
+
+        const material = new THREE.MeshBasicMaterial({
+            color: 0xFF6347,
+            wireframe: true,
+            opacity: 0.1,
+            transparent: true,
+        });
+        torusCube.traverse((o) => {
+            if (o.isMesh) o.material = material;
+        });
+
         scene.add(torusCube);
     }, undefined, function (error) {
         console.error( error );
@@ -92,8 +113,12 @@ const threeEffects = (function() {
             torus.rotation.y += 0.005;
             torus.rotation.z += 0.01;
 
+            // controls.update();
+
+            // mixer.update(0.01);
+
             renderer.render(scene, camera);
-        }
+        },
     };
 })();
 

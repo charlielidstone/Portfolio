@@ -1,35 +1,40 @@
 const mainTitleAnimation = {
   run: function() {
     const mainTitle = document.getElementById("main__title");
-    const fonts = [
-      'VT323',
-      'Lisu Bosa', 
-      'Lugrasimo',
-      'Rowdies',
-      'Kablammo',
-      'Rye',
-      'Grenze Gotisch',
-      'UnifrakturCook',
-      'Old London',
-    ];
-    const mainTitleAnimationDuration = 4500;
-    
-    mainTitle.style.display = "flex"
-    
-    gsap.from("#main__title", {
-      opacity: 0,
-      duration: mainTitleAnimationDuration / 2000,
-      ease: "linear",
-      delay: 0.5,
-    });
-    
-    gsap.from("#main__title", {
-      scale: 0.9,
-      duration: mainTitleAnimationDuration / 1000 + 0.5,
-      ease: "linear",
-    });
-    
-    applyFontSwapAnim(mainTitle, fonts, "Handjet, monospace", mainTitleAnimationDuration, 300);
+
+    if (mainTitle !== null) {
+      const fonts = [
+        'VT323',
+        'Lisu Bosa', 
+        'Lugrasimo',
+        'Rowdies',
+        'Kablammo',
+        'Rye',
+        'Grenze Gotisch',
+        'UnifrakturCook',
+        'Old London',
+      ];
+      const mainTitleAnimationDuration = 4500;
+
+      mainTitle.style.display = "flex"
+
+      gsap.from("#main__title", {
+        opacity: 0,
+        duration: mainTitleAnimationDuration / 2000,
+        ease: "linear",
+        delay: 0.5,
+      });
+
+      gsap.from("#main__title", {
+        scale: 0.9,
+        duration: mainTitleAnimationDuration / 1000 + 0.5,
+        ease: "linear",
+      });
+
+      applyFontSwapAnim(mainTitle, fonts, "Handjet, monospace", mainTitleAnimationDuration, 300);
+    } else {
+      console.error("#main__title not found");
+    }
   }
 };
 
