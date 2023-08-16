@@ -1,8 +1,11 @@
-import gsap from "gsap";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 const gsapEffects = {
   setup: function() {
-    gsap.registerPlugin(ScrollTrigger);
 
     gsap.to("#main__title", {
       filter: "blur(7px)",
