@@ -1,5 +1,5 @@
-const { gsap } = require("gsap/dist/gsap");
-const { ScrollTrigger } = require("gsap/dist/ScrollTrigger");
+import { gsap } from "node_modules/gsap/dist/gsap";
+import { ScrollTrigger } from "node_modules/gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 

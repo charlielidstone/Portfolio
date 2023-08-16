@@ -1,6 +1,6 @@
-const THREE = require("three");
-const { GLTFLoader } = require("three/examples/jsm/loaders/GLTFLoader");
-const { OrbitControls } = require("three/examples/jsm/controls/OrbitControls");
+import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const threeEffects = (function() {
 
