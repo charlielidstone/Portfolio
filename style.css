@@ -7,7 +7,6 @@
   font-style: normal;
 }
 
-
 :root {
   color-scheme: light dark;
   background-color: #000000;
@@ -16,6 +15,7 @@
   --primary-text-colour: rgba(255, 255, 255, 0.87);
   
   --primary-font: 'VT323', monospace;
+  --primary-body-font: 'Courier Prime', monospace;
   --primary-heading-font: 'REM', monospace;
   --primary-display-font: 'Handjet', cursive;
   --primary-handwriting-font: 'Caveat', cursive;
@@ -26,6 +26,8 @@
   font-weight: 100;
 
   color: var(--primary-text-colour);
+
+  scroll-behavior: smooth;
 
 }
 
@@ -128,4 +130,18 @@ header {
 
 .font-name {
   font-size: 4em;
+}
+
+#lorem {
+  /* centred, with 2 fr on each side */
+  grid-column: 3 / span 8;
+}
+
+#lorem p {
+  font-size: 7em;
+  text-align: center;
+  line-height: 1.5em;
+  font-family: var(--primary-heading-font);
+  margin: 0.5em 0;
+  -webkit-text-stroke: 0.5px rgb(255, 255, 255);
 }
