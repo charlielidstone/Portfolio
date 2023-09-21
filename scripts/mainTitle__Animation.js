@@ -31,7 +31,7 @@ const mainTitleAnimation = {
         ease: "linear",
       });
 
-      applyFontSwapAnim(mainTitle, fonts, "Handjet, monospace", mainTitleAnimationDuration, 300);
+      applyFontSwapAnim(mainTitle, fonts, "Croissant One, monospace", mainTitleAnimationDuration, 300);
     } else {
       console.error("#main__title not found");
     }
