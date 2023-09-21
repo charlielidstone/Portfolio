@@ -73,8 +73,9 @@ function applyFontSwapAnim(element, fonts, defaultFont, duration = 2000, interva
       clearInterval(toClear);
 
       element.innerHTML = "";
-      charElements.forEach((charElement) => {
+      charElements.forEach((charElement, index) => {
         charElement.style.fontFamily = defaultFont;
+        if (index > 0) charElement.style.textTransform = "lowercase";
         element.appendChild(charElement); // Use appendChild to add elements to the container
         element.style.transition = "scale 1.2s ease";
         element.style.scale = "1.1";
