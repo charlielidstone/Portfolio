@@ -14,11 +14,15 @@
 
   --primary-text-colour: rgba(255, 255, 255, 0.87);
   
-  --primary-font: 'VT323', monospace;
   --primary-body-font: 'Courier Prime', monospace;
   --primary-heading-font: 'REM', monospace;
   --primary-display-font: 'Handjet', cursive;
   --primary-handwriting-font: 'Caveat', cursive;
+  
+  --secondary-display-font: 'Croissant One', cursive;
+  --other-display-font: 'VT323', monospace;
+  
+  --primary-font: var(--secondary-display-font);
 
   --primary-text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5);
   
