@@ -2,13 +2,13 @@
 
 @font-face {
   font-family: 'Old London';
-  src: url('/public/fonts/old_london/OldLondon.ttf') format('truetype');
+  src: url('/fonts/old_london/OldLondon.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
   background-color: #000000;
   font-synthesis: none;
 
@@ -33,13 +33,6 @@
 
   scroll-behavior: smooth;
 
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
 }
 
 * {
@@ -148,4 +141,12 @@ header {
   font-family: var(--primary-heading-font);
   margin: 0.5em 0;
   -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 700px) {
+    
+  #main__title {
+    font-size: 2em;
+  }
+
 }
