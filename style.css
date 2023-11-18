@@ -119,6 +119,7 @@ header {
   user-select: none;
   text-shadow: var(--primary-text-shadow);
   margin: 0 0.2em;
+  line-height: 2;
 }
 
 #main__title span:hover {

@@ -31,7 +31,7 @@ const mainTitleAnimation = {
         ease: "linear",
       });
 
-      applyFontSwapAnim(mainTitle, fonts, "Croissant One, monospace", mainTitleAnimationDuration, 300);
+      applyFontSwapAnim(mainTitle, fonts, "Lisu Bosa", mainTitleAnimationDuration, 300);
     } else {
       console.error("#main__title not found");
     }
@@ -51,21 +51,6 @@ function applyFontSwapAnim(element, fonts, defaultFont, duration = 2000, interva
     charElement.style.width = "0.8em";
     charElement.innerText = char;
     charElements.push(charElement);
-
-    charElement.addEventListener("mouseover", () => {
-      const randomFontIndex = Math.floor(Math.random() * fonts.length);
-      let randomFont = fonts[randomFontIndex];
-      charElement.style.fontFamily = randomFont;
-    });
-
-    charElement.addEventListener("mouseout", () => {
-      charElement.style.fontFamily = defaultFont; // Set the font family back to defaultFont
-    });
-
-    charElement.addEventListener("click", () => {
-        const randomFontIndex = Math.floor(Math.random() * fonts.length);
-        charElement.style.fontFamily = fonts[randomFontIndex];
-    });
   });
 
   const toClear = setInterval(() => {
@@ -76,9 +61,31 @@ function applyFontSwapAnim(element, fonts, defaultFont, duration = 2000, interva
       charElements.forEach((charElement, index) => {
         charElement.style.fontFamily = defaultFont;
         if (index > 0) charElement.style.textTransform = "lowercase";
-        element.appendChild(charElement); // Use appendChild to add elements to the container
+        element.appendChild(charElement);
         element.style.transition = "scale 1.2s ease";
         element.style.scale = "1.1";
+        
+        var singleCharToClear;
+        var previousRandomFontIndex;
+        charElement.addEventListener("mouseover", () => {
+          var randomFontIndex = Math.floor(Math.random() * fonts.length);
+          previousRandomFontIndex = randomFontIndex;
+          const randomFont = fonts[randomFontIndex];
+          charElement.style.fontFamily = randomFont;
+          singleCharToClear = setInterval(() => {
+            do {
+              var randomFontIndex = Math.floor(Math.random() * fonts.length);
+            } while (randomFontIndex === previousRandomFontIndex);
+            previousRandomFontIndex = randomFontIndex;
+            var randomFont = fonts[randomFontIndex];
+            charElement.style.fontFamily = randomFont;
+          }, interval / 1.5);
+        });
+  
+        charElement.addEventListener("mouseout", () => {
+          charElement.style.fontFamily = defaultFont;
+          clearInterval(singleCharToClear);
+        });
       });
 
       return;
@@ -89,7 +96,7 @@ function applyFontSwapAnim(element, fonts, defaultFont, duration = 2000, interva
     charElements.forEach((charElement) => {
       const randomFontIndex = Math.floor(Math.random() * fonts.length);
       charElement.style.fontFamily = fonts[randomFontIndex];
-      element.appendChild(charElement); // Use appendChild to add elements to the container
+      element.appendChild(charElement); 
     });
 
     totalTime += interval;
