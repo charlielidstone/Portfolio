@@ -73,37 +73,12 @@ let section3 = () => {
 
 }
 
-let lorem = () => {
-  const lorem = document.getElementById('lorem');
-  const loremP = document.querySelector('#lorem p');
-  const loremWords = loremP.innerText.split(' ');
-  loremP.innerHTML = '';
-  loremWords.forEach(word => {
-    const span = document.createElement('span');
-    console.log(word);
-    span.innerText = word + ' ';
-    loremP.appendChild(span);
-  });
-  const loremSpans = document.querySelectorAll('#lorem p span');
-  loremSpans.forEach((span, index) => {
-    const timeline = gsap.timeline({});
-
-    timeline
-      .from(span, { color: "transparent", duration: 1, scrollTrigger: { trigger: span, scrub: true, start: "center center", end: "center center", } })
-
-  });
-
-  
-}
-
 
 const gsapEffects = {
   setup: function() {
 
     mainTitle();
     signature();
-    section3();
-    lorem();
 
   }
 };

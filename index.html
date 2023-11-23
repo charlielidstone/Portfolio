@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=REM&family=Grenze+Gotisch&family=Rye&family=Courier+Prime&family=Space+Mono&family=Lisu+Bosa&family=VT323:wght@400&family=Caveat:wght@500&family=Chokokutai&family=Handjet:wght@500&family=Lugrasimo&family=Lumanosimo&family=Permanent+Marker&family=Rowdies&family=Zeyada&family=Big+Shoulders+Inline+Text&family=Press+Start+2P&family=Kablammo&family=Moirai+One&family=Monoton&family=UnifrakturCook:wght@700&family=Croissant+One&display=swap">
   <link type="text/css" rel="stylesheet" href="/style.css">
   <title>Charlie Lidstone</title>
 </head>
@@ -15,6 +16,7 @@
   <main>
 
     <header>
+      <div class="thing"></div>
       <div id="main__title">
         Charlie
       </div>
@@ -26,23 +28,21 @@
       </svg>        
     </section>
 
-    <section id="section3" class="section">
-      <h2>Hello there</h2>
-      <h2>How are you?</h2>
-    </section>
-
-    <section id="lorem">
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum ex hic sequi odio nam rerum delectus voluptatum ratione. Vel voluptatibus quidem rem tempore aliquid nemo pariatur sint ex aliquam, obcaecati doloremque. Debitis, laborum perferendis sit nemo assumenda incidunt rem tempora itaque harum quod a quia quam, ut quis mollitia quisquam.</p>
-    </section>
-  
-
     <section class="section"></section>
     <section class="section"></section>
     <section class="section"></section>
   </main>
 
+  <script type="module" src="/main.js" async></script>
+  <script type="module" async>
+    import mainTitleAnimation from '/scripts/mainTitleAnimation.js';
+    mainTitleAnimation.run();
+  </script>
+  <script type="module" async>
+    import gsapEffects from '/scripts/gsapEffects.js';
+    gsapEffects.setup();
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script type="module" src="/main.js" async></script>
 </body>
 </html>
