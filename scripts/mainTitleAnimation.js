@@ -8,11 +8,11 @@ const mainTitleAnimation = {
         'Lisu Bosa', 
         'Lugrasimo',
         'Rowdies',
-        'Kablammo',
         'Rye',
         'Grenze Gotisch',
         'UnifrakturCook',
         'Old London',
+        'Cutive Mono',
       ];
       const mainTitleAnimationDuration = 4500;
 
@@ -60,7 +60,7 @@ function applyFontSwapAnim(element, fonts, defaultFont, duration = 2000, interva
       element.innerHTML = "";
       charElements.forEach((charElement, index) => {
         // charElement.style.fontFamily = defaultFont;
-        if (index > 0) charElement.style.textTransform = "lowercase";
+        // if (index > 0) charElement.style.textTransform = "lowercase";
         element.appendChild(charElement);
         element.style.transition = "all 1.2s ease";
         element.style.opacity = "0";

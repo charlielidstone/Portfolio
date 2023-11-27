@@ -99,7 +99,7 @@ header {
 
 .thing {
   content: '';
-  position: absolute;
+  position: fixed;
   width: 140vw;
   aspect-ratio: 1 / 1;
   background: url('public/images/4065770.png') no-repeat center center;
@@ -171,4 +171,12 @@ header {
     font-size: 2em;
   }
 
+}
+
+.rolling-text-char {
+  position: relative;
+  display: inline-block;
+  transform-origin: 50% 100% 0px;
+  will-change: opacity, transform;
+  transform-style: preserve-3d;
 }

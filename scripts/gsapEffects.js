@@ -54,21 +54,30 @@ let signature = () => {
 
 }
 
-let section3 = () => {
-  const section3 = document.getElementById('section3');
-  const section3H2 = document.querySelector('#section3 h2');
-  gsap.to(section3H2, {
-    scale: 9,
-    duration: 1,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: section3,
-      start: "center center",
-      end: "bottom top",
-      scrub: 0.4,
-      pin: true,
-      pinSpacing: true,
-    },
+let rollingText = () => {
+  const rollingText = document.getElementById('rolling-text');
+  const rollingTextCharacters = rollingText.innerText.split('');
+  console.log(rollingTextCharacters);
+  rollingText.innerHTML = '';
+  rollingTextCharacters.forEach((character, index) => {
+    const characterElement = document.createElement('span');
+    characterElement.classList.add('rolling-text-char');
+    characterElement.innerText = character;
+    rollingText.appendChild(characterElement);
+
+    gsap.from(characterElement, {
+      opacity: 0,
+      transform: "translate3d(0px, 0px, -200px) rotateX(90deg)",
+      duration: 1,
+      ease: "power2.out",
+      delay: index * 0.01,
+      scrollTrigger: {
+        trigger: rollingText,
+        start: "center 80%",
+        end: "center center",
+        toggleActions: "restart none none reverse"
+      },
+    });
   });
 
 }
@@ -79,6 +88,7 @@ const gsapEffects = {
 
     mainTitle();
     signature();
+    rollingText();
 
   }
 };
