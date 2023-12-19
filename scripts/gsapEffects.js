@@ -57,24 +57,25 @@ let signature = () => {
 let rollingText = () => {
   const rollingText = document.getElementById('rolling-text');
   const rollingTextCharacters = rollingText.innerText.split('');
-  console.log(rollingTextCharacters);
   rollingText.innerHTML = '';
   rollingTextCharacters.forEach((character, index) => {
+    if (character === ' ') character = '&nbsp;';
     const characterElement = document.createElement('span');
     characterElement.classList.add('rolling-text-char');
-    characterElement.innerText = character;
+    characterElement.innerHTML = character;
     rollingText.appendChild(characterElement);
 
     gsap.from(characterElement, {
       opacity: 0,
       transform: "translate3d(0px, 0px, -200px) rotateX(90deg)",
-      duration: 1,
-      ease: "power2.out",
-      delay: index * 0.01,
+      duration: 5,
+      ease: "power2.inOut",
+      delay: index * 0.02,
       scrollTrigger: {
         trigger: rollingText,
-        start: "center 80%",
+        start: "center 90%",
         end: "center center",
+        scrub: 1,
         toggleActions: "restart none none reverse"
       },
     });
