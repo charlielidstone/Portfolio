@@ -102,12 +102,13 @@ header {
   position: fixed;
   width: 140vw;
   aspect-ratio: 1 / 1;
-  background: url('public/images/4065770.png') no-repeat center center;
+  background: url('public/images/blue-purple-grainy-gradient.png') no-repeat center center;
+  background-size: cover;
   box-shadow: inset 0px 0px 100vw 100vw black;
   z-index: -1;
   border-radius: 50%;
-  animation: box-shadow 1s ease-out 1;
-  animation-delay: 4.7s;
+  animation: box-shadow 1.5s ease-out 1;
+  animation-delay: 5s;
   animation-fill-mode: forwards;
 }
 

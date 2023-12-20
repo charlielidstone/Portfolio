@@ -14,7 +14,7 @@ const mainTitleAnimation = {
         'Old London',
         'Cutive Mono',
       ];
-      const mainTitleAnimationDuration = 4500;
+      const mainTitleAnimationDuration = 4300;
 
       mainTitle.style.display = "flex"
 
