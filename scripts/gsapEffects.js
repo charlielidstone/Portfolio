@@ -58,7 +58,8 @@ let helloWorld = () => {
   const helloWorld = document.getElementById('hello-world');
     
   gsap.to(helloWorld, {
-    scale: 0.9,  
+    scale: 0.9,
+    opacity: 0,
 
     scrollTrigger: {
       trigger: helloWorld,
@@ -71,6 +72,26 @@ let helloWorld = () => {
   });
 }
 
+let worksSection = () => {
+  const worksSection = document.getElementById('works__section');
+
+  gsap.to(worksSection, {
+    scale: 0.8,
+    borderRadius: "50px",
+    y: "30px",
+
+    scrollTrigger: {
+      trigger: worksSection,
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+      pin: true,
+      toggleActions: "restart none none reverse",
+      markers: true,
+    },
+  });
+}
+
 
 const gsapEffects = {
   setup: function() {
@@ -78,6 +99,7 @@ const gsapEffects = {
     mainTitle();
     signature();
     helloWorld();
+    worksSection();
 
   }
 };
