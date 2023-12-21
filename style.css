@@ -102,7 +102,7 @@ header {
   position: fixed;
   width: 140vw;
   aspect-ratio: 1 / 1;
-  background: url('public/images/blue-purple-grainy-gradient.png') no-repeat center center;
+  /* background: url('public/images/blue-purple-grainy-gradient.png') no-repeat center center; */
   background-size: cover;
   box-shadow: inset 0px 0px 100vw 100vw black;
   z-index: -1;
@@ -185,16 +185,11 @@ header {
 
 }
 
-#rolling-text {
-  perspective: 1000px;
-  transform-style: preserve-3d;
+#hello-world {
+  font-size: 7em;
 }
 
-.rolling-text-char {
-  position: relative;
-  display: inline-block;
-  font-size: 3em;
-  transform-origin: 50% -100% 0px;
-  will-change: opacity, transform;
-  transform-style: preserve-3d;
+
+#works__section {
+  background: white;
 }
