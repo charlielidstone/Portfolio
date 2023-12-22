@@ -191,5 +191,5 @@ header {
 
 
 #works__section {
-  background: white;
+  backdrop-filter: invert(1);
 }
