@@ -40,8 +40,8 @@ const gsapEffects = {
       scrollTrigger: {
         trigger: signatureContainer,
         start: "center center",
-        end: "bottom -100%",
-        scrub: 0.5,
+        end: "bottom -200%",
+        scrub: 3,
         pin: true,
         pinSpacing: true,
       },
@@ -55,7 +55,7 @@ const gsapEffects = {
     const worksSection = document.getElementById('works__section');
 
     gsap.to(helloWorld, {
-      scale: 0.9,
+      scale: 0.8,
 
       scrollTrigger: {
         trigger: worksSection,
@@ -64,14 +64,13 @@ const gsapEffects = {
         pin: helloWorld,
         scrub: true,
         toggleActions: "restart none none reverse",
-        markers: true,
       },
     });
 
 
     gsap.to(worksSection, {
-      scale: 0.8,
-      borderRadius: "50px",
+      scale: 0.65,
+      borderRadius: "100px",
       y: "10px",
 
       scrollTrigger: {
@@ -81,7 +80,6 @@ const gsapEffects = {
         scrub: true,
         pin: true,
         toggleActions: "restart none none reverse",
-        markers: true,
       },
     });
   }
