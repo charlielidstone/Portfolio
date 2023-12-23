@@ -82,6 +82,25 @@ const gsapEffects = {
         toggleActions: "restart none none reverse",
       },
     });
+
+    // Select all the covers
+    const covers = document.querySelectorAll('.project__cover');
+
+    // Loop over each cover
+    covers.forEach((cover, index) => {
+      // Use gsap.to() to animate the cover
+      gsap.from(cover, {
+        y: 200, // This will move each cover up in a stack-like way
+        duration: 1, // Duration of the animation
+        ease: "power1.out", // Easing function for the animation
+        scrollTrigger: {
+          trigger: cover,
+          start: "top bottom", // Start the animation when the top of the cover reaches the bottom of the viewport
+          end: "bottom top", // End the animation when the bottom of the cover reaches the top of the viewport
+          scrub: true, // Enable scrubbing for smooth scrolling
+        },
+      });
+    });
   }
 };
 

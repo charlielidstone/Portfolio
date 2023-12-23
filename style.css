@@ -20,7 +20,7 @@
   --secondary-display-font: 'Croissant One', cursive;
   --other-display-font: 'VT323', monospace;
   
-  --primary-font: var(--secondary-display-font);
+  --primary-font: var(--primary-display-font);
 
   --primary-text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5);
   
@@ -192,4 +192,28 @@ header {
 
 #works__section {
   backdrop-filter: invert(1);
+}
+
+#works__section--actual {
+  background-color: #ffffff;
+  perspective: 450px;
+}
+
+#works__section--actual .project__cover {
+  background: hsl(0, 0%, 90%);
+  width: 300px;
+  height: 300px;
+  border-radius: 43px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.16);
+  color: #00000015;
+  font-size: 17em;
+  transform: rotate3d(1, 0, 0, -20deg);
+  transform-style: preserve-3d;
+  font-family: monospace;
+  position: absolute;
+  top: calc(50% - 150px);
 }
