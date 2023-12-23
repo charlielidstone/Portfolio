@@ -211,9 +211,30 @@ header {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.16);
   color: #00000015;
   font-size: 17em;
-  transform: rotate3d(1, 0, 0, -20deg);
+  /* transform: rotate3d(1, 0, 0, -20deg); */
   transform-style: preserve-3d;
   font-family: monospace;
   position: absolute;
   top: calc(50% - 150px);
+  perspective: 200px;
+}
+
+#works__section--actual .project__cover:nth-child(1) {
+  transform: translateY(-60px) translateZ(-120px);
+  background: red;
+}
+
+#works__section--actual .project__cover:nth-child(2) {
+  transform: translateY(-25px) translateZ(-80px);
+  background: blue;
+}
+
+#works__section--actual .project__cover:nth-child(3) {
+  transform: translateY(10px) translateZ(-40px);
+  background: green;
+}
+
+#works__section--actual .project__cover:nth-child(4) {
+  transform: translateY(50px) translateZ(0px);
+  background: yellow;
 }
