@@ -1,3 +1,4 @@
+// remove this comment
 const mainTitleAnimation = {
   run: function() {
     const mainTitle = document.getElementById("main__title");
