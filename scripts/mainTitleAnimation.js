@@ -14,7 +14,7 @@ const mainTitleAnimation = {
         'Old London',
         'Cutive Mono',
       ];
-      const mainTitleAnimationDuration = 4300;
+      const mainTitleAnimationDuration = 2000;
 
       mainTitle.style.display = "flex"
 
@@ -55,7 +55,7 @@ function applyFontSwapAnim(element, fonts, defaultFont, duration = 2000, interva
 
   const toClear = setInterval(() => {
     if (totalTime >= duration) {
-      clearInterval(toClear);
+      // clearInterval(toClear);
 
       element.innerHTML = "";
       charElements.forEach((charElement, index) => {
@@ -63,7 +63,7 @@ function applyFontSwapAnim(element, fonts, defaultFont, duration = 2000, interva
         // if (index > 0) charElement.style.textTransform = "lowercase";
         element.appendChild(charElement);
         element.style.transition = "all 1.2s ease";
-        element.style.opacity = "0";
+        // element.style.opacity = "0";
         element.style.scale = "1.1";
         
         var singleCharToClear;
