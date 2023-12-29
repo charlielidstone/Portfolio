@@ -90,7 +90,7 @@ const gsapEffects = {
         y: index * -20,
         scrollTrigger: {
           trigger: projectCover,
-          start: "center center",
+          start: `center ${50 + index*10}%`,
           end: "bottom top",
           scrub: true,
           pin: true,
