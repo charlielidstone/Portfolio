@@ -1,3 +1,4 @@
+// remove this comment
 const mainTitleAnimation = {
   run: function() {
     const mainTitle = document.getElementById("main__title");
@@ -31,7 +32,7 @@ const mainTitleAnimation = {
         ease: "linear",
       });
 
-      applyFontSwapAnim(mainTitle, fonts, "Lisu Bosa", mainTitleAnimationDuration, 300);
+      applyFontSwapAnim(mainTitle, fonts, "Lisu Bosa", 0, 300);
     } else {
       console.error("#main__title not found");
     }
@@ -54,8 +55,8 @@ function applyFontSwapAnim(element, fonts, defaultFont, duration = 2000, interva
   });
 
   const toClear = setInterval(() => {
-    if (totalTime >= duration) {
-      // clearInterval(toClear);
+    if (totalTime >= duration && duration !== 0) {
+      clearInterval(toClear);
 
       element.innerHTML = "";
       charElements.forEach((charElement, index) => {
