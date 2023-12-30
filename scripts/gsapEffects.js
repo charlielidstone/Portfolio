@@ -83,20 +83,22 @@ const gsapEffects = {
       },
     });
 
-    const covers = document.querySelectorAll('.project__cover');
-
-    covers.forEach((cover, index) => {
-      gsap.to(cover, {
-        y: "100px",
+    const projectCovers = document.querySelectorAll('.project__cover');
+    projectCovers.forEach((projectCover, index) => {
+      gsap.to(projectCover, {
+        scale: 0.7,
+        y: index * -20,
         scrollTrigger: {
-          trigger: cover,
-          start: "top bottom",
-          end: "top top",
+          trigger: projectCover,
+          start: `center ${50 + index*10}%`,
+          end: "bottom top",
           scrub: true,
+          pin: true,
           toggleActions: "restart none none reverse",
         },
       });
     });
+
   },
 };
 
