@@ -97,6 +97,18 @@ header {
   justify-content: center;
 }
 
+#main__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0f0f0f;
+  font-family: monospace;
+  text-wrap: wrap;
+  
+}
+
 .thing {
   content: '';
   position: fixed;
