@@ -15,7 +15,7 @@ const mainTitleAnimation = {
         'Old London',
         'Cutive Mono',
       ];
-      const mainTitleAnimationDuration = 2000;
+      const mainTitleAnimationDuration = 4300; // 4300ms works well
 
       mainTitle.style.display = "flex"
 
@@ -32,14 +32,14 @@ const mainTitleAnimation = {
         ease: "linear",
       });
 
-      applyFontSwapAnim(mainTitle, fonts, "Lisu Bosa", 0, 300);
+      applyFontSwapAnimation(mainTitle, fonts, "Lisu Bosa", mainTitleAnimationDuration, 300);
     } else {
       console.error("#main__title not found");
     }
   }
 };
 
-function applyFontSwapAnim(element, fonts, defaultFont, duration = 2000, interval = 200) {
+function applyFontSwapAnimation(element, fonts, defaultFont, duration = 2000, interval = 200) {
   const text = element.innerText;
   const chars = text.split("");
   let totalTime = 0;
