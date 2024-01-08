@@ -1,7 +1,9 @@
 const mainBackgroundAnimation = () => {
-    run: function() {
+    run: () => {
         const mainBackground = document.getElementById("main__background");
         
-        function fillBackground
+        function fillBackground() {
+            
+        }
     }
 };
