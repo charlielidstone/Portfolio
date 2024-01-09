@@ -7,7 +7,21 @@
 
 @font-face {
   font-family: 'ARB 85 Poster Script JAN-39';
-  src: url('public/fonts/arb_85_poster_script_jan_39/ARB 85 Poster Script JAN-39 FRE.ttf') format('truetype');
+  src: url('/fonts/arb_85_poster_script_jan_39/ARB 85 Poster Script JAN-39 FRE.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'US Angel';
+  src: url('/fonts/usangel/usangel.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cloister Black';
+  src: url('/fonts/cloister-black/CloisterBlack.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -174,6 +188,7 @@ header {
   text-shadow: var(--primary-text-shadow);
   margin: 0 0.2em;
   line-height: 2;
+  position: relative;
 }
 
 #main__title span:hover {

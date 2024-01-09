@@ -7,13 +7,14 @@ const mainTitleAnimation = {
       const fonts = [
         'VT323',
         'Lisu Bosa', 
-        'Lugrasimo',
+        // 'Lugrasimo',
         'Rowdies',
         'Rye',
         'Grenze Gotisch',
-        'UnifrakturCook',
+        '"UnifrakturCook"',
         'Old London',
         'Cutive Mono',
+        'ARB 85 Poster Script JAN-39',
       ];
       const mainTitleAnimationDuration = 4300; // 4300ms works well
 
@@ -60,7 +61,16 @@ function applyFontSwapAnimation(element, fonts, defaultFont, duration = 2000, in
 
       element.innerHTML = "";
       charElements.forEach((charElement, index) => {
-        // charElement.style.fontFamily = defaultFont;
+        charElement.style.fontFamily = defaultFont;
+        console.log(index);
+        if (index === 0) { charElement.style.fontFamily = 'Old London'; charElement.style.left = '0.2em' }
+        else if (index === 1) { charElement.style.fontFamily = 'Nova Flat'; charElement.style.fontSize = '0.9em' }
+        else if (index === 2) { charElement.style.fontFamily = 'UnifrakturCook'; charElement.style.right = '0.1em' }
+        else if (index === 3) { charElement.style.fontFamily = '"ARB 85 Poster Script JAN-39"'; charElement.style.fontSize = '0.9em'; charElement.style.right = '0.1em' }
+        else if (index === 4) { charElement.style.fontFamily = 'US Angel'; charElement.style.left = '0.2em' }
+        else if (index === 5) { charElement.style.fontFamily = 'Cloister Black' }
+        else if (index === 6) { charElement.style.fontFamily = ''; charElement.style.right = '0.2em' }
+
         // if (index > 0) charElement.style.textTransform = "lowercase";
         element.appendChild(charElement);
         element.style.transition = "all 1.2s ease";
