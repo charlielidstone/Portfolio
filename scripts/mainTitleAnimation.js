@@ -1,4 +1,52 @@
-// remove this comment
+const c = {
+  defaultFont: "Old London",
+  defaultFontSize: "1em",
+  defaultPositionTop: "0em",
+  defaultPositionLeft: "0.2em",
+}
+
+const h = {
+  defaultFont: "Nova Flat",
+  defaultFontSize: "0.9em",
+  defaultPositionTop: "0em",
+  defaultPositionLeft: "0em",
+}
+
+const a = {
+  defaultFont: "UnifrakturCook",
+  defaultFontSize: "1em",
+  defaultPositionTop: "0em",
+  defaultPositionLeft: "-0.1em",
+}
+
+const r = {
+  defaultFont: '"ARB 85 Poster Script JAN-39"',
+  defaultFontSize: "0.9em",
+  defaultPositionTop: "0em",
+  defaultPositionLeft: "-0.1em",
+}
+
+const l = {
+  defaultFont: "US Angel",
+  defaultFontSize: "1em",
+  defaultPositionTop: "0em",
+  defaultPositionLeft: "0.2em",
+}
+
+const i = {
+  defaultFont: "Grenze Gotisch",
+  defaultFontSize: "1.1em",
+  defaultPositionTop: "-0.06em",
+  defaultPositionLeft: "0.1em",
+}
+
+const e = {
+  defaultFont: "Patua One",
+  defaultFontSize: "1em",
+  defaultPositionTop: "0em",
+  defaultPositionLeft: "-0.2em",
+}
+
 const mainTitleAnimation = {
   run: function() {
     const mainTitle = document.getElementById("main__title");
@@ -9,7 +57,7 @@ const mainTitleAnimation = {
         'Lisu Bosa', 
         // 'Lugrasimo',
         'Rowdies',
-        'Rye',
+        // 'Rye',
         'Grenze Gotisch',
         '"UnifrakturCook"',
         'Old London',
@@ -65,11 +113,11 @@ function applyFontSwapAnimation(element, fonts, defaultFont, duration = 2000, in
         console.log(index);
         if (index === 0) { charElement.style.fontFamily = 'Old London'; charElement.style.left = '0.2em' }
         else if (index === 1) { charElement.style.fontFamily = 'Nova Flat'; charElement.style.fontSize = '0.9em' }
-        else if (index === 2) { charElement.style.fontFamily = 'UnifrakturCook'; charElement.style.right = '0.1em' }
-        else if (index === 3) { charElement.style.fontFamily = '"ARB 85 Poster Script JAN-39"'; charElement.style.fontSize = '0.9em'; charElement.style.right = '0.1em' }
+        else if (index === 2) { charElement.style.fontFamily = 'UnifrakturCook'; charElement.style.left = '-0.1em' }
+        else if (index === 3) { charElement.style.fontFamily = '"ARB 85 Poster Script JAN-39"'; charElement.style.fontSize = '0.9em'; charElement.style.left = '-0.1em' }
         else if (index === 4) { charElement.style.fontFamily = 'US Angel'; charElement.style.left = '0.2em' }
-        else if (index === 5) { charElement.style.fontFamily = 'Cloister Black' }
-        else if (index === 6) { charElement.style.fontFamily = ''; charElement.style.right = '0.2em' }
+        else if (index === 5) { charElement.style.fontFamily = 'Grenze Gotisch'; charElement.style.fontSize = '1.1em'; charElement.style.left = '0.1em'; charElement.style.top = '-0.06em' }
+        else if (index === 6) { charElement.style.fontFamily = 'Patua One'; charElement.style.left = '-0.2em' }
 
         // if (index > 0) charElement.style.textTransform = "lowercase";
         element.appendChild(charElement);
