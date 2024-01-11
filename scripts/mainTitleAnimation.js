@@ -143,7 +143,14 @@ function applyFontSwapAnimation(element, fonts, defaultFont, duration = 2000, in
         });
   
         charElement.addEventListener("mouseout", () => {
-          charElement.style.fontFamily = defaultFont;
+          if (charElement.innerHTML == "C") charElement.style.fontFamily = c.defaultFont;
+          else if (charElement.innerHTML == "H") charElement.style.fontFamily = h.defaultFont;
+          else if (charElement.innerHTML == "A") charElement.style.fontFamily = a.defaultFont;
+          else if (charElement.innerHTML == "R") charElement.style.fontFamily = r.defaultFont;
+          else if (charElement.innerHTML == "L") charElement.style.fontFamily = l.defaultFont;
+          else if (charElement.innerHTML == "I") charElement.style.fontFamily = i.defaultFont;
+          else if (charElement.innerHTML == "E") charElement.style.fontFamily = e.defaultFont;
+          else charElement.style.fontFamily = defaultFont;
           clearInterval(singleCharToClear);
         });
       });
