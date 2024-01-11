@@ -62,7 +62,7 @@ const mainTitleAnimation = {
         '"UnifrakturCook"',
         'Old London',
         'Cutive Mono',
-        '"ARB 85 Poster Script JAN-39"',
+        // '"ARB 85 Poster Script JAN-39"',
       ];
       const mainTitleAnimationDuration = 4300; // 4300ms works well
 
@@ -119,7 +119,7 @@ function applyFontSwapAnimation(element, fonts, defaultFont, duration = 2000, in
         else if (index === 5) { charElement.style.fontFamily = 'Grenze Gotisch'; charElement.style.fontSize = '1.1em'; charElement.style.left = '0.1em'; charElement.style.top = '-0.06em' }
         else if (index === 6) { charElement.style.fontFamily = 'Patua One'; charElement.style.left = '-0.2em' }
 
-        // if (index > 0) charElement.style.textTransform = "lowercase";
+        // charElement.style.textTransform = "lowercase";
         element.appendChild(charElement);
         element.style.transition = "all 1.2s ease";
         // element.style.opacity = "0";
