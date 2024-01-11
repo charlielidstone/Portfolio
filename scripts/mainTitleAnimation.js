@@ -62,7 +62,7 @@ const mainTitleAnimation = {
         '"UnifrakturCook"',
         'Old London',
         'Cutive Mono',
-        'ARB 85 Poster Script JAN-39',
+        '"ARB 85 Poster Script JAN-39"',
       ];
       const mainTitleAnimationDuration = 4300; // 4300ms works well
 
