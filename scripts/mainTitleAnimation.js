@@ -109,8 +109,7 @@ function applyFontSwapAnimation(element, fonts, defaultFont, duration = 2000, in
 
       element.innerHTML = "";
       charElements.forEach((charElement, index) => {
-        charElement.style.fontFamily = defaultFont;
-        if (index === 0) { charElement.style.fontFamily = 'Old London'; charElement.style.left = '0.2em' }
+        charElement.style.fontFamily = defaultFont;        if (index === 0) { charElement.style.fontFamily = 'Old London'; charElement.style.left = '0.2em' }
         else if (index === 1) { charElement.style.fontFamily = 'Nova Flat'; charElement.style.fontSize = '0.9em' }
         else if (index === 2) { charElement.style.fontFamily = 'UnifrakturCook'; charElement.style.left = '-0.1em' }
         else if (index === 3) { charElement.style.fontFamily = '"ARB 85 Poster Script JAN-39"'; charElement.style.fontSize = '0.9em'; charElement.style.left = '-0.1em' }
