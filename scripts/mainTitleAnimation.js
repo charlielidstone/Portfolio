@@ -53,7 +53,7 @@ const mainTitleAnimation = {
 
     if (mainTitle !== null) {
       const fonts = [
-        'VT323',
+        // 'VT323',
         'Lisu Bosa', 
         // 'Lugrasimo',
         'Rowdies',
@@ -61,7 +61,7 @@ const mainTitleAnimation = {
         'Grenze Gotisch',
         '"UnifrakturCook"',
         'Old London',
-        'Cutive Mono',
+        // 'Cutive Mono',
         // '"ARB 85 Poster Script JAN-39"',
       ];
       const mainTitleAnimationDuration = 4300; // 4300ms works well
