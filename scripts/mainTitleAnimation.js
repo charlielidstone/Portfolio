@@ -50,7 +50,7 @@ const e = {
 const mainTitleAnimation = {
   run: function() {
     const mainTitle = document.getElementById("main__title");
- 
+
     if (mainTitle !== null) {
       const fonts = [
         // 'VT323',
