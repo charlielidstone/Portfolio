@@ -51,6 +51,7 @@
   color: var(--primary-text-colour);
 
   scroll-behavior: smooth;
+  font-display: swap;
 
 }
 
