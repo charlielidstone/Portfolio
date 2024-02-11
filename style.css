@@ -68,7 +68,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 canvas {
@@ -104,9 +103,6 @@ section, .section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.section {
   min-height: 100vh;
 }
 
@@ -181,6 +177,7 @@ header {
   letter-spacing: 0.5em;
   font-family: var(--primary-font);
   display: none;
+  position: absolute;
 }
 
 #main__title span {

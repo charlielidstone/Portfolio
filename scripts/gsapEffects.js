@@ -1,19 +1,19 @@
 const gsapEffects = {
   setup: function() {
     gsap.to("#main__title", {
-      filter: "blur(7px)",
-      scale: 0.9,
-      duration: 1,
-      ease: "power2.out",
+      scale: 2.8,
+      color: 'black',
+      top: "-200px",
       scrollTrigger: {
         trigger: "header",
-        start: "bottom bottom",
+        start: "center center",
         end: "bottom top",
         scrub: 1,
+        pin: true,
         toggleActions: "restart pause resume pause"
       },
     });
-
+    
     // const sectionH1s = document.querySelectorAll('section h1');
     // const sections = document.querySelectorAll('section');
     // sectionH1s.forEach((sectionH1, index) => {

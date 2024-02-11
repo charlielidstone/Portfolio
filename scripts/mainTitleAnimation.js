@@ -136,7 +136,7 @@ function applyFontSwapAnimation(element, fonts, defaultFont, duration = 2000, in
 
         // charElement.style.textTransform = "lowercase";
         element.appendChild(charElement);
-        element.style.transition = "all 1.2s ease";
+        // element.style.transition = "all 1.2s ease";
         // element.style.opacity = "0";
         element.style.scale = "1.1";
 
