@@ -97,7 +97,7 @@ const mainTitleAnimation = {
         ease: "linear",
       });
 
-      applyFontSwapAnimation(mainTitle, fonts, "Lisu Bosa", mainTitleAnimationDuration, 300);
+      applyFontSwapAnimation(mainTitle, fonts, "Lisu Bosa", mainTitleAnimationDuration, 351);
     } else {
       console.error("#main__title not found");
     }
