@@ -39,7 +39,8 @@ const MainLogo = {
     defaultFont: '"ARB85"',
     defaultFontSize: "0.9em",
     defaultPositionTop: "0em",
-    defaultPositionLeft: "-0.1em",
+    defaultPositionLeft: "-0.2em",
+    margin: "0.1em",
   },
   l: {
     defaultFont: "US Angel",
@@ -52,6 +53,7 @@ const MainLogo = {
     defaultFontSize: "1.1em",
     defaultPositionTop: "-0.06em",
     defaultPositionLeft: "0.1em",
+    margin: "0.1em",
   },
   e: {
     defaultFont: "Patua One",
@@ -123,13 +125,14 @@ function applyFontSwapAnimation(element, fonts, defaultFont, duration = 2000, in
 
       element.innerHTML = "";
       charElements.forEach((charElement, index) => {
-        charElement.style.fontFamily = defaultFont;        if (index === 0) { charElement.style.fontFamily = 'Old London'; charElement.style.left = '0.2em' }
-        else if (index === 1) { charElement.style.fontFamily = 'Nova Flat'; charElement.style.fontSize = '0.9em' }
-        else if (index === 2) { charElement.style.fontFamily = 'UnifrakturCook'; charElement.style.left = '-0.1em' }
-        else if (index === 3) { charElement.style.fontFamily = '"ARB85"'; charElement.style.fontSize = '0.9em'; charElement.style.left = '-0.1em' }
-        else if (index === 4) { charElement.style.fontFamily = 'US Angel'; charElement.style.left = '0.2em' }
-        else if (index === 5) { charElement.style.fontFamily = 'Grenze Gotisch'; charElement.style.fontSize = '1.1em'; charElement.style.left = '0.1em'; charElement.style.top = '-0.06em' }
-        else if (index === 6) { charElement.style.fontFamily = 'Patua One'; charElement.style.left = '-0.2em' }
+        charElement.style.fontFamily = defaultFont;        if (index === 0) { charElement.style.fontFamily = MainLogo.c.defaultFont; charElement.style.left = MainLogo.c.defaultPositionLeft; charElement.style.fontSize = MainLogo.c.defaultFontSize; charElement.style.top = MainLogo.c.defaultPositionTop; }
+        else if (index === 1) { charElement.style.fontFamily = MainLogo.h.defaultFont; charElement.style.left = MainLogo.h.defaultPositionLeft; charElement.style.fontSize = MainLogo.h.defaultFontSize; charElement.style.top = MainLogo.h.defaultPositionTop; }
+        else if (index === 2) { charElement.style.fontFamily = MainLogo.a.defaultFont; charElement.style.left = MainLogo.a.defaultPositionLeft; charElement.style.fontSize = MainLogo.a.defaultFontSize; charElement.style.top = MainLogo.a.defaultPositionTop; }
+        else if (index === 3) { charElement.style.fontFamily = MainLogo.r.defaultFont; charElement.style.left = MainLogo.r.defaultPositionLeft; charElement.style.fontSize = MainLogo.r.defaultFontSize; charElement.style.top = MainLogo.r.defaultPositionTop; charElement.style.marginLeft = MainLogo.r.margin; charElement.style.marginRight = MainLogo.r.margin;}
+        else if (index === 4) { charElement.style.fontFamily = MainLogo.l.defaultFont; charElement.style.left = MainLogo.l.defaultPositionLeft; charElement.style.fontSize = MainLogo.l.defaultFontSize; charElement.style.top = MainLogo.l.defaultPositionTop; }
+        else if (index === 5) { charElement.style.fontFamily = MainLogo.i.defaultFont; charElement.style.left = MainLogo.i.defaultPositionLeft; charElement.style.fontSize = MainLogo.i.defaultFontSize; charElement.style.top = MainLogo.i.defaultPositionTop; charElement.style.marginLeft = MainLogo.i.margin; charElement.style.marginRight = MainLogo.i.margin;}
+        else if (index === 6) { charElement.style.fontFamily = MainLogo.e.defaultFont; charElement.style.left = MainLogo.e.defaultPositionLeft; charElement.style.fontSize = MainLogo.e.defaultFontSize; charElement.style.top = MainLogo.e.defaultPositionTop; }
+        else charElement.style.fontFamily = defaultFont;
 
         // charElement.style.textTransform = "lowercase";
         element.appendChild(charElement);
