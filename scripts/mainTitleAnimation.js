@@ -3,14 +3,12 @@ const usAngelFont = new FontFace('US Angel', 'url(public/fonts/usangel/usangel.t
 const arb85Font = new FontFace('ARB85', 'url(public/fonts/arb85-2/arb85.ttf)');
 const cloisterBlackFont = new FontFace('Cloister Black', 'url(public/fonts/cloister-black/CloisterBlack.ttf)');
 
-// Load all the fonts
 Promise.all([
   oldLondonFont.load(),
   usAngelFont.load(),
   arb85Font.load(),
   cloisterBlackFont.load()
 ]).then((loadedFonts) => {
-  // Add the loaded fonts to the document
   loadedFonts.forEach((font) => {
     document.fonts.add(font);
   });
@@ -111,12 +109,17 @@ function applyFontSwapAnimation(element, fonts, defaultFont, duration = 2000, in
   const charElements = [];
 
   chars.forEach((char, index) => {
-    const charElement = document.createElement("span");
+    var charElementContainer = document.createElement("div")
+    charElementContainer.classList.add("main__title-char-container")
+
+    var charElement = document.createElement("span");
     charElement.classList.add("main__title-char");
     charElement.style.display = "inline-block";
     charElement.style.width = "0.8em";
     charElement.innerText = char;
-    charElements.push(charElement);
+
+    charElementContainer.appendChild(charElement)
+    charElements.push(charElementContainer);
   });
 
   const toClear = setInterval(() => {
@@ -125,7 +128,8 @@ function applyFontSwapAnimation(element, fonts, defaultFont, duration = 2000, in
 
       element.innerHTML = "";
       charElements.forEach((charElement, index) => {
-        charElement.style.fontFamily = defaultFont;        if (index === 0) { charElement.style.fontFamily = MainLogo.c.defaultFont; charElement.style.left = MainLogo.c.defaultPositionLeft; charElement.style.fontSize = MainLogo.c.defaultFontSize; charElement.style.top = MainLogo.c.defaultPositionTop; }
+        charElement.style.fontFamily = defaultFont;        
+             if (index === 0) { charElement.style.fontFamily = MainLogo.c.defaultFont; charElement.style.left = MainLogo.c.defaultPositionLeft; charElement.style.fontSize = MainLogo.c.defaultFontSize; charElement.style.top = MainLogo.c.defaultPositionTop; }
         else if (index === 1) { charElement.style.fontFamily = MainLogo.h.defaultFont; charElement.style.left = MainLogo.h.defaultPositionLeft; charElement.style.fontSize = MainLogo.h.defaultFontSize; charElement.style.top = MainLogo.h.defaultPositionTop; }
         else if (index === 2) { charElement.style.fontFamily = MainLogo.a.defaultFont; charElement.style.left = MainLogo.a.defaultPositionLeft; charElement.style.fontSize = MainLogo.a.defaultFontSize; charElement.style.top = MainLogo.a.defaultPositionTop; }
         else if (index === 3) { charElement.style.fontFamily = MainLogo.r.defaultFont; charElement.style.left = MainLogo.r.defaultPositionLeft; charElement.style.fontSize = MainLogo.r.defaultFontSize; charElement.style.top = MainLogo.r.defaultPositionTop; charElement.style.marginLeft = MainLogo.r.margin; charElement.style.marginRight = MainLogo.r.margin;}
