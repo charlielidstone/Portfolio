@@ -189,4 +189,5 @@ function applyFontSwapAnimation(element, fonts, defaultFont, duration = 2000, in
   }, interval);
 }
 
+
 export default mainTitleAnimation;
