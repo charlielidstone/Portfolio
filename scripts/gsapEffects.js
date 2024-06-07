@@ -56,7 +56,6 @@ const gsapEffects = {
 
     // gsap.to(helloWorld, {
     //   scale: 0.8,
-
     //   scrollTrigger: {
     //     trigger: worksSection,
     //     start: "top bottom",
