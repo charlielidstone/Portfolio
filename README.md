@@ -1,4 +1,4 @@
-You can use *Browsersync* to run this project on a local server.
+You can use **Browsersync** to run this project on a local server.
 
 Installation:
 `npm install -g browser-sync`
