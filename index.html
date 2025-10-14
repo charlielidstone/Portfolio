@@ -18,6 +18,7 @@
         <img id="profile-img" src="/public/images/grad_photo_2025.jpg" />
       </div>
       <h1>Charlie Lidstone</h1>
+      <img src="/public/images/blurred-circle.svg" id="blurred-circle" />
     </div>
 
     <div id="box"></div>
@@ -29,7 +30,7 @@
       viewBox="0 0 220 220"
       xmlns="http://www.w3.org/2000/svg">
       <filter id="displacementFilter">
-        <feImage href="/public/images/displacement-map.svg" result="map" preserveAspectRatio="none" />
+        <feImage href="/public/images/displacement-maps/displacement-map.svg" result="map" preserveAspectRatio="none" />
         <!-- <feTurbulence
           type="turbulence"
           baseFrequency="0.05"
@@ -40,7 +41,7 @@
           in="SourceGraphic"
           scale="200"
           xChannelSelector="G"
-          yChannelSelector="R" />
+          yChannelSelector="B" />
         </filter>
         <!-- <rect width="100%" height="100%" filter="url(#displacementFilter)" /> -->
         <!-- <circle cx="100" cy="100" r="100" filter="url(#displacementFilter)" /> -->

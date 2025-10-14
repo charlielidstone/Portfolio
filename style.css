@@ -103,10 +103,16 @@ h1 {
   color: #ff0000;
 }
 
+#blurred-circle {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
 #box {
   width: 300px;
   height: 300px;
-  background: repeating-linear-gradient(90deg, #00000000, #00000022 6.25%);
+  /* background: repeating-linear-gradient(90deg, #00000000, #00000022 6.25%); */
   position: absolute;
   top: 0;
   left: 0;
