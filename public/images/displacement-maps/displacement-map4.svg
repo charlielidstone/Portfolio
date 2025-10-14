@@ -8,8 +8,8 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
-   sodipodi:docname="displacement-map.svg"
-   inkscape:export-filename="displacement-maps\displacement-map.png"
+   sodipodi:docname="displacement-map4.svg"
+   inkscape:export-filename="displacement-map.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -333,7 +333,7 @@
        gradientUnits="userSpaceOnUse"
        x="0"
        y="0"
-       gradientTransform="translate(14.882813,-30.757812)">
+       gradientTransform="translate(13.890626)">
       <meshrow
          id="meshrow83-6-8-1">
         <meshpatch
@@ -968,9 +968,8 @@
        id="rect1-2-8-8"
        width="1.984375"
        height="31.75"
-       x="14.882812"
-       y="-30.757812"
-       transform="rotate(90)" />
+       x="13.890625"
+       y="0" />
     <rect
        style="mix-blend-mode:screen;fill:url(#meshgradient83-03);fill-opacity:1;stroke-width:0.0534308"
        id="rect1-5"

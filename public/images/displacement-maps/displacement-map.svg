@@ -26,9 +26,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="2.6492926"
-     inkscape:cx="-34.348792"
-     inkscape:cy="92.666247"
+     inkscape:zoom="5.2985852"
+     inkscape:cx="55.580875"
+     inkscape:cy="66.904653"
      inkscape:window-width="1920"
      inkscape:window-height="1094"
      inkscape:window-x="-11"
@@ -333,7 +333,7 @@
        gradientUnits="userSpaceOnUse"
        x="0"
        y="0"
-       gradientTransform="translate(13.890626)">
+       gradientTransform="translate(14.882813,-31.75)">
       <meshrow
          id="meshrow83-6-8-1">
         <meshpatch
@@ -968,8 +968,9 @@
        id="rect1-2-8-8"
        width="1.984375"
        height="31.75"
-       x="13.890625"
-       y="0" />
+       x="14.882812"
+       y="-31.75"
+       transform="rotate(90)" />
     <rect
        style="mix-blend-mode:screen;fill:url(#meshgradient83-03);fill-opacity:1;stroke-width:0.0534308"
        id="rect1-5"
