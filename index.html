@@ -30,7 +30,7 @@
       viewBox="0 0 220 220"
       xmlns="http://www.w3.org/2000/svg">
       <filter id="displacementFilter">
-        <feImage href="/public/images/displacement-maps/displacement-map.png" result="map" preserveAspectRatio="none" />
+        <feImage x="0" y="0" width="300" height="300" href="/public/images/displacement-maps/displacement-map.png" result="map" preserveAspectRatio="none" />
         <!-- <feTurbulence
           type="turbulence"
           baseFrequency="0.05"
@@ -39,7 +39,7 @@
         </feTurbulence> -->
         <feDisplacementMap
           in="SourceGraphic"
-          scale="200"
+          scale="50"
           xChannelSelector="G"
           yChannelSelector="B" />
         </filter>
