@@ -27,31 +27,7 @@
 }
 
 :root {
-  color-scheme: dark;
-  background-color: #000000;
-  font-synthesis: none;
-
-  --primary-text-colour: rgba(255, 255, 255, 0.87);
   
-  --primary-body-font: 'Courier Prime', monospace;
-  --primary-heading-font: 'REM', monospace;
-  --primary-display-font: 'Handjet', cursive;
-  --primary-handwriting-font: 'Caveat', cursive;
-  
-  --secondary-display-font: 'Croissant One', cursive;
-  --other-display-font: 'VT323', monospace;
-  
-  --primary-font: var(--primary-heading-font);
-
-  --primary-text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5);
-  
-  font-family: var(--primary-font);
-  font-weight: 100;
-
-  color: var(--primary-text-colour);
-
-  scroll-behavior: smooth;
-  font-display: swap;
 }
 
 * {
@@ -59,210 +35,120 @@
   padding: 0;
 }
 
-* {
-  z-index: 1;
-}
-
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-}
-
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
 }
 
 main {
+  height: 400vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.main-content {
+  position: fixed;
   width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
   width: 100%;
-  z-index: 99;
-  position: absolute;
+  height: 100%;
+  z-index: -1;
+  display: block;
+  background: center no-repeat url('/public/images/Great_Wave_off_Kanagawa2.jpg');
+  background-size: cover;
+  width: 1200px;
+  height: 800px;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(0px);
+}
+
+.img-window {
+  position: fixed;
+  border-radius: 50px;
+  width: 201px;
+  overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  place-items: center;
+  background: #000000aa;
+  backdrop-filter: invert(0.5);
+  aspect-ratio: 2 / 3;
+  z-index: 1;
+}
+
+#profile-img {
+  height: 300px;
+  border-radius: 5px;
 }
 
 h1 {
-  font-size: 7em;
-  font-family: var(--primary-font);
-  text-shadow: var(--primary-text-shadow);
-  width: fit-content;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  /* make the backdrop-filter fade out */
-  padding: 0.2em 0.5em;
-  text-align: center;
-}
-
-section, .section {
-  grid-column: 1 / 13;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
-header {
-  height: 100vh;
-  grid-column: 1 / span 12;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#primary-heading {
-  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 5em;
-  animation: fade-up 0.4s ease;
+  margin: 0.4em;
+  position: fixed;
+  bottom: 18vh;
+  color: #ff0000;
 }
 
-#main__background {
+#box {
+  width: 300px;
+  height: 300px;
+  background: repeating-linear-gradient(90deg, #00000000, #00000022 6.25%);
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  font-family: monospace;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  color: #151515;
-  line-height: 0.8em;
-  font-size: 3em;
+  cursor: grab;
+  border: 0px solid #ffffff;
+  --backdrop-filter-basics: blur(0px) sepia(0) invert(0);
+  border-radius: 2px;
 }
 
-.thing {
-  content: '';
-  position: fixed;
-  width: 140vw;
-  aspect-ratio: 1 / 1;
-  /* background: url('public/images/blue-purple-grainy-gradient.png') no-repeat center center; */
-  background-size: cover;
-  box-shadow: inset 0px 0px 100vw 100vw black;
-  z-index: -1;
-  border-radius: 50%;
-  animation: box-shadow 1.5s ease-out 1;
-  animation-delay: 5s;
-  animation-fill-mode: forwards;
-}
-
-.thing::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  border-radius: 5px;
-  box-shadow: inset 0px 0px 100vw 100vw black;
-}
-
-@keyframes box-shadow {
-  0% {
-    box-shadow: inset 0px 0px 70vw 70vw black;
-  }
-  100% {
-    box-shadow: inset 0px 0px 70vw 0vw black;
-  }
-}
-
-#main__title {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  width: fit-content;
-  height: fit-content;
-  font-size: 6em;
-  letter-spacing: 0.5em;
-  font-family: var(--primary-font);
-  display: none;
-  position: absolute;
-}
-
-#main__title span {
-  text-align: center;
-  cursor: default;
-  user-select: none;
-  text-shadow: var(--primary-text-shadow);
-  margin: 0 0.2em;
-  line-height: 2;
-  position: relative;
-}
-
-#main__title span:hover {
-  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
-}
-
-.font-name {
-  font-size: 4em;
-}
-
-#lorem {
-  /* centred, with 2 fr on each side */
-  grid-column: 3 / span 8;
-}
-
-#lorem p {
-  font-size: 7em;
-  text-align: center;
-  line-height: 1.5em;
-  font-family: var(--primary-heading-font);
-  margin: 0.5em 0;
-  -webkit-text-stroke: 0.5px rgb(255, 255, 255);
-}
-
-@media screen and (max-width: 700px) {
-    
-  #main__title {
-    font-size: 2em;
-  }
-
-}
-
-#hello-world {
-  font-size: 9em;
-  text-shadow: 0px 0px 1000px;
-}
-
-
-#works__section {
-  backdrop-filter: invert(1);
-}
-
-#works__section--actual {
-}
-
-#works__section--actual .project__cover {
-  background: hsl(0, 0%, 90%);
+#box::after {
+  border-radius: 2px;
+  content: "";
+  display: block;
   width: 300px;
   height: 300px;
-  border-radius: 43px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.16);
-  color: #00000015;
-  font-size: 17em;
-  font-family: monospace;
-  font-weight: 600;
-  margin: 0.5em;
+  background: linear-gradient(90deg, #00000033, #00000000, #00000033);
 }
 
-@keyframes fade-up {
-  0% {
-    opacity: 0;
-    transform: translateY(30%);
+/* firefox doesn't seem to support the displacement filter stuff sadly, so this stuff is just compatibility-proofing */
+@supports (backdrop-filter: url(#displacementFilter)) {
+  #box {
+    backdrop-filter:  url(#displacementFilter) var(--backdrop-filter-basics);
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
+}
+
+@supports not (backdrop-filter: url(#displacementFilter)) {
+  #box {
+    backdrop-filter: var(--backdrop-filter-basics);
   }
+}
+
+@-moz-document url-prefix() {
+  #box {
+    backdrop-filter: blur(5px) var(--backdrop-filter-basics) !important;
+  }
+}
+
+
+#box:active {
+  cursor: grabbing;
+}
+
+header {
+  padding: 20px;
 }

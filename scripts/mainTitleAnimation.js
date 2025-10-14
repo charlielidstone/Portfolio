@@ -1,3 +1,8 @@
+/**
+ * this script is for the Loki effect
+ */
+
+
 const oldLondonFont = new FontFace('Old London', 'url(public/fonts/old_london/OldLondon.ttf)');
 const usAngelFont = new FontFace('US Angel', 'url(public/fonts/usangel/usangel.ttf)');
 const arb85Font = new FontFace('ARB85', 'url(public/fonts/arb85-2/arb85.ttf)');

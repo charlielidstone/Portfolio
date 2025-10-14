@@ -1,18 +1,52 @@
 const gsapEffects = {
   setup: function() {
-    gsap.to("#main__title", {
-      scale: 2.8,
-      color: 'black',
-      top: "-200px",
+    let tl = gsap.timeline({
       scrollTrigger: {
         trigger: "header",
-        start: "center center",
-        end: "bottom top",
-        scrub: 1,
+        start: "center bottom",
+        end: "center top",
+        scrub: 0.5,
         pin: true,
-        toggleActions: "restart pause resume pause"
-      },
+        toggleActions: "restart pause resume pause",
+        markers: true,
+      }
     });
+
+    // Border radius animates first, quickly
+    tl.to("#img-window", {
+      borderRadius: 0,
+      duration: 2, // short and finishes early
+      ease: "power2.out"
+    });
+
+    // Width and height animate over a longer time
+    tl.to("#img-window", {
+      width: "100vw",
+      height: "100vh",
+      duration: 2,
+      ease: "power2.inOut"
+    }, "<"); // "<" means start at the same time as previous, but longer duration
+
+    tl.to("#profile-img", {
+      scale: 1.1,
+      duration: 2,
+      ease: "power2.inOut"
+    }, "<")
+    
+    
+    // gsap.to("#main__title", {
+    //   scale: 2.8,
+    //   color: 'black',
+    //   top: "-200px",
+    //   scrollTrigger: {
+    //     trigger: "header",
+    //     start: "center center",
+    //     end: "bottom top",
+    //     scrub: 1,
+    //     pin: true,
+    //     toggleActions: "restart pause resume pause"
+    //   },
+    // });
     
     // const sectionH1s = document.querySelectorAll('section h1');
     // const sections = document.querySelectorAll('section');
