@@ -14,7 +14,10 @@
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+<<<<<<< Updated upstream
    xmlns:xlink="http://www.w3.org/1999/xlink"
+=======
+>>>>>>> Stashed changes
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
@@ -27,9 +30,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
+<<<<<<< Updated upstream
      inkscape:zoom="5.7513468"
      inkscape:cx="55.89995"
      inkscape:cy="55.726078"
+=======
+     inkscape:zoom="2.8756734"
+     inkscape:cx="94.760413"
+     inkscape:cy="69.375055"
+>>>>>>> Stashed changes
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -39,6 +48,7 @@
   <defs
      id="defs1">
     <linearGradient
+<<<<<<< Updated upstream
        id="linearGradient256"
        inkscape:collect="always">
       <stop
@@ -435,6 +445,8 @@
          id="stop138" />
     </linearGradient>
     <linearGradient
+=======
+>>>>>>> Stashed changes
        id="swatch85"
        inkscape:swatch="solid">
       <stop
@@ -442,6 +454,7 @@
          offset="0"
          id="stop85" />
     </linearGradient>
+<<<<<<< Updated upstream
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient137"
@@ -740,19 +753,26 @@
        x2="31.75"
        y2="15.875"
        gradientUnits="userSpaceOnUse" />
+=======
+>>>>>>> Stashed changes
   </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient197);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#80ee80;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7"
        width="1.9843749"
        height="31.75"
        x="1.9843751"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient138);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect94-5-0-5-7-9"
        width="1.9843749"
@@ -762,216 +782,353 @@
        transform="scale(-1)" />
     <rect
        style="fill:url(#linearGradient199);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#80ff80;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect94-5-0-5-7-9"
+       width="1.9843749"
+       height="31.75"
+       x="0"
+       y="0" />
+    <rect
+       style="fill:#80cd80;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7"
        width="1.9843749"
        height="31.75"
        x="3.9687507"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient201);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#80dd80;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9"
        width="1.9843749"
        height="31.75"
        x="3.9687507"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient203);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#80cc80;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6"
        width="1.9843749"
        height="31.75"
        x="5.953124"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient205);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#80bb80;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0"
        width="1.9843749"
        height="31.75"
        x="7.9374981"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient207);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#80aa80;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9"
        width="1.9843749"
        height="31.75"
        x="9.9218721"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient209);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#809980;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5"
        width="1.9843749"
        height="31.75"
        x="11.906246"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient211);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#808880;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6"
        width="1.9843749"
        height="31.75"
        x="13.890616"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient213);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#807780;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-8"
        width="1.9843749"
        height="31.75"
        x="15.874989"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient215);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#806680;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-8-4"
        width="1.9843749"
        height="31.75"
        x="17.859365"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient217);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#805580;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-8-4-0"
        width="1.9843749"
        height="31.75"
        x="19.843739"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient219);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#804480;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-8-4-3"
        width="1.9843749"
        height="31.75"
        x="21.828114"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient221);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#803380;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-8-4-3-0"
        width="1.9843749"
        height="31.75"
        x="23.812489"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient223);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#802280;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-8-4-3-0-6"
        width="1.9843749"
        height="31.75"
        x="25.796867"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient225);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#801180;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-8-4-3-0-6-9"
        width="1.9843749"
        height="31.75"
        x="27.781242"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient227);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#800080;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-8-4-3-0-6-9-8"
        width="1.9843749"
        height="31.75"
        x="29.765625"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient140);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#80ee80;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-8"
        width="1.9843749"
        height="31.75"
        x="1.9843751"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient229);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#80ff80;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect94-5-0-5-7-9-2"
+       width="1.9843749"
+       height="31.75"
+       x="0"
+       y="0" />
+    <rect
+       style="fill:#80cd80;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-1"
        width="1.9843749"
        height="31.75"
        x="3.9687507"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient231);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#80dd80;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-1"
        width="1.9843749"
        height="31.75"
        x="3.9687507"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient233);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#80cc80;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-9"
        width="1.9843749"
        height="31.75"
        x="5.953124"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient235);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#80bb80;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-7"
        width="1.9843749"
        height="31.75"
        x="7.9374981"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient237);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#80aa80;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-6"
        width="1.9843749"
        height="31.75"
        x="9.9218721"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient239);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#809980;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-2"
        width="1.9843749"
        height="31.75"
        x="11.906246"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient241);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#808880;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-9"
        width="1.9843749"
        height="31.75"
        x="13.890616"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient243);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#807780;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-8-5"
        width="1.9843749"
        height="31.75"
        x="15.874989"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient245);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#806680;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-8-4-2"
        width="1.9843749"
        height="31.75"
        x="17.859365"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient247);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#805580;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-8-4-0-0"
        width="1.9843749"
        height="31.75"
        x="19.843739"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient249);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#804480;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-8-4-3-03"
        width="1.9843749"
        height="31.75"
        x="21.828114"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient251);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#803380;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-8-4-3-0-9"
        width="1.9843749"
        height="31.75"
        x="23.812489"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient253);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#802280;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-8-4-3-0-6-1"
        width="1.9843749"
        height="31.75"
        x="25.796867"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient255);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#801180;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-8-4-3-0-6-9-81"
        width="1.9843749"
        height="31.75"
        x="27.781242"
        y="0" />
     <rect
+<<<<<<< Updated upstream
        style="fill:url(#linearGradient257);fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+=======
+       style="fill:#800080;fill-opacity:1;stroke:none;stroke-width:0.156432;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+>>>>>>> Stashed changes
        id="rect94-5-0-5-7-7-9-6-0-9-5-6-8-4-3-0-6-9-8-9"
        width="1.9843749"
        height="31.75"
