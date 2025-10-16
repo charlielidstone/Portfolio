@@ -126,6 +126,7 @@ h1 {
 .cropped-section {
   background: red;
   padding: 10vh 10vw;
+  box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 0;
@@ -134,7 +135,7 @@ h1 {
   display: flex;
   align-items: start;
   justify-content: center;
-  clip-path: xywh(calc(50vw - 100px) 10vh 200px 200px round 0);
+  clip-path: inset(10vh calc(50vw - 100px) calc(190vh - 200px) calc(50vw - 100px));
 }
 
 #profile-img {
