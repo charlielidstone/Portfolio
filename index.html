@@ -12,43 +12,19 @@
 <body>
 
   <main id="main">
-    <!-- <div class="background-image"></div> -->
-    <div class="main-content">
-      <div id="img-window" class="img-window">
-        <img id="profile-img" src="/public/images/grad_photo_2025.jpg" />
+    
+    <!-- <div id="box"></div> -->
+
+    <header>
+      <!-- <div class="background-image"></div> -->
+      <div class="main-content">
+        <h1>Charlie Lidstone</h1>
       </div>
-      <h1>Charlie Lidstone</h1>
-      <img src="/public/images/blurred-circle.svg" id="blurred-circle" />
-    </div>
+    </header>
 
-    <div id="box"></div>
-
-    <svg
-      style="display: none;"
-      width="400"
-      height="400"
-      viewBox="0 0 220 220"
-      xmlns="http://www.w3.org/2000/svg">
-      <filter id="displacementFilter">
-        <feImage x="0" y="0" width="300" height="300" href="/public/images/displacement-maps/displacement-map.png" result="map" preserveAspectRatio="none" />
-        <!-- <feTurbulence
-          type="turbulence"
-          baseFrequency="0.05"
-          numOctaves="2"
-          result="turbulence" >
-        </feTurbulence> -->
-        <feDisplacementMap
-          in="SourceGraphic"
-          scale="50"
-          xChannelSelector="G"
-          yChannelSelector="B" />
-        </filter>
-        <!-- <rect width="100%" height="100%" filter="url(#displacementFilter)" /> -->
-        <!-- <circle cx="100" cy="100" r="100" filter="url(#displacementFilter)" /> -->
-        
-        <!-- <img src="/public/images/4065770.png" style="height: 337.5; width: 600px; filter:url(#displacementFilter); position:absolute; top:0; left:0;" /> -->
-      </svg>
-
+    <section class="cropped-section">
+      <img id="profile-img" src="/public/images/Great_Wave_off_Kanagawa2.jpg" />
+    </section>
 
     <!-- <section>
       <svg id="signature-container" width="648" height="198" viewBox="0 0 216 66" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,6 +32,33 @@
       </svg>        
     </section> -->
   </main>
+
+  <svg
+    style="display: none;"
+    width="400"
+    height="400"
+    viewBox="0 0 220 220"
+    xmlns="http://www.w3.org/2000/svg">
+    <filter id="displacementFilter">
+      <feImage x="0" y="0" width="100" height="300" href="/public/images/displacement-maps/displacement-map.png" result="map" preserveAspectRatio="none" />
+      <!-- <feTurbulence
+        type="turbulence"
+        baseFrequency="0.05"
+        numOctaves="2"
+        result="turbulence" >
+      </feTurbulence> -->
+      <feDisplacementMap
+        in="SourceGraphic"
+        scale="50"
+        xChannelSelector="G"
+        yChannelSelector="B" />
+      </filter>
+      <!-- <rect width="100%" height="100%" filter="url(#displacementFilter)" /> -->
+      <!-- <circle cx="100" cy="100" r="100" filter="url(#displacementFilter)" /> -->
+      
+      <!-- <img src="/public/images/4065770.png" style="height: 337.5; width: 600px; filter:url(#displacementFilter); position:absolute; top:0; left:0;" /> -->
+    </svg>
+
 
   <script type="module" src="/main.js" async></script>
   <!-- <script type="module" async>
@@ -70,7 +73,7 @@
     import gsapEffects from '/scripts/gsapEffects.js';
     gsapEffects.setup();
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
 </body>
 </html>

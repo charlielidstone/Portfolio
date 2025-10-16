@@ -40,24 +40,6 @@ html, body {
   padding: 0;
 }
 
-main {
-  height: 400vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-.main-content {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .background-image {
   position: fixed;
   left: 0;
@@ -77,58 +59,55 @@ main {
   filter: blur(0px);
 }
 
-.img-window {
-  position: fixed;
-  border-radius: 50px;
-  width: 201px;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
-  background: #000000aa;
-  backdrop-filter: invert(0.5);
-  aspect-ratio: 2 / 3;
-  z-index: 1;
-}
-
 #profile-img {
   height: 300px;
   border-radius: 5px;
+  clip-path: rect(0 1000px 1000px 0);
+}
+
+header {
+  height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  background: blue;
 }
 
 h1 {
   font-size: 5em;
   margin: 0.4em;
-  position: fixed;
-  bottom: 18vh;
   color: #ff0000;
 }
 
-#blurred-circle {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-}
-
 #box {
-  width: 300px;
-  height: 300px;
+  --width: 100px;
+  --height: 300px;
+  width: var(--width);
+  height: var(--height);
   background: repeating-linear-gradient(90deg, #00000000, #00000022 6.25%);
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   cursor: grab;
   border: 0px solid #ffffff;
   --backdrop-filter-basics: blur(0px) sepia(0) invert(0);
-  border-radius: 2px;
+  border-radius: var(--border-radius);
+  --border-radius: 50px;
 }
 
 #box::after {
-  border-radius: 2px;
+  border-radius: var(--border-radius);
   content: "";
   display: block;
-  width: 300px;
-  height: 300px;
+  width: var(--width);
+  height: var(--height);
   background: linear-gradient(90deg, #00000011, #00000000, #00000011);
+}
+
+#box:active {
+  cursor: grabbing;
 }
 
 /* firefox doesn't seem to support the displacement filter stuff sadly, so this stuff is just compatibility-proofing */
@@ -150,11 +129,15 @@ h1 {
   }
 }
 
-
-#box:active {
-  cursor: grabbing;
-}
-
-header {
-  padding: 20px;
+.cropped-section {
+  background: red;
+  padding: 10vh 10vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200vh;
+  display: grid;
+  place-items: start center;
+  clip-path: rect(10vh 80vw 80vh 20vw)
 }
