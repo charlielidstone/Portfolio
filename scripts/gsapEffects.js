@@ -26,12 +26,6 @@ const gsapEffects = {
       duration: 2,
       ease: "power2.inOut"
     }, "<"); // "<" means start at the same time as previous, but longer duration
-
-    tl.to("#profile-img", {
-      scale: 1.1,
-      duration: 2,
-      ease: "power2.inOut"
-    }, "<")
     
     
     // gsap.to("#main__title", {

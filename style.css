@@ -59,12 +59,6 @@ html, body {
   filter: blur(0px);
 }
 
-#profile-img {
-  height: 300px;
-  border-radius: 5px;
-  clip-path: rect(0 1000px 1000px 0);
-}
-
 header {
   height: 100vh;
   position: relative;
@@ -137,7 +131,14 @@ h1 {
   left: 0;
   right: 0;
   height: 200vh;
-  display: grid;
-  place-items: start center;
-  clip-path: rect(10vh 80vw 80vh 20vw)
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  clip-path: xywh(calc(50vw - 100px) 10vh 200px 200px round 0);
+}
+
+#profile-img {
+  width: 200px;
+  border-radius: 50%;
+  /* clip-path: rect(0 1000px 1000px 0); */
 }
