@@ -40,6 +40,26 @@ html, body {
   padding: 0;
 }
 
+#construction-banner {
+  background: hsla(51, 100%, 67%, 0.938);
+  border: 3px solid hsl(51, 48%, 45%);
+  width: fit-content;
+  max-width: 100vw;
+  text-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 50px;
+  font-family: Georgia;
+  color: hsl(51, 47%, 29%);
+  border-radius: 100px;
+  position: fixed;
+  top: 9px;
+  left: calc(50vw - 262px);
+  z-index: 1;
+  backdrop-filter: blur(2px);
+}
+
 .background-image {
   position: fixed;
   left: 0;
