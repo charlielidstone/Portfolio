@@ -1,3 +1,5 @@
+It'll be done soon trust 🙏
+
 You can use **Browsersync** to run this project on a local server.
 
 Installation:
