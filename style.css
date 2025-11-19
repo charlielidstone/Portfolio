@@ -95,7 +95,7 @@ h1 {
 }
 
 #box {
-  --width: 100px;
+  --width: 300px;
   --height: 300px;
   width: var(--width);
   height: var(--height);
@@ -144,7 +144,7 @@ h1 {
 }
 
 .cropped-section {
-  background: red;
+  background: purple;
   padding: 10vh 10vw;
   box-sizing: border-box;
   position: absolute;
