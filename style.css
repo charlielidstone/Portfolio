@@ -101,7 +101,7 @@ h1 {
   width: var(--width);
   height: var(--height);
   background: repeating-linear-gradient(90deg, #00000000, #00000022 6.25%);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
@@ -109,7 +109,7 @@ h1 {
   border: 0px solid #ffffff;
   --backdrop-filter-basics: blur(0px) sepia(0) invert(0);
   border-radius: var(--border-radius);
-  --border-radius: 50px;
+  --border-radius: 0px;
 }
 
 #box::after {
@@ -128,7 +128,7 @@ h1 {
 /* firefox doesn't seem to support the displacement filter stuff sadly, so this stuff is just compatibility-proofing */
 @supports (backdrop-filter: url(#displacementFilter)) {
   #box {
-    backdrop-filter:  url(#displacementFilter) var(--backdrop-filter-basics);
+    backdrop-filter:  url(#displacementFilter) var(--backdrop-filter-basics) blur(1px);
   }
 }
 
