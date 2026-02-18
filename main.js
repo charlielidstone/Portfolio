@@ -22,7 +22,7 @@ box.addEventListener("pointerup", () => {
     isDragging = false;
 });
 
-const ca = document.querySelector('.chromatic-aberration div');
+const ca = document.querySelector('.chromatic-aberration');
 
 // make box-shadow point in direction of mouse relative to center of element, between 1px and -1px
 body.addEventListener("pointermove", (e) => {
@@ -39,4 +39,26 @@ body.addEventListener("pointermove", (e) => {
     `;
 });
 
+const variableWidthText = document.querySelector('.variable-width-text');
 
+const variableWidthTextChars = variableWidthText.textContent.split("");
+
+variableWidthText.innerHTML = variableWidthTextChars.map(char => {
+    return `<span>${char}</span>`;
+}).join("");
+
+const variableWidthTextSpans = variableWidthText.querySelectorAll('span');
+
+body.addEventListener("pointermove", (e) => {
+    variableWidthTextSpans.forEach(span => {
+        const rect = span.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const offsetX = e.clientX - centerX;
+        const offsetY = e.clientY - centerY;
+        const distance = Math.sqrt(offsetX * offsetX + (offsetY * offsetY)/7);
+        // const distance = Math.abs(offsetX);
+        const weight = Math.max(100, 900 - distance * 7);
+        span.style.fontWeight = weight;
+    });
+});
