@@ -1,31 +1,31 @@
 const gsapEffects = {
   setup: function() {
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "header",
-        start: "center bottom",
-        end: "center top",
-        scrub: 0.5,
-        pin: true,
-        toggleActions: "restart pause resume pause",
-        markers: true,
-      }
-    });
+    // let tl = gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: "header",
+    //     start: "center bottom",
+    //     end: "center top",
+    //     scrub: 0.5,
+    //     pin: true,
+    //     toggleActions: "restart pause resume pause",
+    //     markers: true,
+    //   }
+    // });
 
-    // Border radius animates first, quickly
-    tl.to("#img-window", {
-      borderRadius: 0,
-      duration: 2, // short and finishes early
-      ease: "power2.out"
-    });
+    // // Border radius animates first, quickly
+    // tl.to("#img-window", {
+    //   borderRadius: 0,
+    //   duration: 2, // short and finishes early
+    //   ease: "power2.out"
+    // });
 
-    // Width and height animate over a longer time
-    tl.to("#img-window", {
-      width: "100vw",
-      height: "100vh",
-      duration: 2,
-      ease: "power2.inOut"
-    }, "<"); // "<" means start at the same time as previous, but longer duration
+    // // Width and height animate over a longer time
+    // tl.to("#img-window", {
+    //   width: "100vw",
+    //   height: "100vh",
+    //   duration: 2,
+    //   ease: "power2.inOut"
+    // }, "<"); // "<" means start at the same time as previous, but longer duration
     
     
     // gsap.to("#main__title", {
