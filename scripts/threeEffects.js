@@ -37,7 +37,7 @@ const threeEffects = (function() {
     const loader = new GLTFLoader();
     let torusCube,
         mixer;
-    loader.load('torus_cube.glb', function(gltf) {
+    loader.load('public/torus_cube.glb', function(gltf) {
         torusCube = gltf.scene;
         torusCube.position.set(0, 0, 0);
         torusCube.scale.set(1, 1, 1);

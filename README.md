@@ -1,13 +1,8 @@
 It'll be done soon trust 🙏
 
-You can use **Browsersync** to run this project on a local server.
+Get node installed, then run it with:
 
-Installation:
 ```
-npm install -g browser-sync
-```
-
-Run Server:
-```
-browser-sync start --server --files "*.html"
+npm install
+npm run dev
 ```
