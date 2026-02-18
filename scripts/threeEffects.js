@@ -78,7 +78,7 @@ const threeEffects = (function() {
 
     function addCube() {
         const geometry = new THREE.BoxGeometry(3, 3, 3);
-        const material = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
+        const material = new THREE.MeshBasicMaterial({ color: 0xFF6347, wireframe: true });
         const cube = new THREE.Mesh(geometry, material);
 
         cube.rotation.x = Math.random() * 2 * Math.PI;
