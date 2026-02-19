@@ -53,6 +53,11 @@ html, body {
   overflow-x: hidden;
 }
 
+::selection {
+  background: hsl(51, 100%, 67%);
+  color: hsl(51, 47%, 19%);
+}
+
 #bg {
   position: fixed;
   left: 0;
