@@ -6,6 +6,20 @@
 }
 
 @font-face {
+  font-family: 'JetBrains Mono';
+  src: url("public/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Serif';
+  src: url('public/fonts/dm_serif/DMSerifText-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Trajan';
   src: url('public/fonts/trajan/Trajan-Regular.ttf') format('truetype');
   font-weight: normal;
@@ -80,7 +94,7 @@ html, body {
   justify-content: center;
   align-items: center;
   padding: 10px 50px;
-  font-family: Georgia;
+  font-family:  Georgia, 'Times New Roman', Times, serif;
   color: hsl(51, 47%, 29%);
   border-radius: 100px;
   position: fixed;
@@ -144,14 +158,16 @@ header * {
   }
 }
 
-h1 {
+header h1 {
   font-size: 3em;
   margin: 0 0 0.4em 0;
+  font-family: "DM Serif", "Times New Roman", Georgia, Times, serif;
 }
 
-p {
+header p {
   margin: 1em 0;
-  font-family: "Cutive Mono", monospace;
+  font-family: "Cutive Mono", "JetBrains Mono", monospace;
+  font-size: 1.1em;
 }
 
 #box {
