@@ -1,5 +1,7 @@
 import * as THREE from "three";
 
+const EFFECT_SCALE = 1;
+
 const particles = (function() {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -46,8 +48,8 @@ const particles = (function() {
         const offsetX = mouseX - centerX;
         const offsetY = mouseY - centerY;
 
-        pivot.rotation.x = -offsetY * 0.00003;
-        pivot.rotation.y = -offsetX * 0.00003;
+        pivot.rotation.x = -offsetY * 0.00003 * EFFECT_SCALE;
+        pivot.rotation.y = -offsetX * 0.00003 * EFFECT_SCALE;
     }
 
     // on mouse move, rotate the scene based on the mouse position
