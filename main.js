@@ -1,5 +1,5 @@
-import particles from "./modules/particles";
-import initVariableWidthText from "./modules/variableWidthText";
+import particles from "./modules/particles.js";
+import initVariableWidthText from "./modules/variableWidthText.js";
 
 particles.render();
 initVariableWidthText();
