@@ -1,6 +1,13 @@
 import * as THREE from "three";
 
 const EFFECT_SCALE = 1;
+const STAR_DENSITY = 1/32000;
+
+const spreadX = 800;
+const spreadY = 400;
+const spreadZ = 300;
+
+const spreadVOL = spreadX*spreadY*spreadZ;
 
 const particles = (function() {
     const scene = new THREE.Scene();
@@ -27,16 +34,17 @@ const particles = (function() {
         const star = new THREE.Mesh(geometry, material);
         
         // const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(200));
-        
-        const x = THREE.MathUtils.randFloatSpread(400);
-        const y = THREE.MathUtils.randFloatSpread(400);
-        const z = THREE.MathUtils.randFloatSpread(300);
+
+
+        const x = THREE.MathUtils.randFloatSpread(spreadX);
+        const y = THREE.MathUtils.randFloatSpread(spreadY);
+        const z = THREE.MathUtils.randFloatSpread(spreadZ);
 
         star.position.set(x, y, z - pivotOffset);
         pivot.add(star);
     };
 
-    Array(1500).fill().forEach(addStar);
+    Array(spreadVOL*STAR_DENSITY).fill().forEach(addStar);
 
     function rotateScene(e) {
         const mouseX = e.clientX;

@@ -80,6 +80,8 @@ html, body {
   height: 100%;
   z-index: 0;
   display: block;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 #construction-banner {
