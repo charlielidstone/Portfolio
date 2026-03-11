@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-const EFFECT_SCALE = 1;
+const EFFECT_SCALE = 0.3;
 const STAR_DENSITY = 1/32000;
 
 const spreadX = 800;
@@ -19,7 +19,7 @@ const particles = (function() {
     const pivot = new THREE.Group();
     scene.add(pivot);
 
-    const pivotOffset = -200;
+    const pivotOffset = -1000;
     
     pivot.position.set(0, 0, pivotOffset);
 
