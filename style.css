@@ -345,7 +345,8 @@ section {
 
 .gradual-blur-section {
   height: 100vh;
-  background: linear-gradient(90deg, #85a8e1, #779dda, #6e95d5, #658cce, #5c85c9, #557ec2, #4f7bbe, #4a77ba, #4774b8, #4270b3);
+  /* background: linear-gradient(90deg, #85a8e1, #779dda, #6e95d5, #658cce, #5c85c9, #557ec2, #4f7bbe, #4a77ba, #4774b8, #4270b3); */
+  background: linear-gradient(90deg, #8aaff5, #749dec, #6290e5, #5686da, #467dd5, #3d75ca, #326fc2, #316bbc, #2b66b4, #2862ac);
   position: relative;
   z-index: 0;
   isolation: isolate;
@@ -365,16 +366,20 @@ section {
 }
 
 .standing-on-rock-section {
-  background-image: url("public/images/rock.png");
+  /* background-image: url("public/images/rock.jpg"); */
   background-position: center top;
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 0;
-  height: 400vh;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: start;
   position: relative;
+}
+
+.rock-background-img {
+  width: 100%;
 }
 
 .about-me-heading {
@@ -387,4 +392,10 @@ section {
   font-weight: 100;
   position: fixed;
   top: 0;
+}
+
+.next-section {
+  height: 100vh;
+  width: 100vw;
+  background: red;
 }
