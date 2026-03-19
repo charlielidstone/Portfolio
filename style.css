@@ -14,7 +14,14 @@
 
 @font-face {
   font-family: 'DM Serif';
-  src: url('public/fonts/dm_serif/DMSerifText-Regular.ttf') format('truetype');
+  src: url('public/fonts/DM_Serif/DMSerifText-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('public/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -80,8 +87,8 @@ html, body {
   height: 100%;
   z-index: 0;
   display: block;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  /* border-top: 1px solid black;
+  border-bottom: 1px solid black; */
 }
 
 #construction-banner {
@@ -134,21 +141,29 @@ html, body {
   filter: blur(0px);
 }
 
-header {
+main {
+  display: flex;
+  padding: 70px 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blue-section {
   width: 40vw;
   height: 80vh;
-  position: fixed;
-  top: 10vh;
-  left: 30vw;
   background: rgba(94, 120, 153, 0.726);
-  z-index: 1;
   backdrop-filter: blur(7px);
   padding: 20px;
   box-sizing: border-box;
+  margin: 25px 0;
 }
 
-header * {
+.blue-section * {
   color: white;
+}
+
+header {
+
 }
 
 @media screen and (max-width: 768px) {
@@ -291,13 +306,13 @@ section {
 
 .variable-width-text span {
   font-family: 'Roboto';
-  font-size: 3em;
+  /* font-size: 3em; */
   font-weight: 100;
   cursor: default;
   text-transform: uppercase;
   /* transition: 0.5s cubic-bezier(0,1.06,0,.9); */
   /* animation: font-width 1s ease infinite alternate; */
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 @keyframes font-width {
@@ -326,4 +341,50 @@ section {
   margin-top: -3px;
   /* background-color: rgba(0, 0, 255, 0.432); */
   backdrop-filter: blur(10px);
+}
+
+.gradual-blur-section {
+  height: 100vh;
+  background: linear-gradient(90deg, #85a8e1, #779dda, #6e95d5, #658cce, #5c85c9, #557ec2, #4f7bbe, #4a77ba, #4774b8, #4270b3);
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+}
+
+.gradual-blur-section::after {
+  display: none;
+  width: 300%;
+  height: 300%;
+  content: "";
+  position: absolute;
+  transform: translateX(-50%);
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  box-shadow: inset 0 300px 300px rgb(0, 0, 0);
+}
+
+.standing-on-rock-section {
+  background-image: url("public/images/rock.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  height: 400vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+}
+
+.about-me-heading {
+  font-family: 'Roboto', 'DM Sans', serif;
+  font-size: 22em;
+  /* font-style: italic; */
+  text-wrap: nowrap;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 100;
+  position: fixed;
+  top: 0;
 }

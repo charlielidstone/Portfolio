@@ -12,23 +12,24 @@
 <body>
 
   <div id="construction-banner">🏗️ Website currently under construction, check back soon!</div>
-
   
-  <header>
-    <p style="margin: 0;">Hi, I'm</p>
-    <h1 class="">Charlie Lidstone.</h1>
-    <p class="">Welcome to my portfolio! Sorry for the mess, this site is a work in progress...</p>
-    <p>I'm an engineering student at UVic. I've been programming for about 6 years, and I love creating neat stuff for the web.</p>
-    <p>You can check out some of the other stuff I've been working on at my <a href="https://github.com/charlielidstone" target="_blank">GitHub</a>.</p>
-    
-  </header>
+  <canvas id="bg"></canvas>
   
   <main id="main">  
+    <header class="blue-section">
+      <p style="margin: 0;">Hi, I'm</p>
+      <h1 class="">Charlie Lidstone.</h1>
+      <p class="">Welcome to my portfolio! Sorry for the mess, this site is a work in progress...</p>
+      <p>I'm an engineering student at UVic. I've been programming for about 6 years, and I love creating neat stuff for the web.</p>
+      <p>You can check out some of the other stuff I've been working on at my <a href="https://github.com/charlielidstone" target="_blank">GitHub</a>.</p>
+      
+    </header>
+
     <!-- <section style="background-color: white; border-bottom: 1px solid black"></section> -->
-  
-    <section>
-      <canvas id="bg"></canvas>
-    </section>
+
+    <!-- <section class="blue-section">
+      <h1>Projects</h1>
+    </section> -->
   
     <!-- <section style="background-color: white; border-top: 1px solid black"></section> -->
 
@@ -37,6 +38,11 @@
     <!-- <div id="box"></div> -->
     
     <!-- <div id="lens"></div> -->
+
+    <section class="gradual-blur-section"></section>
+    <section class="standing-on-rock-section">
+      <h1 class="about-me-heading">Hello</h1>
+    </section>
 
     <section></section>
     <section></section>
@@ -140,10 +146,10 @@
     import gsapEffects from '/scripts/gsapEffects.js';
     gsapEffects.setup();
   </script> -->
-  <script type="module" async>
+  <!-- <script type="module" async>
     import threeEffects from './scripts/threeEffects.js';
     threeEffects.animate();
-  </script>
+  </script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </body>

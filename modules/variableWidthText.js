@@ -18,8 +18,8 @@ export function initVariableWidthText(selector = '.variable-width-text') {
             const centerY = rect.top + rect.height / 2;
             const offsetX = e.clientX - centerX;
             const offsetY = e.clientY - centerY;
-            const distance = Math.sqrt(offsetX * offsetX + (offsetY * offsetY) / 7);
-            const weight = Math.max(100, 900 - distance * 7);
+            const distance = Math.sqrt(offsetX * offsetX + (offsetY * offsetY) / 2);
+            const weight = Math.max(100, 900 - distance * 0.5);
             span.style.fontWeight = weight;
         });
     };
