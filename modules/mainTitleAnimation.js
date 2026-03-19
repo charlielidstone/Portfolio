@@ -1,5 +1,5 @@
 /**
- * this script is for the Loki effect
+ * the Loki effect
  */
 
 
