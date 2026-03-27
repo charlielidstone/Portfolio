@@ -140,6 +140,22 @@ x.loading-screen {
   font-size: 3em;
 }
 
+#shadow-thing {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  box-shadow: inset calc(var(--shadow-x)) calc(var(--shadow-y)) 100px var(--shadow-color);
+  --shadow-x: 100px;
+  --shadow-y: 250px;
+  --shadow-color: white;
+}
+
+#shadow-thing::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  box-shadow: inset calc(var(--shadow-x)*-1) calc(var(--shadow-y)*-1) 100px var(--shadow-color);
+  --shadow-color: white;
+}
 
 .thing {
   content: '';
