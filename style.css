@@ -59,6 +59,16 @@
   src: url('public/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Fanwood';
+  src: url('public/fonts/fanwood/fanwood-master/webfonts/fanwood-webfont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ostrich Sans';
+  src: url('public/fonts/ostrich-sans/ostrich-sans-master/webfonts/ostrich-sans-black.ttf')
+}
+
 :root {
   
 }
@@ -223,7 +233,7 @@ x.loading-screen {
   position: fixed;
   top: 9px;
   left: calc(50vw - 275px);
-  z-index: 1;
+  z-index: 999;
   backdrop-filter: blur(2px);
 }
 
@@ -257,7 +267,7 @@ x.loading-screen {
 
 main {
   display: flex;
-  padding: 70px 0;
+  /* padding: 70px 0; */
   flex-direction: column;
   align-items: center;
 }
@@ -277,7 +287,21 @@ main {
 }
 
 header {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #fffefb;
+  z-index: 1;
+  padding: 0 10vw;
+  box-sizing: border-box;
+  position: relative;
+}
 
+header * {
+  z-index: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -293,10 +317,83 @@ header {
   }
 }
 
-header h1 {
-  font-size: 3em;
-  margin: 0 0 0.4em 0;
-  font-family: "DM Serif", "Times New Roman", Georgia, Times, serif;
+.header-title {
+  font-size: 7rem;
+  margin: 0 0 0em 0;
+  padding: 0.3em 0 0 0;
+  font-family: 'Ostrich Sans';
+  /* font-family: "Fanwood", "DM Serif", "Times New Roman", Georgia, Times, serif; */
+  font-weight: 100;
+  text-align: center;
+  color: #000000;
+}
+
+.header-subtitle {
+  font-size: 7rem;
+  margin: 0 0 0.5em 0;
+  padding: 0em 0 0 0;
+  font-family: 'Ostrich Sans';
+  /* font-family: "Fanwood", "DM Serif", "Times New Roman", Georgia, Times, serif; */
+  font-weight: 100;
+  text-align: center;
+  color: #bebdba;
+}
+
+.picture-frame {
+  position: absolute;
+  top: 15vh;
+  left: 40vw;
+  scale: 0.5;
+}
+
+
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  background: url('public/images/rock.jpg') center / cover;
+  mask-image: url('public/images/picture-frame-cropped.jpg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url('public/images/picture-frame-cropped.jpg');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+
+
+.header-rock-background-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  mask: url(#myMask);
+  /* clip-path: inset(
+    calc(50% - 150px)
+    calc(50% - 200px)
+    calc(50% - 150px)
+    calc(50% - 200px)
+  ); */
 }
 
 header p {
