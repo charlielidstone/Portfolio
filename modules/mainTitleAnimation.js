@@ -167,14 +167,14 @@ function applyFontSwapAnimation(element, fonts, defaultFont, duration = 2000, in
         });
   
         charElement.addEventListener("mouseout", () => {
-          if (charElement.innerHTML == "C") charElement.style.fontFamily = MainLogo.c.defaultFont;
-          else if (charElement.innerHTML == "H") charElement.style.fontFamily = MainLogo.h.defaultFont;
-          else if (charElement.innerHTML == "A") charElement.style.fontFamily = MainLogo.a.defaultFont;
-          else if (charElement.innerHTML == "R") charElement.style.fontFamily = MainLogo.r.defaultFont;
-          else if (charElement.innerHTML == "L") charElement.style.fontFamily = MainLogo.l.defaultFont;
-          else if (charElement.innerHTML == "I") charElement.style.fontFamily = MainLogo.i.defaultFont;
-          else if (charElement.innerHTML == "E") charElement.style.fontFamily = MainLogo.e.defaultFont;
-          else charElement.style.fontFamily = defaultFont;
+          // if (charElement.innerHTML == "C") charElement.style.fontFamily = MainLogo.c.defaultFont;
+          // else if (charElement.innerHTML == "H") charElement.style.fontFamily = MainLogo.h.defaultFont;
+          // else if (charElement.innerHTML == "A") charElement.style.fontFamily = MainLogo.a.defaultFont;
+          // else if (charElement.innerHTML == "R") charElement.style.fontFamily = MainLogo.r.defaultFont;
+          // else if (charElement.innerHTML == "L") charElement.style.fontFamily = MainLogo.l.defaultFont;
+          // else if (charElement.innerHTML == "I") charElement.style.fontFamily = MainLogo.i.defaultFont;
+          // else if (charElement.innerHTML == "E") charElement.style.fontFamily = MainLogo.e.defaultFont;
+          // else charElement.style.fontFamily = defaultFont;
           clearInterval(singleCharToClear);
         });
       });
