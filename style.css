@@ -79,7 +79,7 @@ html, body {
   color: hsl(51, 47%, 19%);
 }
 
-.loading-screen {
+x.loading-screen {
   position: fixed;
   top: 0;
   left: 0;
@@ -90,8 +90,18 @@ html, body {
   justify-content: center;
   align-items: center;
   z-index: 1;
-  animation: fade-out 0.5s ease-out forwards;
-  animation-delay: 1s;
+  /* animation: fade-out 0.5s ease-out forwards; */
+  /* animation-delay: 1s; */
+}
+
+.loading-screen {
+  height: 100vh;
+  grid-column: 1 / span 12;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes fade-out {
@@ -104,6 +114,83 @@ html, body {
     visibility: hidden;
     transform: scale(1.3);
   }
+}
+
+#main__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: monospace;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: #151515;
+  line-height: 0.8em;
+  font-size: 3em;
+}
+
+
+.thing {
+  content: '';
+  position: fixed;
+  width: 140vw;
+  aspect-ratio: 1 / 1;
+  /* background: url('public/images/blue-purple-grainy-gradient.png') no-repeat center center; */
+  background-size: cover;
+  box-shadow: inset 0px 0px 100vw 100vw black;
+  z-index: -1;
+  border-radius: 50%;
+  animation: box-shadow 0.7s ease-out 1;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.thing::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 100vw 100vw black;
+}
+
+@keyframes box-shadow {
+  0% {
+    box-shadow: inset 0px 0px 70vw 70vw black;
+  }
+  100% {
+    box-shadow: inset 0px 0px 0vw 0vw black;
+  }
+}
+
+#main__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  width: fit-content;
+  height: fit-content;
+  font-size: 6em;
+  letter-spacing: 0.5em;
+  font-family: var(--primary-font);
+  display: none;
+}
+
+#main__title span {
+  text-align: center;
+  cursor: default;
+  user-select: none;
+  text-shadow: var(--primary-text-shadow);
+  margin: 0 0.2em;
+  line-height: 2;
+}
+
+#main__title span:hover {
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
 }
 
 #bg {
