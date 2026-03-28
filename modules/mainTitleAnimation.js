@@ -28,7 +28,7 @@ const MainLogo = {
   },
   h: {
     defaultFont: "Nova Flat",
-    defaultFontSize: "0.9em",
+    defaultFontSize: "1em",
     defaultPositionTop: "0em",
     defaultPositionLeft: "0em",
   },
@@ -40,7 +40,7 @@ const MainLogo = {
   },
   r: {
     defaultFont: '"ARB85"',
-    defaultFontSize: "0.9em",
+    defaultFontSize: "1em",
     defaultPositionTop: "0em",
     defaultPositionLeft: "-0.2em",
     margin: "0.1em",
@@ -53,7 +53,7 @@ const MainLogo = {
   },
   i: {
     defaultFont: "Grenze Gotisch",
-    defaultFontSize: "1.1em",
+    defaultFontSize: "1em",
     defaultPositionTop: "-0.06em",
     defaultPositionLeft: "0.1em",
     margin: "0.1em",
