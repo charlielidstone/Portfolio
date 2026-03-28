@@ -351,6 +351,11 @@ x.loading-screen {
     left: 5vw;
     padding: 10px 1.5em;
   }
+
+  .shadow {
+    width: 90vw;
+    left: 5vw;
+  }
   
 }
 
