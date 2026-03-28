@@ -82,6 +82,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 ::selection {
@@ -409,6 +410,19 @@ main {
 .nav-bar li:hover {
   background: rgb(79, 101, 87);
   color: white;
+}
+
+.beta-notification {
+  width: 100vw;
+  height: 3rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #000000aa;
+  font-style: italic;
 }
 
 .blue-section {
