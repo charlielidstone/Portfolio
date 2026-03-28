@@ -207,6 +207,7 @@ x.loading-screen {
   letter-spacing: 0.5em;
   font-family: var(--primary-font);
   display: none;
+  transition-duration: 1s;
 }
 
 #main__title span {
@@ -216,6 +217,7 @@ x.loading-screen {
   text-shadow: var(--primary-text-shadow);
   margin: 0 0.2em;
   line-height: 2;
+  transition-duration: 1s;
 }
 
 #main__title span:hover {
