@@ -198,7 +198,7 @@ x.loading-screen {
 #main__title {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   text-transform: uppercase;
   width: fit-content;
@@ -207,7 +207,7 @@ x.loading-screen {
   letter-spacing: 0.5em;
   font-family: var(--primary-font);
   display: none;
-  transition-duration: 1s;
+  transition: scale 1s;
 }
 
 #main__title span {
@@ -217,11 +217,14 @@ x.loading-screen {
   text-shadow: var(--primary-text-shadow);
   margin: 0 0.2em;
   line-height: 2;
-  transition-duration: 1s;
 }
 
 #main__title span:hover {
   text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+
+.main__title-char-container {
+  position: relative;
 }
 
 #bg {

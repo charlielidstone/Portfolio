@@ -28,7 +28,7 @@ const MainLogo = {
   },
   h: {
     defaultFont: "Nova Flat",
-    defaultFontSize: "1em",
+    defaultFontSize: "0.9em",
     defaultPositionTop: "0em",
     defaultPositionLeft: "0em",
   },
@@ -40,7 +40,7 @@ const MainLogo = {
   },
   r: {
     defaultFont: '"ARB85"',
-    defaultFontSize: "1em",
+    defaultFontSize: "0.9em",
     defaultPositionTop: "0em",
     defaultPositionLeft: "-0.2em",
     margin: "0.1em",
@@ -53,7 +53,7 @@ const MainLogo = {
   },
   i: {
     defaultFont: "Grenze Gotisch",
-    defaultFontSize: "1em",
+    defaultFontSize: "1.1em",
     defaultPositionTop: "-0.06em",
     defaultPositionLeft: "0.1em",
     margin: "0.1em",
@@ -149,34 +149,34 @@ function applyFontSwapAnimation(element, fonts, defaultFont, duration = 2000, in
         // element.style.opacity = "0";
         element.style.scale = "1.1";
 
-        var singleCharToClear;
-        var previousRandomFontIndex;
-        charElement.addEventListener("mouseover", () => {
-          var randomFontIndex = Math.floor(Math.random() * fonts.length);
-          previousRandomFontIndex = randomFontIndex;
-          const randomFont = fonts[randomFontIndex];
-          charElement.style.fontFamily = randomFont;
-          singleCharToClear = setInterval(() => {
-            do {
-              var randomFontIndex = Math.floor(Math.random() * fonts.length);
-            } while (randomFontIndex === previousRandomFontIndex);
-            previousRandomFontIndex = randomFontIndex;
-            var randomFont = fonts[randomFontIndex];
-            charElement.style.fontFamily = randomFont;
-          }, interval / 1.5);
-        });
+        // var singleCharToClear;
+        // var previousRandomFontIndex;
+        // charElement.addEventListener("mouseover", () => {
+        //   var randomFontIndex = Math.floor(Math.random() * fonts.length);
+        //   previousRandomFontIndex = randomFontIndex;
+        //   const randomFont = fonts[randomFontIndex];
+        //   charElement.style.fontFamily = randomFont;
+        //   singleCharToClear = setInterval(() => {
+        //     do {
+        //       var randomFontIndex = Math.floor(Math.random() * fonts.length);
+        //     } while (randomFontIndex === previousRandomFontIndex);
+        //     previousRandomFontIndex = randomFontIndex;
+        //     var randomFont = fonts[randomFontIndex];
+        //     charElement.style.fontFamily = randomFont;
+        //   }, interval / 1.5);
+        // });
   
-        charElement.addEventListener("mouseout", () => {
-          // if (charElement.innerHTML == "C") charElement.style.fontFamily = MainLogo.c.defaultFont;
-          // else if (charElement.innerHTML == "H") charElement.style.fontFamily = MainLogo.h.defaultFont;
-          // else if (charElement.innerHTML == "A") charElement.style.fontFamily = MainLogo.a.defaultFont;
-          // else if (charElement.innerHTML == "R") charElement.style.fontFamily = MainLogo.r.defaultFont;
-          // else if (charElement.innerHTML == "L") charElement.style.fontFamily = MainLogo.l.defaultFont;
-          // else if (charElement.innerHTML == "I") charElement.style.fontFamily = MainLogo.i.defaultFont;
-          // else if (charElement.innerHTML == "E") charElement.style.fontFamily = MainLogo.e.defaultFont;
-          // else charElement.style.fontFamily = defaultFont;
-          clearInterval(singleCharToClear);
-        });
+        // charElement.addEventListener("mouseout", () => {
+        //   // if (charElement.innerHTML == "C") charElement.style.fontFamily = MainLogo.c.defaultFont;
+        //   // else if (charElement.innerHTML == "H") charElement.style.fontFamily = MainLogo.h.defaultFont;
+        //   // else if (charElement.innerHTML == "A") charElement.style.fontFamily = MainLogo.a.defaultFont;
+        //   // else if (charElement.innerHTML == "R") charElement.style.fontFamily = MainLogo.r.defaultFont;
+        //   // else if (charElement.innerHTML == "L") charElement.style.fontFamily = MainLogo.l.defaultFont;
+        //   // else if (charElement.innerHTML == "I") charElement.style.fontFamily = MainLogo.i.defaultFont;
+        //   // else if (charElement.innerHTML == "E") charElement.style.fontFamily = MainLogo.e.defaultFont;
+        //   // else charElement.style.fontFamily = defaultFont;
+        //   clearInterval(singleCharToClear);
+        // });
       });
 
       return;
