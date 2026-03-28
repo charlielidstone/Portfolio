@@ -247,13 +247,84 @@ x.loading-screen {
   align-items: center;
   padding: 10px 50px;
   font-family:  Georgia, 'Times New Roman', Times, serif;
-  color: hsl(51, 47%, 29%);
+  /* color: hsl(51, 47%, 29%); */
+  color: white;
   border-radius: 100px;
   position: fixed;
   top: 9px;
   left: calc(50vw - 275px);
   z-index: 999;
   backdrop-filter: blur(2px);
+  animation: flash-background 0.3s ease-in-out infinite alternate;
+  /* box-shadow: 1px 0px 10px 3px hsl(51, 100%, 67%, 0.5); */
+}
+
+.block {
+  position: relative;
+  width:25vw;
+  height:25vw;
+  border-radius: 100px;
+  background: linear-gradient(0deg, #000, #262626);
+}
+
+.shadow {
+
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 100px;
+    background: linear-gradient(
+      45deg, 
+      #fb0094, 
+      #0000ff, 
+      #00ff00, 
+      #ffff00, 
+      #ff0000, 
+      #fb0094, 
+      #0000ff, 
+      #00ff00, 
+      #ffff00, 
+      #ff0000
+    );
+    background-size: 400%;
+    z-index: -1;
+    animation: shadow 20s linear infinite;
+  }
+  
+  &:after {
+    top:-8px;
+    left:-8px;
+    width:calc(100% + 16px);
+    height:calc(100% + 16px);    
+    filter:blur(24px);
+    opacity:0.9;
+  }
+  
+}
+
+@keyframes shadow {
+  0% {
+    background-position: 0 0;
+  }
+  50.01% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes flash-background {
+  from {
+    background: hsla(51, 100%, 67%, 0.938);
+  }
+  to {
+    background: hsla(51, 100%, 88%, 0.938);
+  }
 }
 
 @media screen and (max-width: 768px) {
