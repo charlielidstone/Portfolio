@@ -438,14 +438,15 @@ main {
   height: 100%;
   background: #ffffff;
   z-index: 2;
-  mask-image: url('public/images/picture-frame-cropped.jpg');
+  /* mask-image: url('public/images/picture-frame-cropped.jpg');
   mask-size: contain;
   mask-repeat: no-repeat;
   mask-position: center;
   -webkit-mask-image: url('public/images/picture-frame-cropped.jpg');
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
+  -webkit-mask-position: center; */
+
 }
 
 .picture-frame {
@@ -454,7 +455,6 @@ main {
   left: 40vw;
   scale: 0.5;
 }
-
 
 #about {
 
