@@ -432,54 +432,20 @@ main {
 }
 
 .hero-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  /* background: #fffefb; */
-  z-index: 1;
-  /* padding: 0 10vw; */
-  box-sizing: border-box;
-  position: relative;
-}
-
-.hero-section * {
-  z-index: 1;
-}
-
-@media screen and (max-width: 768px) {
-  .hero-section {
-    width: 80vw;
-    left: 10vw;
-    top: 15vh;
-    height: 70vh;
-  }
-
-  .blue-section {
-    width: 80vw;
-  }
-}
-
-.hero-section-title {
-  font-size: 7rem;
-  margin: 0 0 0em 0;
-  padding: 0.3em 0 0 0;
-  font-family: 'Ostrich Sans';
-  /* font-family: "Fanwood", "DM Serif", "Times New Roman", Georgia, Times, serif; */
-  font-weight: 100;
-  text-align: center;
-  color: #000000;
-}
-
-.hero-section-subtitle {
-  font-size: 7rem;
-  margin: 0 0 0.5em 0;
-  padding: 0em 0 0 0;
-  font-family: 'Ostrich Sans';
-  /* font-family: "Fanwood", "DM Serif", "Times New Roman", Georgia, Times, serif; */
-  font-weight: 100;
-  text-align: center;
-  color: #bebdba;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 2;
+  mask-image: url('public/images/picture-frame-cropped.jpg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url('public/images/picture-frame-cropped.jpg');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 
 .picture-frame {
@@ -490,14 +456,8 @@ main {
 }
 
 
-.mask {
-  position: relative;
-  width: 50vw;
-  height: 50vh;
-}
-
 #about {
-  
+
 }
 
 .about-section {
@@ -508,37 +468,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  /* box-shadow: 0 -800px 250px -200px #ff0000 inset; */
   position: relative;
-}
-
-.about-section-background {
-  background: url('public/images/rock.jpg') center / cover;
-  /* mask-image: url('public/images/picture-frame-cropped.jpg');
-  mask-size: contain;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-image: url('public/images/picture-frame-cropped.jpg');
-  -webkit-mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center; */
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0px;
-    background: linear-gradient(0deg, #000000, #00000071, #00000000, #00000000);
-  }
-  
+  top: var(--offset-top);
+  --offset-top: -30vw;
 }
 
 .about-section-background-img {
@@ -565,13 +497,12 @@ main {
 }
 
 .about-section::before {
-  display: none;
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0px;
+  bottom: var(--offset-top);
   width: 100%;
-  height: 400px;
+  height: calc(var(--offset-top)*-1);
   background: #010101;
   z-index: 1;
 }
