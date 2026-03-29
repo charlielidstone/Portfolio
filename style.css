@@ -76,6 +76,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 html, body {
@@ -380,8 +381,8 @@ main {
 
 .nav-bar {
   position: fixed;
-  bottom: 20px;
-  left: calc(50vw-150px);
+  top: 20px;
+  right: calc(50vw - 150px);
   z-index: 999;
   width: 300px;
   display: flex;
@@ -401,12 +402,18 @@ main {
 }
 
 .nav-bar li {
-  padding: 1rem;
   cursor: pointer;
 }
 
-.nav-bar li:hover {
-  background: rgb(79, 101, 87);
+.nav-bar a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+}
+
+.nav-bar a:hover {
+  background: rgb(0, 0, 0);
   color: white;
 }
 
@@ -487,6 +494,10 @@ main {
   position: relative;
   width: 50vw;
   height: 50vh;
+}
+
+#about {
+  
 }
 
 .about-section {
