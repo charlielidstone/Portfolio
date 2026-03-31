@@ -432,12 +432,12 @@ main {
 }
 
 .hero-section {
-  /* position: absolute; */
+  position: relative;
   /* inset: 0; */
   width: 100vw;
   height: 100vh;
   /* background: #ff0000aa; */
-  z-index: 2;
+  z-index: 999;
   /* mask-image: url('public/images/picture-frame-cropped.jpg');
   mask-size: contain;
   mask-repeat: no-repeat;
@@ -452,9 +452,9 @@ main {
   position: fixed;
   /* top: 0; */
   /* right: 0; */
-  scale: 0.2;
+  /* scale: 0.2; */
   /* opacity: 0.6; */
-  transform: translate(-110px, -550px);
+  /* transform: translate(-110px, -550px); */
 }
 
 #about {
@@ -476,7 +476,7 @@ main {
 }
 
 .about-section-background-img {
-  width: 100vw;
+  width: 105vw;
   position: absolute;
   top: 0;
   left: 0;
