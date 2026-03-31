@@ -432,10 +432,10 @@ main {
 }
 
 .hero-section {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  /* position: absolute; */
+  /* inset: 0; */
+  width: 100vw;
+  height: 100vh;
   /* background: #ff0000aa; */
   z-index: 2;
   /* mask-image: url('public/images/picture-frame-cropped.jpg');
@@ -472,6 +472,7 @@ main {
   position: relative;
   top: var(--offset-top);
   --offset-top: -30vw;
+  clip-path: rect(calc(var(--offset-top)*-1) 100vw 133vw 0);
 }
 
 .about-section-background-img {

@@ -13,4 +13,4 @@ import { applyDragability } from "./scripts/draggable.js";
 
 // mainTitleAnimation.run();
 
-heroSectionScroll.setup();
+// heroSectionScroll.setup();

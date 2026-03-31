@@ -3,11 +3,11 @@ const heroSectionScroll = {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".about-section",
-        start: "center center",
+        start: "top top",
         end: "bottom center",
         scrub: 0.5,
-        pin: true,
-        toggleActions: "restart pause resume pause",
+        // pin: true,
+        // toggleActions: "restart pause resume pause",
         markers: true,
       }
     });
