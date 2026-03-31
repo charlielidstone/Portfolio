@@ -2,14 +2,22 @@ const heroSectionScroll = {
   setup: function() {
     let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".hero-section",
-        start: "top top",
+        trigger: ".about-section",
+        start: "center center",
         end: "bottom center",
         scrub: 0.5,
         pin: true,
         toggleActions: "restart pause resume pause",
         markers: true,
       }
+    });
+
+    tl.to(".picture-frame", {
+      rotation: 20,
+      scale: 3.5,
+      duration: 10,
+      scrub: true,
+      ease: "power2.inOut",
     });
 
     // // Border radius animates first, quickly

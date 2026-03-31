@@ -432,11 +432,11 @@ main {
 }
 
 .hero-section {
-  position: fixed;
+  position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  background: #ffffff;
+  /* background: #ff0000aa; */
   z-index: 2;
   /* mask-image: url('public/images/picture-frame-cropped.jpg');
   mask-size: contain;
@@ -446,14 +446,15 @@ main {
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center; */
-
 }
 
 .picture-frame {
-  position: absolute;
-  top: 15vh;
-  left: 40vw;
-  scale: 0.5;
+  position: fixed;
+  /* top: 0; */
+  /* right: 0; */
+  scale: 0.2;
+  /* opacity: 0.6; */
+  transform: translate(-110px, -550px);
 }
 
 #about {
