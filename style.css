@@ -96,7 +96,7 @@ html, body {
   color: hsl(51, 47%, 19%);
 }
 
-x.loading-screen {
+.loading-screen {
   position: fixed;
   top: 0;
   left: 0;
@@ -106,12 +106,12 @@ x.loading-screen {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
-  /* animation: fade-out 0.5s ease-out forwards; */
-  /* animation-delay: 1s; */
+  z-index: 1000;
+  animation: fade-out 0.5s ease-out forwards;
+  animation-delay: 1s;
 }
 
-.loading-screen {
+x.loading-screen {
   height: 100vh;
   grid-column: 1 / span 12;
   position: relative;
@@ -175,7 +175,7 @@ x.loading-screen {
   /* background: url('public/images/blue-purple-grainy-gradient.png') no-repeat center center; */
   background-size: cover;
   box-shadow: inset 0px 0px 100vw 100vw black;
-  z-index: -1;
+  z-index: 1001;
   border-radius: 50%;
   animation: box-shadow 0.7s ease-out 1;
   animation-delay: 1s;
@@ -185,7 +185,7 @@ x.loading-screen {
 .thing::after {
   content: '';
   position: absolute;
-  z-index: -1;
+  z-index: 1000;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -210,7 +210,7 @@ x.loading-screen {
   text-transform: uppercase;
   width: fit-content;
   height: fit-content;
-  font-size: 6em;
+  font-size: 4em;
   letter-spacing: 0.5em;
   font-family: var(--primary-font);
   transition: scale 1s;
@@ -602,7 +602,7 @@ main {
 }
 
 .hero-section-content h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Inria Serif", serif;
 }
 
