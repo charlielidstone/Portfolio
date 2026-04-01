@@ -7,7 +7,7 @@ import { applyDragability } from "./scripts/draggable.js";
 // const box = document.getElementById('box');
 // applyDragability(box);
 
-particles.render();
+// particles.render();
 
 // initVariableWidthText();
 
