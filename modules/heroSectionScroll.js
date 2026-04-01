@@ -12,22 +12,33 @@ const heroSectionScroll = {
       }
     });
 
-    gsap.to(".about-section", {
-      // your animation props
-      scrollTrigger: {
-        trigger: ".hero-section",
-        start: "top top",
-        end: "bottom 70%",
-        scrub: true,
-        pin: ".about-section",  // ← pin a different element than the trigger
-        // markers: true,
-      }
-    });
-    
+    // gsap.to(".about-section", {
+    //   scrollTrigger: {
+    //     trigger: ".hero-section",
+    //     start: "top top",
+    //     end: "bottom 70%",
+    //     scrub: true,
+    //     pin: ".about-section",
+    //     // markers: true,
+    //   }
+    // });
+
     tl.to(".picture-frame", {
       rotation: -10,
       scale: 12,
       ease: "power4.in",
+    });
+
+    tl.to(".hero-section-content", {
+      scale: 0.8,
+      scrollTrigger: {
+        trigger: ".hero-section",
+        start: "top top",
+        end: "bottom 60%",
+        scrub: true,
+        pin: ".about-section",  // ← pin a different element than the trigger
+        // markers: true,
+      }
     });
 
 
