@@ -264,9 +264,9 @@ x.loading-screen {
   /* color: white; */
   border-radius: 100px;
   position: fixed;
-  top: 9px;
+  top: 20px;
   left: calc(50vw - 275px);
-  z-index: 999;
+  z-index: 500;
   backdrop-filter: blur(2px);
   animation: flash-background 0.3s ease-in-out infinite alternate;
   /* box-shadow: 1px 0px 10px 3px hsl(51, 100%, 67%, 0.5); */
@@ -286,9 +286,9 @@ x.loading-screen {
   box-sizing: border-box;
   max-width: 100vw;
   position: fixed;
-  top: 9px;
+  top: 20px;
   left: calc(50vw - 275px);
-  z-index: 1;
+  z-index: 400;
 }
 
 .shadow {
