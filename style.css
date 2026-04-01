@@ -527,7 +527,6 @@ main {
 
 .about-section-content {
   z-index: 1;
-  font-family: "Crimson Text", Georgia, 'Times New Roman', Times, serif;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -538,7 +537,8 @@ main {
 }
 
 .about-section h1 {
-  font-size: 8rem;
+  font-family: "Crimson Text", Georgia, 'Times New Roman', Times, serif;
+  font-size: 6rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 11.52px;
