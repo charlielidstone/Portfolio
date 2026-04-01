@@ -547,9 +547,11 @@ main {
 
 .about-section p {
   margin: 2rem;
-  font-size: 1.4rem;
-  max-width: 500px;
-  font-weight: 600;
+  font-size: 1.2rem;
+  max-width: 300px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
 }
 
 .__the-next-section__ {
