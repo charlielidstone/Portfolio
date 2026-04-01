@@ -442,29 +442,14 @@ main {
 
 .hero-section {
   position: absolute;
-  /* display: none; */
-  /* inset: 0; */
   width: 100vw;
   height: 100vh;
-  /* background: #ff0000aa; */
   z-index: 2;
-  /* mask-image: url('public/images/picture-frame-cropped.jpg');
-  mask-size: contain;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-image: url('public/images/picture-frame-cropped.jpg');
-  -webkit-mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center; */
 }
 
 .picture-frame {
   position: fixed;
-  /* top: 0; */
-  /* right: 0; */
   scale: 1;
-  /* opacity: 0.6; */
-  /* transform: translate(-110px, -550px); */
   z-index: 0;
   pointer-events: none;
   translate: 0 calc(var(--offset-top) + 34.5vw);
