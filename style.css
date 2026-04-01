@@ -478,7 +478,7 @@ main {
   justify-content: flex-end;
   position: relative;
   top: var(--offset-top);
-  /* clip-path: rect(calc(var(--offset-top)*-1) 100vw 133.33vw 0); */
+  clip-path: rect(calc(var(--offset-top)*-1) 100vw 133.33vw 0); /* we can probably remove this */
 }
 
 .about-section-background-img {
