@@ -396,6 +396,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  backdrop-filter: blur(5px);
 }
 
 .nav-bar ul {
@@ -403,10 +404,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* gap: 1rem; */
-  background-color: white;
-  border: 1px solid black;
   width: fit-content;
+  outline: 1px solid #000000;
+  box-sizing: border-box;
 }
 
 .nav-bar li {
@@ -414,14 +414,15 @@ main {
 }
 
 .nav-bar a {
+  background-color: #ffffff;
   display: block;
   text-decoration: none;
-  color: black;
+  color: #000000;
   padding: 1rem;
 }
 
 .nav-bar a:hover {
-  background: rgb(0, 0, 0);
+  background: #000000;
   color: white;
 }
 
