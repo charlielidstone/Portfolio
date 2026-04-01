@@ -21,7 +21,7 @@ const heroSectionScroll = {
         scrub: true,
         // pin: ".about-section",
         ease: "power4.in",
-        markers: true,
+        // markers: true,
       }
     });
 
