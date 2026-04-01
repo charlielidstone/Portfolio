@@ -540,12 +540,6 @@ main {
   font-family: "Roboto", sans-serif;
 }
 
-.__the-next-section__ {
-  width: 100vw;
-  height: 100vh;
-  background-color: #010101;
-}
-
 .frame {
   position: absolute;
   inset: 0;
