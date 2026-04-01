@@ -221,7 +221,7 @@ x.loading-screen {
   cursor: default;
   user-select: none;
   text-shadow: var(--primary-text-shadow);
-  margin: 0 0.2em;
+  margin: -1rem 0.2em;
   line-height: 2;
 }
 
@@ -461,7 +461,7 @@ main {
   position: fixed;
   /* top: 0; */
   /* right: 0; */
-  scale: 0.9;
+  scale: 1.4;
   /* opacity: 0.6; */
   /* transform: translate(-110px, -550px); */
   z-index: 0;
@@ -592,7 +592,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 13vh 0;
+  padding: 10vh 0;
   z-index: 1;
 }
 
