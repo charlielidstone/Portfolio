@@ -2,23 +2,34 @@ const heroSectionScroll = {
   setup: function() {
     let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".about-section",
+        trigger: ".hero-section",
         start: "top top",
         end: "bottom center",
         scrub: 0.5,
         // pin: true,
         // toggleActions: "restart pause resume pause",
-        markers: true,
+        // markers: true,
       }
     });
 
-    tl.to(".picture-frame", {
-      rotation: 20,
-      scale: 3.5,
-      duration: 10,
-      scrub: true,
-      ease: "power2.inOut",
+    gsap.to(".about-section", {
+      // your animation props
+      scrollTrigger: {
+        trigger: ".hero-section",
+        start: "top top",
+        end: "bottom 70%",
+        scrub: true,
+        pin: ".about-section",  // ← pin a different element than the trigger
+        markers: true,
+      }
     });
+    
+    tl.to(".picture-frame", {
+      rotation: -10,
+      scale: 12,
+      ease: "power4.in",
+    });
+
 
     // // Border radius animates first, quickly
     // tl.to("#img-window", {

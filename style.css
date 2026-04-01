@@ -83,6 +83,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background: #010101;
 }
 
 ::selection {
@@ -318,7 +319,7 @@ x.loading-screen {
     width:calc(100% + 16px);
     height:calc(100% + 16px);    
     filter:blur(24px);
-    opacity:0.9;
+    opacity: 0.9;
   }
   
 }
@@ -432,7 +433,8 @@ main {
 }
 
 .hero-section {
-  position: relative;
+  position: absolute;
+  /* display: none; */
   /* inset: 0; */
   width: 100vw;
   height: 100vh;
@@ -452,7 +454,7 @@ main {
   position: fixed;
   /* top: 0; */
   /* right: 0; */
-  /* scale: 0.2; */
+  scale: 0.9;
   /* opacity: 0.6; */
   /* transform: translate(-110px, -550px); */
 }
@@ -471,7 +473,7 @@ main {
   justify-content: flex-end;
   position: relative;
   top: var(--offset-top);
-  --offset-top: -30vw;
+  --offset-top: -34.5vw;
   clip-path: rect(calc(var(--offset-top)*-1) 100vw 133vw 0);
 }
 
@@ -505,7 +507,7 @@ main {
   bottom: var(--offset-top);
   width: 100%;
   height: calc(var(--offset-top)*-1);
-  background: #010101;
+  background: #010101aa;
   z-index: 1;
 }
 
