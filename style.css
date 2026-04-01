@@ -69,6 +69,11 @@
   src: url('public/fonts/ostrich-sans/ostrich-sans-master/webfonts/ostrich-sans-black.ttf')
 }
 
+@font-face {
+  font-family: 'Inria Serif';
+  src: url('public/fonts/Inria_Serif/InriaSerif-Italic.ttf')
+}
+
 :root {
   
 }
@@ -236,6 +241,7 @@ x.loading-screen {
   height: 100%;
   z-index: 0;
   display: block;
+  pointer-events: none;
   /* border-top: 1px solid black;
   border-bottom: 1px solid black; */
 }
@@ -383,7 +389,8 @@ main {
 .nav-bar {
   position: fixed;
   top: 20px;
-  right: calc(50vw - 150px);
+  right: 20px;
+  /* right: calc(50vw - 150px); */
   z-index: 999;
   width: 300px;
   display: flex;
@@ -439,7 +446,7 @@ main {
   width: 100vw;
   height: 100vh;
   /* background: #ff0000aa; */
-  z-index: 999;
+  z-index: 2;
   /* mask-image: url('public/images/picture-frame-cropped.jpg');
   mask-size: contain;
   mask-repeat: no-repeat;
@@ -457,10 +464,17 @@ main {
   scale: 0.9;
   /* opacity: 0.6; */
   /* transform: translate(-110px, -550px); */
+  z-index: 0;
+  pointer-events: none;
+  translate: 0 calc(var(--offset-top) + 34.5vw);
 }
 
 #about {
 
+}
+
+* {
+  --offset-top: -30vw;
 }
 
 .about-section {
@@ -473,7 +487,6 @@ main {
   justify-content: flex-end;
   position: relative;
   top: var(--offset-top);
-  --offset-top: -34.5vw;
   clip-path: rect(calc(var(--offset-top)*-1) 100vw 133vw 0);
 }
 
@@ -570,6 +583,26 @@ main {
   margin: 1em 0;
   font-family: "Cutive Mono", "JetBrains Mono", monospace;
   font-size: 1.1em;
+}
+
+.hero-section-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 13vh 0;
+  z-index: 1;
+}
+
+.hero-section-content h1 {
+  font-size: 4rem;
+}
+
+.hero-section-content h2 {
+  font-size: 2rem;
+  font-family: "Inria Serif", serif;
 }
 
 .projects-section {

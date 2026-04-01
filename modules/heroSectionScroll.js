@@ -20,7 +20,7 @@ const heroSectionScroll = {
         end: "bottom 70%",
         scrub: true,
         pin: ".about-section",  // ← pin a different element than the trigger
-        markers: true,
+        // markers: true,
       }
     });
     
