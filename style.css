@@ -88,7 +88,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  /* background: #010101; */
+  background: #010101;
 }
 
 ::selection {
@@ -478,7 +478,7 @@ main {
   justify-content: flex-end;
   position: relative;
   top: var(--offset-top);
-  clip-path: rect(calc(var(--offset-top)*-1) 100vw 133.33vw 0); /* we can probably remove this */
+  /* clip-path: rect(calc(var(--offset-top)*-1) 100vw 133.33vw 0); we can probably remove this */
 }
 
 .about-section-background-img {
@@ -523,7 +523,7 @@ main {
 }
 
 .about-section h1 {
-  font-family: "Crimson Text", Georgia, 'Times New Roman', Times, serif;
+  font-family: "Crimson Text", "DM Serif", Georgia, 'Times New Roman', Times, serif;
   font-size: 6rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -592,13 +592,22 @@ main {
 
 .projects-section {
   display: flex;
-  justify-content: center;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: center;
+  background: #010101;
+  color: #ffffff;
+  width: 100vw;
+  height: 200vh;
+  padding: 30vw 0;
 }
 
 .projects-section h1 {
-  font-family: 'DM Serif', serif;
-  font-size: 3em;
+  font-family: "Crimson Text", "DM Serif", Georgia, 'Times New Roman', Times, serif;
+  font-size: 4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 11.52px;
+  margin-bottom: 2rem;
 }
 
 #box {
@@ -693,7 +702,7 @@ section {
   display: flex;
   align-items: start;
   justify-content: center;
-  clip-path: inset(10vh calc(50vw - 100px) calc(190vh - 200px) calc(50vw - 100px));
+  /* clip-path: inset(10vh calc(50vw - 100px) calc(190vh - 200px) calc(50vw - 100px)); */
 }
 
 #profile-img {
