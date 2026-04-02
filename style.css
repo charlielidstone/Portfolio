@@ -398,6 +398,8 @@ main {
   inset: 0;
   z-index: 2000;
   background: #ffffff;
+  padding: 3rem;
+  text-align: center;
 }
 
 .nav-bar {
