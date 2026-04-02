@@ -611,14 +611,19 @@ main {
 }
 
 .projects-container {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: -1px;
+  perspective: 400px;
+  width: 100vw;
 }
 
 .project-box {
-  width: 500px;
-  height: 500px;
+  width: 10vw;
+  height: 10vw;
   background: #ffffff;
+  /* transform: rotateY(45deg); */
 }
 
 #box {

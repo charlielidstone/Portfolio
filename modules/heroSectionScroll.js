@@ -43,6 +43,18 @@ const heroSectionScroll = {
       }
     });
 
+    gsap.to(".project-box", {
+      transform: "rotate3d(1, 1, 1, 45deg)",
+      scrollTrigger: {
+        trigger: ".project-box",
+        start: "top 30%",
+        end: "top top",
+        scrub: true,
+        // pin: ".projects-section",
+        markers: true,
+      }
+    })
+
 
     // // Border radius animates first, quickly
     // tl.to("#img-window", {
