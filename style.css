@@ -386,12 +386,6 @@ main {
   align-items: center;
 }
 
-@media screen and (min-width: 768px) {
-  .small-screen-notification {
-    display: none;
-  }
-}
-
 .small-screen-notification {
   display: block;
   position: fixed;
@@ -400,6 +394,12 @@ main {
   background: #ffffff;
   padding: 3rem;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .small-screen-notification {
+    display: none;
+  }
 }
 
 .nav-bar {
