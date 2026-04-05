@@ -30,7 +30,7 @@ const particles = (function() {
 
     const addStar = () => {
         const geometry = new THREE.SphereGeometry(0.25, 24, 24);
-        const material = new THREE.MeshBasicMaterial({ color: 0x000000 });
+        const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
         const star = new THREE.Mesh(geometry, material);
         
         // const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(200));

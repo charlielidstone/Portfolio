@@ -51,7 +51,6 @@ const heroSectionScroll = {
         end: "top top",
         scrub: true,
         // pin: ".projects-section",
-        markers: true,
       }
     })
 

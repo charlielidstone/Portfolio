@@ -237,9 +237,11 @@ x.loading-screen {
   position: fixed;
   left: 0;
   right: 0;
+  top: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  /* z-index: 1000; */
   display: block;
   pointer-events: none;
   /* border-top: 1px solid black;
@@ -615,6 +617,7 @@ main {
   width: 100vw;
   height: 200vh;
   padding: 30vw 0;
+  position: relative;
 }
 
 .projects-section h1 {
