@@ -15,7 +15,7 @@ const projectsSectionScroll = {
         animation: tl,
         trigger: ".projects-container",
         start: "top 80%",
-        end: "bottom top",
+        end: "+=2000",
         scrub: true,
         pin: true,
 
