@@ -8,10 +8,11 @@ const SmoothScrolling = {
     setup: function() {
         if (window.innerWidth > 768) {
             ScrollSmoother.create({
-                wrapper: ".smooth-wrapper",
-                content: ".smooth-content",
-                smooth: 0.5,
-                effects: true,
+                wrapper: "#smooth-wrapper",
+                content: "#smooth-content",
+                smooth: 1,
+                effects: true,  
+
             });
         }
     }

@@ -23,4 +23,4 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 mainTitleAnimation.run();
 
 heroSectionScroll.setup();
-// SmoothScrolling.setup();
+SmoothScrolling.setup();
