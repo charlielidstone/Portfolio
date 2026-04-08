@@ -642,30 +642,28 @@ main {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  gap: -1px;
-  perspective: 1000px;
+  place-items: center;
+  /* grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr); */
+  /* gap: -1px; */
+  perspective: none;
   width: 100vw;
+  position: relative;
 }
 
 .project-card {
-  width: 20vw;
-  height: 20vw;
+  position: absolute;
+  top: 0;
+  width: 50vw;
+  height: 30vw;
+  background: #010101;
   border: 1px solid #ffffff;
   padding: 1rem;
-  /* transform: rotateY(1deg) translateX(1000px); */
-  animation: project-card-anim 1s ease-out;
 }
 
-@keyframes project-card-anim {
-  from {
-    transform: rotateY(90deg);
-  }
-  to {
-    transform: rotateY(0deg);
-  }
-}
+#p1 { z-index: 3; } 
+#p2 { z-index: 2; }
+#p3 { z-index: 1; }
 
 #box {
   --width: 300px;
