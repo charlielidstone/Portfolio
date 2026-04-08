@@ -637,7 +637,7 @@ main {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 11.52px;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .projects-container {
@@ -645,15 +645,26 @@ main {
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
   gap: -1px;
-  perspective: 400px;
+  perspective: 1000px;
   width: 100vw;
 }
 
-.project-box {
-  width: 10vw;
-  height: 10vw;
-  background: #ffffff;
-  /* transform: rotateY(45deg); */
+.project-card {
+  width: 20vw;
+  height: 20vw;
+  border: 1px solid #ffffff;
+  padding: 1rem;
+  /* transform: rotateY(1deg) translateX(1000px); */
+  animation: project-card-anim 1s ease-out;
+}
+
+@keyframes project-card-anim {
+  from {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
 }
 
 #box {
