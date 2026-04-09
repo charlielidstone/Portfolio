@@ -7,18 +7,17 @@ const projectsSectionScroll = {
   setup: function() {
     const tl = gsap.timeline();
 
-    tl.from("#p1", { rotate: "3deg" }).to("#p1", { translateY: -500, zIndex: 1, rotate: "-1deg" })
-    .from("#p2", { rotate: "-4deg" }).to("#p2", { translateY: -500, zIndex: 2, rotate: "1deg" })
-    .from("#p3", { rotate: "2deg" }).to("#p3", { translateY: -500, zIndex: 3, rotate: "-2deg" })
+    tl.from("#p1", { rotate: "3deg" }).to("#p1", { translate: "800px 200px", rotate: "10deg" })
+    .from("#p2", { rotate: "-4deg" }).to("#p2", { translateX: "-800px 200px", rotate: "-7deg" })
+    .from("#p3", { rotate: "2deg" }).to("#p3", { translateX: "1000px", rotate: "-2deg" })
 
     ScrollTrigger.create({
         animation: tl,
         trigger: ".projects-container",
-        start: "top 80%",
+        start: "top 30%",
         end: "+=2000",
         scrub: true,
-        pin: true,
-
+        pin: ".projects-section",
     })
     
   },

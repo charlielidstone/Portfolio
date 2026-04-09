@@ -627,7 +627,7 @@ main {
   color: #ffffff;
   width: 100vw;
   height: 200vh;
-  padding: 30vw 0;
+  padding: 0;
   position: relative;
 }
 
@@ -654,8 +654,8 @@ main {
 .project-card {
   position: absolute;
   top: 0;
-  width: 50vw;
-  height: 30vw;
+  width: 30vw;
+  height: 20vw;
   background: #010101;
   border: 1px solid #ffffff;
   padding: 1rem;

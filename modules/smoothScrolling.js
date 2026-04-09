@@ -10,7 +10,7 @@ const SmoothScrolling = {
             ScrollSmoother.create({
                 wrapper: "#smooth-wrapper",
                 content: "#smooth-content",
-                smooth: 0.8,
+                smooth: 1.5,
                 effects: true,
             });
         }
