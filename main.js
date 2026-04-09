@@ -7,8 +7,8 @@ import { applyDragability } from "./scripts/draggable.js";
 // import threeEffects from "./scripts/threeEffects.js";
 import SmoothScrolling from "./modules/smoothScrolling.js";
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
