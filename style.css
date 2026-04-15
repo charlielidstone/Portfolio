@@ -884,9 +884,11 @@ section {
   height: 100vh;
   width: 100vw;
   background: green;
+  position: relative;
 }
 
 .clipped-thing {
+  display: none;
   width: 300px;
   height: 300px;
   background: blue;
@@ -897,4 +899,34 @@ section {
 
 .clipped-thing:hover {
   clip-path: path(evenodd, "M 0 0 L 300 0 L 300 300 L 0 300 Z M 150 10 L 290 150 L 150 290 L 10 150 Z");
+}
+
+.test-section-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/public/images/Great_Wave_off_Kanagawa2.jpg') center no-repeat;
+  background-size: cover;
+  /* clip-path: rect(calc(200px + 10px) calc(500px + 400px - 10px) calc(200px + 475px - 10px) calc(500px + 10px)); */
+  clip-path: path(evenodd, "M 0 0 L 1000 0 L 1000 1000 L 0 1000 Z M 500 200 L 900 200 L 900 675 L 500 675 Z");
+  transition: clip-path 1s ease;
+}
+
+.test-section-background:hover {
+  clip-path: path(evenodd, "M 0 0 L 1000 0 L 1000 1000 L 0 1000 Z M 600 100 L 1000 300 L 800 775 L 400 575 Z");
+}
+
+.test-frame {
+  position: absolute;
+  top: 200px;
+  left: 500px;
+  width: 400px;
+  height: 475px;
+  transition: 1s ease;
+}
+
+.test-frame:hover {
+  rotate: 45deg;
 }
