@@ -214,6 +214,7 @@ x.loading-screen {
   letter-spacing: 0.5em;
   font-family: var(--primary-font);
   transition: scale 1s;
+  clip-path: rect(0 100% 100% 0);
 }
 
 #main__title span {
