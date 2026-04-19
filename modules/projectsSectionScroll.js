@@ -19,8 +19,7 @@ const projectsSectionScroll = {
         end: "+=2000",
         scrub: true,
         pin: ".projects-section",
-    })
-    
+    });
   },
 };
 
