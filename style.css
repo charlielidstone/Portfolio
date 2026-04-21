@@ -586,32 +586,18 @@ main {
 }
 
 .hero-section-background {
-  background: #ffffff;
+  background-color: #f8f8f6;
+  background-image:
+    linear-gradient(to right, rgba(16, 16, 16, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 16, 16, 0.12) 1px, transparent 1px),
+    radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0) 60%);
+  background-size: 36px 36px, 36px 36px, 100% 100%;
+  background-position: 0 0, 0 0, center;
   position: fixed;
   inset: 0;
   width: 100vw;
   height: 100vh;
   clip-path: url(#fhole);
-  /* clip-path: polygon(evenodd,
-    0 0,
-    100% 0,
-    100% 100%,
-    0 100%,
-    0 0,
-    var(--clip-left) var(--clip-top),
-    var(--clip-right) calc(var(--clip-top) + var(--clip-top-angle-offset)),
-    var(--clip-right) calc(var(--clip-bottom) - var(--clip-bottom-angle-offset)),
-    var(--clip-left) var(--clip-bottom),
-    var(--clip-left) var(--clip-top)
-  );
-  --clip-top: 63%;
-  --clip-right: 66%;
-  --clip-bottom: 100%;
-  --clip-left: 33%;
-  --clip-top-angle-offset: -80px;
-  --clip-bottom-angle-offset: 0px; */
-  /* clip-path:
-    path(evenodd, "M -9999,-9999 H 9999 V 9999 H -9999 Z M -72,-102 H 72 V 102 H -72 Z"); */
 }
 
 .hero-section-foreground-image {

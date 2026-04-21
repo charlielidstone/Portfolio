@@ -15,7 +15,7 @@
     <defs>
       <clipPath id="fhole" clipPathUnits="userSpaceOnUse">
         <path id="fhole-path" clip-rule="evenodd" 
-          d="M -9999,-9999 H 9999 V 9999 H -9999 Z M 0,-100 H 144 V 100 H 0 Z"
+          d="M -9999,-9999 H 9999 V 9999 H -9999 Z M -150,-0 H 300 V 300 L -150 300 Z"
         ></path>
       </clipPath>
     </defs>
@@ -64,8 +64,10 @@
         Charlie
       </div>
     </div> -->
-    <div class="hero-section-background"></div>
-    <img class="hero-section-foreground-image" src="/public/images/rock-no-background.png" alt="">
+    <div class="hero-section-background">
+      
+    </div>
+    <img class="hero-section-foreground-image" src="/public/images/rock-no-background-edited.png" alt="">
     <!-- <img class="picture-frame" src="/public/images/picture-frame-cropped.png" alt=""> -->
     <!-- <img class="picture-frame picture-frame-transparent" src="/public/images/frame-background-3-transparent.png" alt=""> -->
   </section>
@@ -74,11 +76,11 @@
       <img class="about-section-background-img" src="/public/images/rock.jpg" />
       <div id="about" class="about-section-content">
         <div id="about"></div>
-        <h1>About me</h1>
+        <!-- <h1>About me</h1>
         <p>I’m Charlie Lidstone. Welcome to my portfolio!</p>
         <p>I'm an engineering student at UVic. I've been programming for about 6 years, and I love creating stuff for the web.</p>
         <p>I’m always looking for neat projects to be a part of. Find my contact info below.</p>
-        <p>You can check out some of the other stuff I've been working on at my <a href="https://github.com/charlielidstone" target="_blank">GitHub</a>.</p>
+        <p>You can check out some of the other stuff I've been working on at my <a href="https://github.com/charlielidstone" target="_blank">GitHub</a>.</p> -->
       </div>
     </section>
     
@@ -132,10 +134,9 @@
   "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js",
   "gsap/ScrollSmoother": "https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollSmoother.min.js" -->
 
-  <script type="module" src="/main.js" async></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollSmoother.min.js"></script>
+  <script type="module" src="/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/CustomEase.min.js"></script>
   
 </body>
 </html>
