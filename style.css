@@ -460,7 +460,7 @@ main {
 }
 
 .hero-section {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   z-index: 2;
@@ -581,11 +581,19 @@ main {
   pointer-events: none;
 }
 
+#fhole-path {
+  transform-origin: center;
+  transform: translate(calc(50vw - 72px), calc(50vh - 102px));
+}
+
 .hero-section-background {
   background: #ffffff;
-  position: absolute;
+  position: fixed;
   inset: 0;
-  clip-path: polygon(evenodd,
+  width: 100vw;
+  height: 100vh;
+  clip-path: url(#fhole);
+  /* clip-path: polygon(evenodd,
     0 0,
     100% 0,
     100% 100%,
@@ -602,7 +610,9 @@ main {
   --clip-bottom: 100%;
   --clip-left: 33%;
   --clip-top-angle-offset: -80px;
-  --clip-bottom-angle-offset: 0px;
+  --clip-bottom-angle-offset: 0px; */
+  /* clip-path:
+    path(evenodd, "M -9999,-9999 H 9999 V 9999 H -9999 Z M -72,-102 H 72 V 102 H -72 Z"); */
 }
 
 .hero-section-foreground-image {
@@ -611,7 +621,7 @@ main {
   top: -35vw;
   left: 0;
   z-index: 99;
-  clip-path: rect(0 100vw 133vw 0);
+  clip-path: inset(0 0 50% 0);
 }
 
 /* 
