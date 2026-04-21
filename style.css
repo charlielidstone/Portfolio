@@ -485,7 +485,7 @@ main {
 }
 
 * {
-  --offset-top: -30vw;
+  --offset-top: -35vw;
 }
 
 .about-section {
@@ -519,7 +519,7 @@ main {
   left: 0;
   z-index: 0;
   clip-path: rect(0 100vw 133vw 0);
-  filter: saturate(0.2);
+  /* filter: sepia(0.5); */
 }
 
 .about-section::after {
@@ -585,18 +585,35 @@ main {
   background: #ffffff;
   position: absolute;
   inset: 0;
-  clip-path: path(evenodd, "M -9999 -9999 L 9999 -9999 L 9999 9999 L -9999 9999 Z M 330 240 L 800 240 L 800 600 L 330 600 Z");
-  clip-rule: evenodd;
+  clip-path: polygon(evenodd,
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 0,
+    var(--clip-left) var(--clip-top),
+    var(--clip-right) calc(var(--clip-top) + var(--clip-top-angle-offset)),
+    var(--clip-right) calc(var(--clip-bottom) - var(--clip-bottom-angle-offset)),
+    var(--clip-left) var(--clip-bottom),
+    var(--clip-left) var(--clip-top)
+  );
+  --clip-top: 63%;
+  --clip-right: 66%;
+  --clip-bottom: 100%;
+  --clip-left: 33%;
+  --clip-top-angle-offset: -80px;
+  --clip-bottom-angle-offset: 0px;
 }
 
-.hero-section-background::after {
-  content: "";
+.hero-section-foreground-image {
+  width: 105vw;
   position: absolute;
-  top: 240px; left: 330px;
-  width: 233px;
-  height: 100px;
-  background: red;
+  top: -35vw;
+  left: 0;
+  z-index: 99;
+  clip-path: rect(0 100vw 133vw 0);
 }
+
 /* 
 .hero-section-rock-background-img {
   position: fixed;

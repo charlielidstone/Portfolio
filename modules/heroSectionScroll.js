@@ -17,18 +17,18 @@ const heroSectionScroll = {
       }
     });
 
-    gsap.from(".about-section", {
-      scale: 0.85,
-      scrollTrigger: {
-        trigger: ".hero-section",
-        start: "20% top",
-        end: "bottom 60%",
-        scrub: true,
-        // pin: ".about-section",
-        ease: "power4.in",
-        // markers: true,
-      }
-    });
+    // gsap.from(".about-section", {
+    //   scale: 1,
+    //   scrollTrigger: {
+    //     trigger: ".hero-section",
+    //     start: "20% top",
+    //     end: "bottom 60%",
+    //     scrub: true,
+    //     // pin: ".about-section",
+    //     ease: "power4.in",
+    //     // markers: true,
+    //   }
+    // });
 
     tl.to(".picture-frame", {
       rotation: -10,
@@ -36,17 +36,17 @@ const heroSectionScroll = {
       ease: "power4.in",
     });
 
-    tl.to(".hero-section-content", {
-      scale: 0.8,
-      scrollTrigger: {
-        trigger: ".hero-section",
-        start: "top top",
-        end: "bottom 60%",
-        scrub: true,
-        pin: ".about-section",
-        // markers: true,
-      }
-    });
+    // tl.to(".hero-section-content", {
+    //   scale: 0.8,
+    //   scrollTrigger: {
+    //     trigger: ".hero-section",
+    //     start: "top top",
+    //     end: "bottom 60%",
+    //     scrub: true,
+    //     pin: ".about-section",
+    //     // markers: true,
+    //   }
+    // });
 
     // // Border radius animates first, quickly
     // tl.to("#img-window", {
