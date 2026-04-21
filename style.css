@@ -582,8 +582,7 @@ main {
 }
 
 #fhole-path {
-  transform-origin: center;
-  transform: translate(calc(50vw - 72px), calc(50vh - 102px));
+  transform-box: fill-box;
 }
 
 .hero-section-background {

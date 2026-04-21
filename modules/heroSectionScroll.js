@@ -5,8 +5,21 @@
 
 const heroSectionScroll = {
   setup: function() {
+    const holeCenterX = 72;
+    const holeCenterY = 0;
+
+    const placeHoleInViewportCenter = () => {
+      gsap.set("#fhole-path", {
+        x: window.innerWidth / 2 - holeCenterX,
+        y: window.innerHeight / 2 - 102,
+        svgOrigin: `${holeCenterX} ${holeCenterY}`,
+      });
+    };
+
+    placeHoleInViewportCenter();
+    window.addEventListener("resize", placeHoleInViewportCenter);
+
     gsap.to("#fhole-path", {
-      transform: "translate(calc(50vw - 72px), calc(50vh - 102px)) scale(2) rotate(45deg)",
       scrollTrigger: {
         trigger: ".hero-section",
         start: "top top",
@@ -15,12 +28,25 @@ const heroSectionScroll = {
         pin: ".about-section",
         onUpdate: (self) => {
           const progress = self.progress;
-          const scale = 1 + progress; // Scale from 1 to 2
-          const rotation = 45 * progress; // Rotate from 0 to 45 degrees
+          const scale = 1 + progress*9;
+          const rotation = 45 * progress;
           gsap.set("#fhole-path", {
-            transform: `translate(calc(50vw - 72px), calc(50vh - 102px)) scale(${scale}) rotate(${rotation}deg)`,
+            scale,
+            rotation,
           });
-      },
+        }
+      }
+    });
+    
+    gsap.to(".hero-section-foreground-image", {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".hero-section",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+        // pin: true,
+      }
     });
   },
 };
