@@ -10,6 +10,8 @@ const heroSectionScroll = {
     const holeCenterY = 0;
     const baseHoleOffsetX = 10;
     const baseHoleOffsetY = -50;
+    const maxScaleIncrease = 5;
+    let currentProgress = 0;
 
     const getViewportScale = () => {
       const widthScale = window.innerWidth / 1440;
@@ -17,18 +19,21 @@ const heroSectionScroll = {
       return Math.max(0.75, Math.min(widthScale, heightScale));
     };
 
-    const buildClipPath = (progress = 0) => {
+    const buildClipPath = (progress = 0) => { // TODO: go through this
       const viewportScale = getViewportScale();
-      const holeScale = viewportScale * (1 + progress * 5);
+      const verticalPhase = Math.min(progress * 2, 1);
+      const horizontalPhase = Math.max((progress - 0.5) * 2, 0);
+      const xScale = viewportScale * (1 + horizontalPhase * maxScaleIncrease);
+      const yScale = viewportScale * (1 + verticalPhase * maxScaleIncrease);
       const centerX = window.innerWidth / 2 + baseHoleOffsetX;
       const centerY = window.innerHeight / 2 + baseHoleOffsetY;
 
-      const startX = centerX - 122 * holeScale;
-      const startY = centerY - 70 * holeScale;
-      const topRightX = centerX + 72 * holeScale;
-      const bottomRightX = centerX + 122 * holeScale;
-      const bottomY = centerY + 100 * holeScale;
-      const bottomLeftX = centerX - 72 * holeScale;
+      const startX = centerX - 122 * xScale;
+      const startY = centerY - 70 * yScale;
+      const topRightX = centerX + 72 * xScale;
+      const bottomRightX = centerX + 122 * xScale;
+      const bottomY = centerY + 100 * yScale;
+      const bottomLeftX = centerX - 72 * xScale;
 
       return `M -9999,-9999 H 9999 V 9999 H -9999 Z M ${startX} ${startY} H ${topRightX} L ${bottomRightX} ${bottomY} H ${bottomLeftX} Z`;
     };
@@ -42,7 +47,7 @@ const heroSectionScroll = {
     };
 
     applyClipPath();
-    window.addEventListener("resize", () => applyClipPath());
+    window.addEventListener("resize", () => applyClipPath(currentProgress));
 
     gsap.to("#fhole-path", {
       scrollTrigger: {
@@ -52,7 +57,8 @@ const heroSectionScroll = {
         scrub: true,
         pin: ".about-section",
         onUpdate: (self) => {
-          applyClipPath(self.progress);
+          currentProgress = self.progress;
+          applyClipPath(currentProgress);
         }
       }
     });
