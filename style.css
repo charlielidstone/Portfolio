@@ -399,7 +399,7 @@ main {
   text-align: center;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 00px) {
   .small-screen-notification {
     display: none;
   }
