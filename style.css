@@ -472,7 +472,7 @@ main {
   scale: 1;
   z-index: 0;
   pointer-events: none;
-  translate: 0 calc(var(--offset-top) + 34.5vw);
+  translate: 0 calc(var(--about-section-offset-top) + 34.5vw);
 }
 
 .picture-frame-transparent {
@@ -485,10 +485,16 @@ main {
 }
 
 * {
-  --offset-top: -35vw;
+  --about-section-offset-top: -35vw;
+}
+
+.hero-scroll-spacer  {
+  height: 100vh;
 }
 
 .about-section {
+  position: relative;
+  top: var(--about-section-offset-top);
   width: 100vw;
   height: 200vh;
   background: #010101;
@@ -496,9 +502,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  position: relative;
-  top: var(--offset-top);
-  /* clip-path: rect(calc(var(--offset-top)*-1) 100vw 133.33vw 0); we can probably remove this */
+  /* clip-path: rect(calc(var(--about-section-offset-top)*-1) 100vw 133.33vw 0); we can probably remove this */
   transform-origin: 48% 57%;
   /* animation: rotate 20s linear infinite; */
 }
@@ -536,9 +540,9 @@ main {
   /* content: ""; */
   position: absolute;
   left: 0;
-  bottom: var(--offset-top);
+  bottom: var(--about-section-offset-top);
   width: 100%;
-  height: calc(var(--offset-top)*-1);
+  height: calc(var(--about-section-offset-top)*-1);
   background: #010101aa;
   z-index: 1;
 }
@@ -603,7 +607,7 @@ main {
 .hero-section-foreground-image {
   width: 105vw;
   position: absolute;
-  top: -35vw;
+  top: var(--about-section-offset-top);
   left: 0;
   z-index: 99;
   clip-path: inset(0 0 50% 0);

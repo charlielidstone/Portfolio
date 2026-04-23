@@ -28,11 +28,6 @@ const heroSectionScroll = {
         return this.width/this.skewY
       }
     }
-
-    console.log("skew angle x: " + initialHoleDim.skewAngleX());
-
-    const maxScaleIncrease = 5;
-    let currentProgress = 0;
     
     const buildClipPath = (progress = 0) => {
       
@@ -44,7 +39,7 @@ const heroSectionScroll = {
       const bottomLeftYInitial   = (window.innerHeight  / 2) + initialHoleDim.centreY + (initialHoleDim.height  / 2) + (initialHoleDim.skewY / 2);
       const bottomRightXInitial  = (window.innerWidth   / 2) + initialHoleDim.centreX + (initialHoleDim.width   / 2) - (initialHoleDim.skewX / 2);
       const bottomRightYInitial  = (window.innerHeight  / 2) + initialHoleDim.centreY + (initialHoleDim.height  / 2) - (initialHoleDim.skewY / 2);
-
+      
       // the formula here is initialPoint + newY/skewRatio
       const topLeftXFinal1     = topLeftXInitial + ((window.innerHeight / 2) + initialHoleDim.centreY - initialHoleDim.height/2) / initialHoleDim.skewRatioX();
       const topLeftYFinal1     = 0;
@@ -54,7 +49,7 @@ const heroSectionScroll = {
       const bottomLeftYFinal1  = window.innerHeight;
       const bottomRightXFinal1 = bottomRightXInitial - (window.innerHeight - bottomLeftYInitial) / initialHoleDim.skewRatioX();
       const bottomRightYFinal1 = window.innerHeight;
-
+      
       const topLeftXFinal2     = 0;
       const topLeftYFinal2     = 0;
       const topRightXFinal2    = window.innerWidth;
@@ -63,9 +58,9 @@ const heroSectionScroll = {
       const bottomLeftYFinal2  = window.innerHeight;
       const bottomRightXFinal2 = window.innerWidth;
       const bottomRightYFinal2 = window.innerHeight;
-
+      
       let topLeftX, topLeftY, topRightX, topRightY, bottomLeftX, bottomLeftY, bottomRightX, bottomRightY;
-
+      
       if (progress <= 0.5) {
         progress = progress*2;
         topLeftX      = progress*(topLeftXFinal1 - topLeftXInitial) + topLeftXInitial;    
@@ -87,13 +82,14 @@ const heroSectionScroll = {
         bottomRightX  = progress*(bottomRightXFinal2 - bottomRightXFinal1) + bottomRightXFinal1;
         bottomRightY  = progress*(bottomRightYFinal2 - bottomRightYFinal1) + bottomRightYFinal1;
       }
-
-
+      
+      
       return `M -9999,-9999 H 9999 V 9999 H -9999 Z M ${topLeftX} ${topLeftY} 
-                                                    L ${topRightX} ${topRightY} 
-                                                    L ${bottomRightX} ${bottomRightY} 
-                                                    L ${bottomLeftX} ${bottomLeftY} Z`;
+      L ${topRightX} ${topRightY} 
+      L ${bottomRightX} ${bottomRightY} 
+      L ${bottomLeftX} ${bottomLeftY} Z`;
     }
+    
     
     const applyClipPath = (progress = 0) => {
       gsap.set("#fhole-path", {
@@ -102,7 +98,9 @@ const heroSectionScroll = {
         },
       });
     };
-
+    
+    let currentProgress = 0;
+    
     applyClipPath();
     window.addEventListener("resize", () => applyClipPath(currentProgress));
 
@@ -113,12 +111,23 @@ const heroSectionScroll = {
         end: "bottom top",
         scrub: true,
         pin: ".about-section",
+        // pinnedContainer: "#smooth-content",
         onUpdate: (self) => {
           currentProgress = self.progress;
           applyClipPath(currentProgress);
         }
       }
     });
+
+    // gsap.to(".hero-section", {
+    //   scrollTrigger: {
+    //     trigger: ".hero-section",
+    //     start: "top top",
+    //     end: "bottom top",
+    //     scrub: true,
+    //     pin: ".hero-section",
+    //   }
+    // });
     
     gsap.to(".hero-section-foreground-image", {
       display: "none",
