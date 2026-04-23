@@ -2,7 +2,7 @@
  * the Loki effect
  */
 
-// import { gsap } from "gsap";
+import { gsap } from "gsap";
 
 const oldLondonFont = new FontFace('Old London', 'url(public/fonts/old_london/OldLondon.ttf)');
 const usAngelFont = new FontFace('US Angel', 'url(public/fonts/usangel/usangel.ttf)');
