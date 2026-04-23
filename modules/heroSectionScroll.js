@@ -61,27 +61,36 @@ const heroSectionScroll = {
       
       let topLeftX, topLeftY, topRightX, topRightY, bottomLeftX, bottomLeftY, bottomRightX, bottomRightY;
       
-      if (progress <= 0.5) {
-        progress = progress*2;
-        topLeftX      = progress*(topLeftXFinal1 - topLeftXInitial) + topLeftXInitial;    
-        topLeftY      = progress*(topLeftYFinal1 - topLeftYInitial) + topLeftYInitial;    
-        topRightX     = progress*(topRightXFinal1 - topRightXInitial) + topRightXInitial;   
-        topRightY     = progress*(topRightYFinal1 - topRightYInitial) + topRightYInitial;   
-        bottomLeftX   = progress*(bottomLeftXFinal1 - bottomLeftXInitial) + bottomLeftXInitial; 
-        bottomLeftY   = progress*(bottomLeftYFinal1 - bottomLeftYInitial) + bottomLeftYInitial; 
-        bottomRightX  = progress*(bottomRightXFinal1 - bottomRightXInitial) + bottomRightXInitial;
-        bottomRightY  = progress*(bottomRightYFinal1 - bottomRightYInitial) + bottomRightYInitial;
-      } else {
-        progress = (progress-0.5)*2
-        topLeftX      = progress*(topLeftXFinal2 - topLeftXFinal1) + topLeftXFinal1;    
-        topLeftY      = progress*(topLeftYFinal2 - topLeftYFinal1) + topLeftYFinal1;    
-        topRightX     = progress*(topRightXFinal2 - topRightXFinal1) + topRightXFinal1;   
-        topRightY     = progress*(topRightYFinal2 - topRightYFinal1) + topRightYFinal1;   
-        bottomLeftX   = progress*(bottomLeftXFinal2 - bottomLeftXFinal1) + bottomLeftXFinal1; 
-        bottomLeftY   = progress*(bottomLeftYFinal2 - bottomLeftYFinal1) + bottomLeftYFinal1; 
-        bottomRightX  = progress*(bottomRightXFinal2 - bottomRightXFinal1) + bottomRightXFinal1;
-        bottomRightY  = progress*(bottomRightYFinal2 - bottomRightYFinal1) + bottomRightYFinal1;
-      }
+      // if (progress <= 0.5) {
+      //   progress = progress*2;
+      //   topLeftX      = progress*(topLeftXFinal1 - topLeftXInitial) + topLeftXInitial;    
+      //   topLeftY      = progress*(topLeftYFinal1 - topLeftYInitial) + topLeftYInitial;    
+      //   topRightX     = progress*(topRightXFinal1 - topRightXInitial) + topRightXInitial;   
+      //   topRightY     = progress*(topRightYFinal1 - topRightYInitial) + topRightYInitial;   
+      //   bottomLeftX   = progress*(bottomLeftXFinal1 - bottomLeftXInitial) + bottomLeftXInitial; 
+      //   bottomLeftY   = progress*(bottomLeftYFinal1 - bottomLeftYInitial) + bottomLeftYInitial; 
+      //   bottomRightX  = progress*(bottomRightXFinal1 - bottomRightXInitial) + bottomRightXInitial;
+      //   bottomRightY  = progress*(bottomRightYFinal1 - bottomRightYInitial) + bottomRightYInitial;
+      // } else {
+      //   progress = (progress-0.5)*2
+      //   topLeftX      = progress*(topLeftXFinal2 - topLeftXFinal1) + topLeftXFinal1;    
+      //   topLeftY      = progress*(topLeftYFinal2 - topLeftYFinal1) + topLeftYFinal1;    
+      //   topRightX     = progress*(topRightXFinal2 - topRightXFinal1) + topRightXFinal1;   
+      //   topRightY     = progress*(topRightYFinal2 - topRightYFinal1) + topRightYFinal1;   
+      //   bottomLeftX   = progress*(bottomLeftXFinal2 - bottomLeftXFinal1) + bottomLeftXFinal1; 
+      //   bottomLeftY   = progress*(bottomLeftYFinal2 - bottomLeftYFinal1) + bottomLeftYFinal1; 
+      //   bottomRightX  = progress*(bottomRightXFinal2 - bottomRightXFinal1) + bottomRightXFinal1;
+      //   bottomRightY  = progress*(bottomRightYFinal2 - bottomRightYFinal1) + bottomRightYFinal1;
+      // }
+
+      topLeftX      = progress*(topLeftXFinal2 - topLeftXInitial) + topLeftXInitial;    
+      topLeftY      = progress*(topLeftYFinal2 - topLeftYInitial) + topLeftYInitial;    
+      topRightX     = progress*(topRightXFinal2 - topRightXInitial) + topRightXInitial;   
+      topRightY     = progress*(topRightYFinal2 - topRightYInitial) + topRightYInitial;   
+      bottomLeftX   = progress*(bottomLeftXFinal2 - bottomLeftXInitial) + bottomLeftXInitial; 
+      bottomLeftY   = progress*(bottomLeftYFinal2 - bottomLeftYInitial) + bottomLeftYInitial; 
+      bottomRightX  = progress*(bottomRightXFinal2 - bottomRightXInitial) + bottomRightXInitial;
+      bottomRightY  = progress*(bottomRightYFinal2 - bottomRightYInitial) + bottomRightYInitial;
       
       
       return `M -9999,-9999 H 9999 V 9999 H -9999 Z M ${topLeftX} ${topLeftY} 
