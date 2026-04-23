@@ -12,7 +12,7 @@ const heroSectionScroll = {
       width: 500,
       height: 250,
       skewX: 50,
-      skewY: 0,
+      skewY: 100,
     }
 
     const maxScaleIncrease = 5;
@@ -23,9 +23,9 @@ const heroSectionScroll = {
       const topLeftXInitial      = (window.innerWidth   / 2) + initialHoleDim.centreX - (initialHoleDim.width   / 2) + (initialHoleDim.skewX / 2);
       const topLeftYInitial      = (window.innerHeight  / 2) + initialHoleDim.centreY - (initialHoleDim.height  / 2) + (initialHoleDim.skewY / 2);
       const topRightXInitial     = (window.innerWidth   / 2) + initialHoleDim.centreX + (initialHoleDim.width   / 2) + (initialHoleDim.skewX / 2);
-      const topRightYInitial     = (window.innerHeight  / 2) + initialHoleDim.centreY - (initialHoleDim.height  / 2) + (initialHoleDim.skewY / 2);
+      const topRightYInitial     = (window.innerHeight  / 2) + initialHoleDim.centreY - (initialHoleDim.height  / 2) - (initialHoleDim.skewY / 2);
       const bottomLeftXInitial   = (window.innerWidth   / 2) + initialHoleDim.centreX - (initialHoleDim.width   / 2) - (initialHoleDim.skewX / 2);
-      const bottomLeftYInitial   = (window.innerHeight  / 2) + initialHoleDim.centreY + (initialHoleDim.height  / 2) - (initialHoleDim.skewY / 2);
+      const bottomLeftYInitial   = (window.innerHeight  / 2) + initialHoleDim.centreY + (initialHoleDim.height  / 2) + (initialHoleDim.skewY / 2);
       const bottomRightXInitial  = (window.innerWidth   / 2) + initialHoleDim.centreX + (initialHoleDim.width   / 2) - (initialHoleDim.skewX / 2);
       const bottomRightYInitial  = (window.innerHeight  / 2) + initialHoleDim.centreY + (initialHoleDim.height  / 2) - (initialHoleDim.skewY / 2);
 
