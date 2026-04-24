@@ -464,6 +464,7 @@ main {
   width: 100vw;
   height: 100vh;
   z-index: 2;
+  pointer-events: none;
 }
 
 .picture-frame {
@@ -559,7 +560,7 @@ main {
   top: 83vw;
 }
 
-.about-section h1 {
+.about-section-title {
   font-family: "Crimson Text", "DM Serif", Georgia, 'Times New Roman', Times, serif;
   font-size: 6rem;
   font-weight: 600;

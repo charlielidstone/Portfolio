@@ -16,6 +16,8 @@ const aboutSectionScroll = {
                 trigger: ".about-section-title",
                 start: "top 20%",
                 end: "top -40%",
+                // start: "top 120",
+                // end: "top 60%",
                 scrub: true,
                 toggleActions: "play none none reverse",
             }
@@ -30,6 +32,8 @@ const aboutSectionScroll = {
                     trigger: paragraph,
                     start: "top 20%",
                     end: "top -40%",
+                    // start: "top 120",
+                    // end: "top 60%",
                     scrub: true,
                     toggleActions: "play none none reverse",
                 }
