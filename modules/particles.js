@@ -14,7 +14,7 @@ const particles = (function() {
     const canvas = document.querySelector("#bg")
     
     if (!canvas) {
-        console.error("Canvas of form 'canvas#bg' not found.");
+        console.warn("Canvas of form 'canvas#bg' not found.");
         return;
     }
 

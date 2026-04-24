@@ -469,8 +469,10 @@ main {
 .picture-frame {
   position: fixed;
   width: 200px;
+  top: calc(50vh - 200px);
+  left: calc(50vw - 100px);
   scale: 1;
-  z-index: 0;
+  z-index: 3;
   pointer-events: none;
   translate: 0 calc(var(--about-section-offset-top) + 34.5vw);
 }
