@@ -6,16 +6,9 @@ gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 const heroSectionScroll = {
   setup: function() {
-    const pxPerVW = window.innerWidth / 100;
-    const aboutSectionOffsetTop = Math.abs(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--about-section-offset-top'))*pxPerVW);
-
-    // the ratio of the horizontal position to the vertical postition of the focus point on rock.jpg, e.g. 540 / 250 = 2.16
-    const aboutSectionBackgroundPortraitLocation = 2.16;
-
     const initialHoleDim = {
       centreX: 0,
-      centreY: 0 + aboutSectionOffsetTop - window.innerHeight/2,
-      // centreY: 150,
+      centreY: 150,
       width: 500,
       height: 250,
       skewX: 50,
