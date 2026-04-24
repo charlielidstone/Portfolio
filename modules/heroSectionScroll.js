@@ -8,7 +8,7 @@ const heroSectionScroll = {
   setup: function() {
     const initialHoleDim = {
       centreX: 0,
-      centreY: 150,
+      centreY: 125,
       width: 500,
       height: 250,
       skewX: 50,
