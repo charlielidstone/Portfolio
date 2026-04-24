@@ -25,7 +25,6 @@ const aboutSectionScroll = {
             gsap.from(paragraph, {
                 y: 100,
                 opacity: 0,
-                rotateX: -90,
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: paragraph,
