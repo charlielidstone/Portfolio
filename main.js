@@ -4,7 +4,7 @@ import aboutSectionScroll from "./modules/aboutSectionScroll.js";
 import projectsSectionScroll from "./modules/projectsSectionScroll.js";
 import smoothScrolling from "./modules/smoothScrolling.js";
 
-// import particles from "./modules/particles.js";
+import particles from "./modules/particles.js";
 // import initVariableWidthText from "./modules/variableWidthText.js";
 // import { applyDragability } from "./scripts/draggable.js";
 // import threeEffects from "./scripts/threeEffects.js";
@@ -25,7 +25,7 @@ gsap.registerPlugin(ScrollSmoother);
 // const box = document.getElementById('box');
 // applyDragability(box);
 
-// particles.render();
+particles.render();
 // threeEffects.animate();
 
 // initVariableWidthText();

@@ -11,11 +11,11 @@ const spreadVOL = spreadX*spreadY*spreadZ;
 
 
 const particles = (function() {
-    const canvas = document.querySelector("#bg")
+    const canvas = document.querySelector("#particles-bg")
     
     if (!canvas) {
-        console.error("Canvas of form 'canvas#bg' not found.");
-        return;
+        console.warn("Canvas of form 'canvas#particles-bg' not found.");
+        return { render: function() {} };
     }
 
     const scene = new THREE.Scene();
@@ -38,7 +38,7 @@ const particles = (function() {
 
     const addStar = () => {
         const geometry = new THREE.SphereGeometry(0.25, 24, 24);
-        const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+        const material = new THREE.MeshBasicMaterial({ color: 0x000000 });
         const star = new THREE.Mesh(geometry, material);
         
         // const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(200));
