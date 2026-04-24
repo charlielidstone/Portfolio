@@ -1,77 +1,77 @@
 @font-face {
   font-family: 'Old London';
-  src: url('public/fonts/old_london/OldLondon.ttf') format('truetype');
+  src: url('/fonts/old_london/OldLondon.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url("public/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+  src: url('/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DM Serif';
-  src: url('public/fonts/DM_Serif/DMSerifText-Regular.ttf') format('truetype');
+  src: url('/fonts/DM_Serif/DMSerifText-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DM Sans';
-  src: url('public/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
+  src: url('/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Trajan';
-  src: url('public/fonts/trajan/Trajan-Regular.ttf') format('truetype');
+  src: url('/fonts/Trajan/Trajan-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ARB 85 Poster Script JAN-39';
-  src: url('public/fonts/arb_85_poster_script_jan_39/ARB85.ttf') format('truetype');
+  src: url('/fonts/arb85-2/arb85.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'US Angel';
-  src: url('public/fonts/usangel/usangel.ttf') format('truetype');
+  src: url('/fonts/usangel/usangel.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Cloister Black';
-  src: url('public/fonts/cloister-black/CloisterBlack.ttf') format('truetype');
+  src: url('/fonts/cloister-black/CloisterBlack.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('public/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+  src: url('/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Fanwood';
-  src: url('public/fonts/fanwood/fanwood-master/webfonts/fanwood-webfont.ttf') format('truetype');
+  src: url('/fonts/fanwood/fanwood-master/webfonts/fanwood-webfont.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Ostrich Sans';
-  src: url('public/fonts/ostrich-sans/ostrich-sans-master/webfonts/ostrich-sans-black.ttf')
+  src: url('/fonts/ostrich-sans/ostrich-sans-master/webfonts/ostrich-sans-black.ttf')
 }
 
 @font-face {
   font-family: 'Inria Serif';
-  src: url('public/fonts/Inria_Serif/InriaSerif-Italic.ttf')
+  src: url('/fonts/Inria_Serif/InriaSerif-Italic.ttf')
 }
 
 :root {

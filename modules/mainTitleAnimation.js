@@ -4,10 +4,10 @@
 
 import { gsap } from "gsap";
 
-const oldLondonFont = new FontFace('Old London', 'url(public/fonts/old_london/OldLondon.ttf)');
-const usAngelFont = new FontFace('US Angel', 'url(public/fonts/usangel/usangel.ttf)');
-const arb85Font = new FontFace('ARB85', 'url(public/fonts/arb85-2/arb85.ttf)');
-const cloisterBlackFont = new FontFace('Cloister Black', 'url(public/fonts/cloister-black/CloisterBlack.ttf)');
+const oldLondonFont = new FontFace('Old London', 'url(/fonts/old_london/OldLondon.ttf)');
+const usAngelFont = new FontFace('US Angel', 'url(/fonts/usangel/usangel.ttf)');
+const arb85Font = new FontFace('ARB85', 'url(/fonts/arb85-2/arb85.ttf)');
+const cloisterBlackFont = new FontFace('Cloister Black', 'url(/fonts/cloister-black/CloisterBlack.ttf)');
 
 Promise.all([
   oldLondonFont.load(),
@@ -81,7 +81,7 @@ const mainTitleAnimation = {
         'Grenze Gotisch',
         '"UnifrakturCook"',
         'Old London',
-        // 'Cutive Mono',
+        'Cutive Mono',
         // '"ARB85"',
       ];
       const mainTitleAnimationDuration = 4300; // 4300ms works well
