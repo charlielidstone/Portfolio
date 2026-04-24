@@ -1,5 +1,6 @@
 import mainTitleAnimation from "./modules/mainTitleAnimation.js";
 import heroSectionScroll from "./modules/heroSectionScroll.js";
+import aboutSectionScroll from "./modules/aboutSectionScroll.js";
 import projectsSectionScroll from "./modules/projectsSectionScroll.js";
 import smoothScrolling from "./modules/smoothScrolling.js";
 
@@ -34,5 +35,6 @@ mainTitleAnimation.run();
 smoothScrolling.setup();
 heroSectionScroll.setup();
 projectsSectionScroll.setup();
+aboutSectionScroll.setup();
 
 window.addEventListener("load", () => ScrollTrigger.refresh());

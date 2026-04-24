@@ -548,6 +548,7 @@ main {
 }
 
 .about-section-content {
+  perspective: 1000px;
   z-index: 1;
   text-align: center;
   display: flex;
