@@ -55,7 +55,7 @@ const MainLogo = {
   i: {
     defaultFont: "Grenze Gotisch",
     defaultFontSize: "1.1em",
-    defaultPositionTop: "-0.06em",
+    defaultPositionTop: "-0.02em",
     defaultPositionLeft: "0.1em",
     margin: "0.1em",
   },
