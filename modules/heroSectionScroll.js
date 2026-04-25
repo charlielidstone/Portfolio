@@ -120,12 +120,26 @@ const heroSectionScroll = {
         end: "bottom top",
         scrub: true,
         pin: ".about-section",
+        // pin: ".hero-section",
+        pinSpacing: false,
         // pinnedContainer: "#smooth-content",
         onUpdate: (self) => {
           currentProgress = self.progress;
           applyClipPath(currentProgress);
         }
       }
+
+      // scrollTrigger: {
+      //     trigger: ".hero-section",
+      //     start: "top top",
+      //     end: "bottom top",
+      //     scrub: true,
+      //     pin: ".hero-section",  // pin the hero, not about
+      //     onUpdate: (self) => {
+      //         currentProgress = self.progress;
+      //         applyClipPath(currentProgress);
+      //     }
+      // }
     });
 
     // gsap.to(".hero-section", {

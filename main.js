@@ -33,8 +33,9 @@ particles.render();
 mainTitleAnimation.run();
 
 smoothScrolling.setup();
+
 heroSectionScroll.setup();
 projectsSectionScroll.setup();
 aboutSectionScroll.setup();
-
+ScrollTrigger.refresh();
 window.addEventListener("load", () => ScrollTrigger.refresh());

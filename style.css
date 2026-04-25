@@ -621,8 +621,8 @@ main {
     radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0) 60%); */
   background-size: 36px 36px, 36px 36px, 100% 100%;
   background-position: 0 0, 0 0, center;
-  position: fixed;
-  inset: 0;
+  /* position: fixed; */
+  /* inset: 0; */
   width: 100vw;
   height: 100vh;
   clip-path: url(#fhole);

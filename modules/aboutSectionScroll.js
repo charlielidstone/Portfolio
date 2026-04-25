@@ -14,12 +14,14 @@ const aboutSectionScroll = {
             ease: "power2.out",
             scrollTrigger: {
                 trigger: ".about-section-title",
-                start: "top 20%",
-                end: "top -40%",
-                // start: "top 120",
-                // end: "top 60%",
+                // start: "top 20%",
+                // end: "top -40%",
+                start: "top bottom",
+                end: "top center",
                 scrub: true,
+                invalidateOnRefresh: true,
                 toggleActions: "play none none reverse",
+                markers: true,
             }
         });
 
@@ -30,11 +32,12 @@ const aboutSectionScroll = {
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: paragraph,
-                    start: "top 20%",
-                    end: "top -40%",
-                    // start: "top 120",
-                    // end: "top 60%",
+                    // start: "top 20%",
+                    // end: "top -40%",
+                    start: "top bottom",
+                    end: "top center",
                     scrub: true,
+                    invalidateOnRefresh: true,
                     toggleActions: "play none none reverse",
                 }
             });
