@@ -589,8 +589,11 @@ main {
   font-size: 1.2rem;
   max-width: 300px;
   font-weight: 300;
-  /* text-transform: uppercase; */
+  /* font-family: "Crimson Text", "Times New Romans", serif; */
   font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 7%;
 }
 
 .frame {
@@ -607,11 +610,12 @@ main {
 }
 
 .hero-section-background {
-  background-color: #f8f8f6;
-  background-image:
+  /* background-color: #f8f8f6; */
+  background-color: #ffffff;
+  /* background-image:
     linear-gradient(to right, rgba(16, 16, 16, 0.12) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(16, 16, 16, 0.12) 1px, transparent 1px),
-    radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0) 60%);
+    radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0) 60%); */
   background-size: 36px 36px, 36px 36px, 100% 100%;
   background-position: 0 0, 0 0, center;
   position: fixed;
@@ -640,6 +644,7 @@ main {
   mask: url(#myMask);
 } */
 
+
 .hero-section p {
   margin: 1em 0;
   font-family: "Cutive Mono", "JetBrains Mono", monospace;
@@ -659,11 +664,19 @@ main {
 
 .hero-section-content h1 {
   font-size: 4rem;
+  font-family: "Crimson Text", "Times New Romans", serif;
+  font-style: italic;
+  font-weight: normal;
 }
 
 .hero-section-content h2 {
   font-size: 1.5rem;
-  font-family: "Inria Serif", serif;
+  font-family: "Crimson Text", "Times New Romans", serif;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 23%;
+  margin: 0.2em;
 }
 
 .projects-section {
