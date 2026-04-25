@@ -479,7 +479,6 @@ main {
   width: 100vw;
   height: 100vh;
   z-index: 2;
-  pointer-events: none;
 }
 
 .picture-frame {
@@ -596,6 +595,10 @@ main {
   letter-spacing: 7%;
 }
 
+.about-section a {
+  color: white;
+}
+
 .frame {
   position: absolute;
   inset: 0;
@@ -677,6 +680,28 @@ main {
   font-weight: normal;
   letter-spacing: 23%;
   margin: 0.2em;
+}
+
+.hero-section-links {
+  position: absolute;
+  bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-section-links a {
+  width: 35px;
+  height: 35px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.hero-section-links a img {
+  width: 100%;
+  height: 100%;
 }
 
 .projects-section {

@@ -147,6 +147,16 @@ const heroSectionScroll = {
         scrub: true,
       },
     });
+
+    gsap.to(".hero-section", {
+      display: "none",
+      scrollTrigger: {
+        trigger: ".hero-section",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
   },
 };
 
