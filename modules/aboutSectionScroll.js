@@ -21,7 +21,7 @@ const aboutSectionScroll = {
                 scrub: true,
                 invalidateOnRefresh: true,
                 toggleActions: "play none none reverse",
-                markers: true,
+                // markers: true,
             }
         });
 
