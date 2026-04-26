@@ -531,16 +531,6 @@ main {
   }
 }
 
-.about-section-background-img {
-  width: 105vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  clip-path: rect(0 100vw 133vw 0);
-  /* filter: sepia(0.5); */
-}
-
 .about-section::after {
   content: "";
   position: absolute;
@@ -635,6 +625,18 @@ main {
   left: 0;
   z-index: 99;
   clip-path: inset(0 0 50% 0);
+  /* scale: 2; */
+}
+
+.about-section-background-img {
+  width: 105vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  clip-path: rect(0 100vw 133vw 0);
+  /* filter: sepia(0.5); */
+  /* scale: 2; */
 }
 
 /* 
@@ -680,6 +682,7 @@ main {
   font-weight: normal;
   letter-spacing: 23%;
   margin: 0.2em;
+  text-align: center;
 }
 
 .hero-section-links {
