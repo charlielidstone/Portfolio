@@ -75,7 +75,8 @@
 }
 
 :root {
-  
+  --main-background: #0D0D0D;
+  --main-background-light: #fdfdfd;
 }
 
 * {
@@ -88,7 +89,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: #010101;
+  background: var(--main-background);
 }
 
 ::selection {
@@ -102,7 +103,7 @@ html, body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: white;
+  background: var(--main-background-light);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -409,7 +410,7 @@ main {
   position: fixed;
   inset: 0;
   z-index: 2000;
-  background: #ffffff;
+  background: var(--main-background-light);
   padding: 3rem;
   text-align: center;
 }
@@ -512,7 +513,7 @@ main {
   top: var(--about-section-offset-top);
   width: 100vw;
   height: 200vh;
-  background: #010101;
+  background: var(--main-background);
   color: white;
   display: flex;
   align-items: center;
@@ -538,7 +539,7 @@ main {
   top: 0;
   width: 100%;
   height: 133.33vw;
-  box-shadow: inset 0 -60vw 1000px -200px #010101; /* the second value is the one that controls how far up the shadow goes */
+  box-shadow: inset 0 -60vw 1000px -200px var(--main-background); /* the second value is the one that controls how far up the shadow goes */
 }
 
 .about-section::before {
@@ -604,7 +605,7 @@ main {
 
 .hero-section-background {
   /* background-color: #f8f8f6; */
-  background-color: #ffffff;
+  background-color: var(--main-background-light);
   /* background-image:
     linear-gradient(to right, rgba(16, 16, 16, 0.12) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(16, 16, 16, 0.12) 1px, transparent 1px),
@@ -683,6 +684,7 @@ main {
   letter-spacing: 23%;
   margin: 0.2em;
   text-align: center;
+  color: #505050;
 }
 
 .hero-section-links {
@@ -711,7 +713,7 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: #010101;
+  background: var(--main-background);
   color: #ffffff;
   width: 100vw;
   height: 200vh;
