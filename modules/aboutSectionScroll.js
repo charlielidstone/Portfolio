@@ -9,6 +9,7 @@ const aboutSectionScroll = {
         console.log("Setting up about section scroll animation");
         gsap.from(".about-section-title", {
             y: 100,
+            scale: 0.8,
             opacity: 0,
             rotateX: -90,
             ease: "power2.out",
@@ -17,7 +18,7 @@ const aboutSectionScroll = {
                 // start: "top 20%",
                 // end: "top -40%",
                 start: "top bottom",
-                end: "top center",
+                end: "top 70%",
                 scrub: true,
                 invalidateOnRefresh: true,
                 toggleActions: "play none none reverse",
@@ -25,13 +26,14 @@ const aboutSectionScroll = {
             }
         });
 
-        document.querySelectorAll(".about-section p").forEach((paragraph) => {
-            gsap.from(paragraph, {
+        document.querySelectorAll(".about-section p").forEach((p) => {
+            gsap.from(p, {
                 y: 100,
                 opacity: 0,
+                scale: 0.8,
                 ease: "power2.out",
                 scrollTrigger: {
-                    trigger: paragraph,
+                    trigger: p,
                     // start: "top 20%",
                     // end: "top -40%",
                     start: "top bottom",

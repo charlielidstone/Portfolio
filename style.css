@@ -674,7 +674,7 @@ main {
 }
 
 .hero-section-content h1 {
-  font-size: 6rem;
+  font-size: 6em;
   font-family: "Crimson Text", "Times New Romans", serif;
   font-style: italic;
   font-weight: normal;
@@ -712,6 +712,48 @@ main {
 .hero-section-links a img {
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 1500px) {
+  .hero-section-content h1 {
+    font-size: 4em;
+  }
+
+  .hero-section-content h2 {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 687px) {
+  .hero-section-foreground-image {
+    translate: 40px 0;
+    justify-self: center;
+    width: 1400px;
+    z-index: 99;
+  }
+
+  .about-section-background-img {
+    translate: 40px 0;
+    justify-self: center;
+    width: 1400px;
+    z-index: 99;
+  }
+
+  .hero-section-content h1 {
+    font-size: 3.4em;
+  }
+
+  .hero-section-content h2 {
+    font-size: 1em;
+  }
+/* 
+  .hero-section-foreground-image {
+    width: 1500px;
+  }
+
+  .about-section-background-img {
+    width: 1500px;
+  } */
 }
 
 .projects-section {
