@@ -649,6 +649,20 @@ main {
   /* scale: 2; */
 }
 
+@media screen and (min-width: 1300px) {
+  .hero-section-foreground-image {
+    width: 105vw;
+    top: calc(var(--about-section-offset-top) - 500px);
+    left: 0;
+  }
+
+  .about-section-background-img {
+    width: 105vw;
+    top: calc(var(--about-section-offset-top) - 300px);
+    left: 0;
+  }
+}
+
 /* 
 .hero-section-rock-background-img {
   position: fixed;

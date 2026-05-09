@@ -6,6 +6,16 @@ gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 const heroSectionScroll = {
   setup: function() {
+    let aboutSectionOffsetTop = getComputedStyle(document.documentElement)
+      .getPropertyValue("--about-section-offset-top")
+      .trim()
+      .split("px")[0];
+
+    aboutSectionOffsetTop = parseInt(aboutSectionOffsetTop);
+    aboutSectionOffsetTop = 0;
+    
+    console.log("aboutSectionOffsetTop: ", aboutSectionOffsetTop);
+
     const initialHoleDim = {
       centreX: 0,
       centreY: 125,
@@ -28,17 +38,19 @@ const heroSectionScroll = {
         return this.width/this.skewY
       }
     }
+
+    
     
     const buildClipPath = (progress = 0) => {
       
       const topLeftXInitial      = (window.innerWidth   / 2) + initialHoleDim.centreX - (initialHoleDim.width   / 2) + (initialHoleDim.skewX / 2);
-      const topLeftYInitial      = (window.innerHeight  / 2) + initialHoleDim.centreY - (initialHoleDim.height  / 2) + (initialHoleDim.skewY / 2);
+      const topLeftYInitial      = (window.innerHeight  / 2) + initialHoleDim.centreY - (initialHoleDim.height  / 2) + (initialHoleDim.skewY / 2) + aboutSectionOffsetTop;
       const topRightXInitial     = (window.innerWidth   / 2) + initialHoleDim.centreX + (initialHoleDim.width   / 2) + (initialHoleDim.skewX / 2);
-      const topRightYInitial     = (window.innerHeight  / 2) + initialHoleDim.centreY - (initialHoleDim.height  / 2) - (initialHoleDim.skewY / 2);
+      const topRightYInitial     = (window.innerHeight  / 2) + initialHoleDim.centreY - (initialHoleDim.height  / 2) - (initialHoleDim.skewY / 2) + aboutSectionOffsetTop;
       const bottomLeftXInitial   = (window.innerWidth   / 2) + initialHoleDim.centreX - (initialHoleDim.width   / 2) - (initialHoleDim.skewX / 2);
-      const bottomLeftYInitial   = (window.innerHeight  / 2) + initialHoleDim.centreY + (initialHoleDim.height  / 2) + (initialHoleDim.skewY / 2);
+      const bottomLeftYInitial   = (window.innerHeight  / 2) + initialHoleDim.centreY + (initialHoleDim.height  / 2) + (initialHoleDim.skewY / 2) + aboutSectionOffsetTop;
       const bottomRightXInitial  = (window.innerWidth   / 2) + initialHoleDim.centreX + (initialHoleDim.width   / 2) - (initialHoleDim.skewX / 2);
-      const bottomRightYInitial  = (window.innerHeight  / 2) + initialHoleDim.centreY + (initialHoleDim.height  / 2) - (initialHoleDim.skewY / 2);
+      const bottomRightYInitial  = (window.innerHeight  / 2) + initialHoleDim.centreY + (initialHoleDim.height  / 2) - (initialHoleDim.skewY / 2) + aboutSectionOffsetTop;
       
       // the formula here is initialPoint + newY/skewRatio
       const topLeftXFinal1     = topLeftXInitial + ((window.innerHeight / 2) + initialHoleDim.centreY - initialHoleDim.height/2) / initialHoleDim.skewRatioX();
