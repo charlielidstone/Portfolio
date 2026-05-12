@@ -146,44 +146,6 @@ x.loading-screen {
   }
 }
 
-/* Not used in active HTML */
-#main__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  font-family: monospace;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  color: #151515;
-  line-height: 0.8em;
-  font-size: 3em;
-}
-
-/* Not used in active HTML */
-#shadow-thing {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: 0;
-  box-shadow: inset calc(var(--shadow-x)) calc(var(--shadow-y)) 100px var(--shadow-color);
-  --shadow-x: 200px;
-  --shadow-y: 250px;
-  --shadow-color: white;
-}
-
-/* Not used in active HTML */
-#shadow-thing::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: inherit;
-  box-shadow: inset calc(var(--shadow-x)*-1) calc(var(--shadow-y)*-1) 100px var(--shadow-color);
-  --shadow-color: white;
-}
-
-/* Not used in active HTML */
 .thing {
   content: '';
   position: fixed;
@@ -199,19 +161,6 @@ x.loading-screen {
   animation-fill-mode: forwards;
 }
 
-/* Not used in active HTML */
-.thing::after {
-  content: '';
-  position: absolute;
-  z-index: 1000;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  border-radius: 5px;
-  box-shadow: inset 0px 0px 100vw 100vw black;
-}
-
-/* Not used in active HTML */
 @keyframes box-shadow {
   0% {
     box-shadow: inset 0px 0px 70vw 70vw black;
@@ -221,23 +170,6 @@ x.loading-screen {
   }
 }
 
-/* Not used in active HTML */
-#main__title {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: center;
-  text-transform: uppercase;
-  width: fit-content;
-  height: fit-content;
-  font-size: 4em;
-  letter-spacing: 0.5em;
-  font-family: var(--primary-font);
-  transition: scale 1s;
-  clip-path: rect(0 100% 100% 0);
-}
-
-/* Not used in active HTML */
 #main__title span {
   text-align: center;
   cursor: default;
@@ -247,17 +179,6 @@ x.loading-screen {
   line-height: 2;
 }
 
-/* Not used in active HTML */
-#main__title span:hover {
-  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
-}
-
-/* Not used in active HTML */
-.main__title-char-container {
-  position: relative;
-}
-
-/* Not used in active HTML */
 #bg {
   position: fixed;
   left: 0;
@@ -273,23 +194,6 @@ x.loading-screen {
   border-bottom: 1px solid black; */
 }
 
-/* Not used in active HTML */
-#particles-bg {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  display: block;
-  pointer-events: none;
-  /* border-top: 1px solid black;
-  border-bottom: 1px solid black; */
-}
-
-/* Not used in active HTML */
 #construction-banner {
   background: hsla(51, 100%, 67%, 0.938);
   /* border: 3px solid hsl(51, 48%, 45%); */
@@ -316,28 +220,6 @@ x.loading-screen {
   /* box-shadow: 1px 0px 10px 3px hsl(51, 100%, 67%, 0.5); */
 }
 
-/* Not used in active HTML */
-.block {
-  position: relative;
-  width:25vw;
-  height:25vw;
-  border-radius: 100px;
-  background: linear-gradient(0deg, #000, #262626);
-}
-
-/* Not used in active HTML */
-.construction-banner-shadow {
-  width: 550px;
-  height: 3rem;
-  box-sizing: border-box;
-  max-width: 100vw;
-  position: fixed;
-  top: 20px;
-  left: calc(50vw - 275px);
-  z-index: 400;
-}
-
-/* Not used in active HTML */
 .shadow {
 
   &:before, &:after {
@@ -375,59 +257,6 @@ x.loading-screen {
     opacity: 0.9;
   }
   
-}
-
-@keyframes shadow {
-/* Not used in active HTML */
-  0% {
-    background-position: 0 0;
-  }
-  50.01% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-@keyframes flash-background {
-/* Not used in active HTML */
-  from {
-    background: hsla(51, 100%, 67%, 0.938);
-  }
-  to {
-    background: hsla(51, 100%, 88%, 0.938);
-  }
-}
-
-/* Not used in active HTML */
-@media screen and (max-width: 768px) {
-  #construction-banner {
-    width: 90vw;
-    left: 5vw;
-    padding: 10px 1.5em;
-  }
-  
-}
-
-.background-image {
-/* Not used in active HTML */
-  position: fixed;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  display: block;
-  background: center no-repeat url('/public/images/Great_Wave_off_Kanagawa2.jpg');
-  background-size: cover;
-  width: 1200px;
-  height: 800px;
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(0px);
 }
 
 main {
@@ -496,43 +325,11 @@ main {
   color: white;
 }
 
-.blue-section {
-/* Not used in active HTML */
-  width: 500px;
-  height: 80vh;
-  background: rgba(94, 120, 153, 0.726);
-  backdrop-filter: blur(7px);
-  padding: 20px;
-  box-sizing: border-box;
-  margin: 25px 0;
-}
-
-.blue-section * {
-/* Not used in active HTML */
-  color: white;
-}
-
 .hero-section {
   position: fixed;
   width: 100vw;
   height: 100vh;
   z-index: 2;
-}
-
-.picture-frame {
-/* Not used in active HTML */
-  position: fixed;
-  width: 200px;
-  scale: 1;
-  z-index: 0;
-  pointer-events: none;
-  translate: 0 calc(var(--about-section-offset-top) + 34.5vw);
-}
-
-.picture-frame-transparent {
-/* Not used in active HTML */
-  opacity: 1;
-  z-index: 3;
 }
 
 #about {
@@ -542,11 +339,6 @@ main {
 * {
   /* --about-section-offset-top: -35vw; */
   --about-section-offset-top: -200px;
-}
-
-.hero-scroll-spacer  {
-/* Not used in active HTML */
-  height: 100vh;
 }
 
 .about-section {
@@ -562,16 +354,6 @@ main {
   /* clip-path: rect(calc(var(--about-section-offset-top)*-1) 100vw 133.33vw 0); we can probably remove this */
   transform-origin: 48% 57%;
   /* animation: rotate 20s linear infinite; */
-}
-
-@keyframes rotate {
-/* Not used in active HTML */
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .about-section::after {
@@ -710,13 +492,6 @@ main {
 } */
 
 
-.hero-section p {
-/* Not used in active HTML */
-  margin: 1em 0;
-  font-family: "Cutive Mono", "JetBrains Mono", monospace;
-  font-size: 1.1em;
-}
-
 .hero-section-content {
   position: absolute;
   inset: 0;
@@ -745,31 +520,6 @@ main {
   margin: 0.2em;
   text-align: center;
   color: #505050;
-}
-
-.hero-section-links {
-/* Not used in active HTML */
-  position: absolute;
-  bottom: 5vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.hero-section-links a {
-/* Not used in active HTML */
-  width: 35px;
-  height: 35px;
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-.hero-section-links a img {
-/* Not used in active HTML */
-  width: 100%;
-  height: 100%;
 }
 
 @media screen and (max-width: 1500px) {
@@ -812,139 +562,6 @@ main {
   } */
 }
 
-.projects-section {
-/* Not used in active HTML */
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background: var(--main-background);
-  color: #ffffff;
-  width: 100vw;
-  height: 200vh;
-  padding: 0;
-  position: relative;
-}
-
-.projects-section h1 {
-/* Not used in active HTML */
-  font-family: "Crimson Text", "DM Serif", Georgia, 'Times New Roman', Times, serif;
-  font-size: 4rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 11.52px;
-  margin-bottom: 5rem;
-}
-
-.projects-container {
-/* Not used in active HTML */
-  display: grid;
-  place-items: center;
-  /* grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr); */
-  /* gap: -1px; */
-  perspective: none;
-  width: 100vw;
-  position: relative;
-}
-
-.project-card {
-/* Not used in active HTML */
-  position: absolute;
-  top: 0;
-  width: 30vw;
-  height: 20vw;
-  background: #010101;
-  border: 1px solid #ffffff;
-  padding: 1rem;
-}
-
-#p1 { z-index: 3; } 
-#p2 { z-index: 2; }
-#p3 { z-index: 1; }
-
-#box {
-/* Not used in active HTML */
-  --width: 300px;
-  --height: 300px;
-  width: var(--width);
-  height: var(--height);
-  background: repeating-linear-gradient(90deg, #00000000, #00000022 6.25%);
-  cursor: grab;
-  border: 0px solid #ffffff;
-  --backdrop-filter-basics: blur(0px) sepia(0) invert(0);
-  border-radius: var(--border-radius);
-  --border-radius: 50px;
-}
-
-#box::after {
-/* Not used in active HTML */
-  border-radius: var(--border-radius);
-  content: "";
-  display: block;
-  width: var(--width);
-  height: var(--height);
-  background: linear-gradient(90deg, #00000011, #00000000, #00000011);
-}
-
-#box:active {
-/* Not used in active HTML */
-  cursor: grabbing;
-}
-
-/* firefox doesn't seem to support the displacement filter stuff sadly, so this stuff is just compatibility-proofing */
-/* Not used in active HTML */
-@supports (backdrop-filter: url(#displacementFilter)) {
-  #box {
-/* Not used in active HTML */
-    backdrop-filter:  url(#displacementFilter) var(--backdrop-filter-basics) blur(1px);
-  }
-}
-
-/* Not used in active HTML */
-@supports not (backdrop-filter: url(#displacementFilter)) {
-  #box {
-/* Not used in active HTML */
-    backdrop-filter: var(--backdrop-filter-basics);
-  }
-}
-
-/* Not used in active HTML */
-@-moz-document url-prefix() {
-  #box {
-/* Not used in active HTML */
-    backdrop-filter: blur(5px) var(--backdrop-filter-basics) !important;
-  }
-}
-
-#lens {
-/* Not used in active HTML */
-  --radius: 100px;
-  --backdrop-filter-basics: blur(0px) sepia(0) invert(0);
-  position: fixed;
-  top: calc(50vh - var(--radius));
-  left: calc(50vw - var(--radius));
-  width: calc(var(--radius) * 2);
-  height: calc(var(--radius) * 2);
-  background: rgba(255, 0, 0, 0.24);
-  border-radius: 50%;
-  backdrop-filter: url(#lensDisplacementFilter) var(--backdrop-filter-basics) blur(1px);
-}
-
-#lens::after {
-/* Not used in active HTML */
-  border-radius: var(--border-radius);
-  content: "";
-  display: block;
-  width: var(--width);
-  height: var(--height);
-  background: linear-gradient(90deg, #00000011, #00000000, #00000011);
-}
-
-#lens:active {
-/* Not used in active HTML */
-  cursor: grabbing;
-}
-
 section {
   width: 100vw;
   /* height: 100vh; */
@@ -952,211 +569,4 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.cropped-section {
-/* Not used in active HTML */
-  background: purple;
-  padding: 10vh 10vw;
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 200vh;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  /* clip-path: inset(10vh calc(50vw - 100px) calc(190vh - 200px) calc(50vw - 100px)); */
-}
-
-#profile-img {
-/* Not used in active HTML */
-  width: 200px;
-  border-radius: 50%;
-  /* clip-path: rect(0 1000px 1000px 0); */
-}
-
-.chromatic-aberration-section {
-/* Not used in active HTML */
-  height: 100vh;
-}
-
-.chromatic-aberration {
-/* Not used in active HTML */
-  color: rgba(255, 0, 255, 0.1);
-  font-size: 4em;
-  font-family: sans-serif;
-  margin: 1rem;
-}
-
-.variable-width-text-section {
-/* Not used in active HTML */
-  height: 100vh;
-  display: grid;
-  place-items: center;
-}
-
-.variable-width-text span {
-/* Not used in active HTML */
-  font-family: 'Roboto';
-  /* font-size: 3em; */
-  font-weight: 100;
-  cursor: default;
-  text-transform: uppercase;
-  /* transition: 0.5s cubic-bezier(0,1.06,0,.9); */
-  /* animation: font-width 1s ease infinite alternate; */
-  /* font-style: italic; */
-}
-
-@keyframes font-width {
-/* Not used in active HTML */
-  from {
-    font-weight: 100;
-  }
-  to {
-    font-weight: 900;
-  }
-}
-
-#gradual-blur-box {
-/* Not used in active HTML */
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  outline: 1px solid black;
-}
-
-.gradual-blur-div {
-/* Not used in active HTML */
-  width: 100%;
-  flex-grow: 1;
-  margin-top: -3px;
-  /* background-color: rgba(0, 0, 255, 0.432); */
-  backdrop-filter: blur(10px);
-}
-
-.gradual-blur-section {
-/* Not used in active HTML */
-  height: 100vh;
-  /* background: linear-gradient(90deg, #85a8e1, #779dda, #6e95d5, #658cce, #5c85c9, #557ec2, #4f7bbe, #4a77ba, #4774b8, #4270b3); */
-  background: linear-gradient(90deg, #8aaff5, #749dec, #6290e5, #5686da, #467dd5, #3d75ca, #326fc2, #316bbc, #2b66b4, #2862ac);
-  position: relative;
-  z-index: 0;
-  isolation: isolate;
-}
-
-.gradual-blur-section::after {
-/* Not used in active HTML */
-  display: none;
-  width: 300%;
-  height: 300%;
-  content: "";
-  position: absolute;
-  transform: translateX(-50%);
-  inset: 0;
-  z-index: 10;
-  pointer-events: none;
-  box-shadow: inset 0 300px 300px rgb(0, 0, 0);
-}
-
-.standing-on-rock-section {
-/* Not used in active HTML */
-  /* background-image: url("public/images/rock.jpg"); */
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: 0;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  position: relative;
-}
-
-.rock-background-img {
-/* Not used in active HTML */
-  width: 100%;
-}
-
-.about-me-heading {
-/* Not used in active HTML */
-  font-family: 'Roboto', 'DM Sans', serif;
-  font-size: 22em;
-  /* font-style: italic; */
-  text-wrap: nowrap;
-  color: white;
-  text-transform: uppercase;
-  font-weight: 100;
-  position: fixed;
-  top: 0;
-}
-
-.next-section {
-/* Not used in active HTML */
-  height: 100vh;
-  width: 100vw;
-  background: red;
-}
-
-.test-section {
-/* Not used in active HTML */
-  height: 100vh;
-  width: 100vw;
-  background: green;
-  position: relative;
-}
-
-.clipped-thing {
-/* Not used in active HTML */
-  display: none;
-  width: 300px;
-  height: 300px;
-  background: blue;
-  /* Two sub-paths with matching command counts for smooth interpolation. */
-  clip-path: path(evenodd, "M 0 0 L 300 0 L 300 300 L 0 300 Z M 90 90 L 210 90 L 210 210 L 90 210 Z");
-  transition: clip-path 1s ease;
-}
-
-.clipped-thing:hover {
-/* Not used in active HTML */
-  clip-path: path(evenodd, "M 0 0 L 300 0 L 300 300 L 0 300 Z M 150 10 L 290 150 L 150 290 L 10 150 Z");
-}
-
-.test-section-background {
-/* Not used in active HTML */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('/public/images/Great_Wave_off_Kanagawa2.jpg') center no-repeat;
-  background-size: cover;
-  /* clip-path: rect(calc(200px + 10px) calc(500px + 400px - 10px) calc(200px + 475px - 10px) calc(500px + 10px)); */
-  clip-path: path(evenodd, "M 0 0 L 1000 0 L 1000 1000 L 0 1000 Z M 500 200 L 900 200 L 900 675 L 500 675 Z");
-  transition: clip-path 1s ease;
-}
-
-.test-section-background:hover {
-/* Not used in active HTML */
-  clip-path: path(evenodd, "M 0 0 L 1000 0 L 1000 1000 L 0 1000 Z M 600 100 L 1000 300 L 800 775 L 400 575 Z");
-}
-
-.test-frame {
-/* Not used in active HTML */
-  position: absolute;
-  top: 200px;
-  left: 500px;
-  width: 400px;
-  height: 475px;
-  transition: 1s ease;
-}
-
-.test-frame:hover {
-/* Not used in active HTML */
-  rotate: 45deg;
 }
