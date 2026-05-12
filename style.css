@@ -80,13 +80,20 @@
 }
 
 @font-face {
+  font-family: "Lastik";
+  src: url('public/fonts/lastik/Fonts/Lastik Free Font/TTF/LastikFreeFont-Free.ttf');
+}
+
+@font-face {
   font-family: "Suisse Intl";
   src: url('/public/fonts/suisse-intl/SuisseIntlCondTrial.otf') format('opentype');
 }
 
 :root {
-  --main-background: #0D0D0D;
+  --main-background: #000000;
   --main-background-light: #fdfdfd;
+  --primary-serif: 'Lastik', 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
+  --primary-sans-serif: 'Ranade', 'Roboto', sans-serif;
 }
 
 * {
@@ -144,6 +151,7 @@ x.loading-screen {
   }
 }
 
+/* Not used in active HTML */
 #main__background {
   position: absolute;
   top: 0;
@@ -159,6 +167,7 @@ x.loading-screen {
   font-size: 3em;
 }
 
+/* Not used in active HTML */
 #shadow-thing {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -169,6 +178,7 @@ x.loading-screen {
   --shadow-color: white;
 }
 
+/* Not used in active HTML */
 #shadow-thing::after {
   content: '';
   position: absolute;
@@ -178,6 +188,7 @@ x.loading-screen {
   --shadow-color: white;
 }
 
+/* Not used in active HTML */
 .thing {
   content: '';
   position: fixed;
@@ -193,6 +204,7 @@ x.loading-screen {
   animation-fill-mode: forwards;
 }
 
+/* Not used in active HTML */
 .thing::after {
   content: '';
   position: absolute;
@@ -204,6 +216,7 @@ x.loading-screen {
   box-shadow: inset 0px 0px 100vw 100vw black;
 }
 
+/* Not used in active HTML */
 @keyframes box-shadow {
   0% {
     box-shadow: inset 0px 0px 70vw 70vw black;
@@ -213,6 +226,7 @@ x.loading-screen {
   }
 }
 
+/* Not used in active HTML */
 #main__title {
   display: flex;
   flex-direction: row;
@@ -228,6 +242,7 @@ x.loading-screen {
   clip-path: rect(0 100% 100% 0);
 }
 
+/* Not used in active HTML */
 #main__title span {
   text-align: center;
   cursor: default;
@@ -237,14 +252,17 @@ x.loading-screen {
   line-height: 2;
 }
 
+/* Not used in active HTML */
 #main__title span:hover {
   text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
 }
 
+/* Not used in active HTML */
 .main__title-char-container {
   position: relative;
 }
 
+/* Not used in active HTML */
 #bg {
   position: fixed;
   left: 0;
@@ -260,6 +278,7 @@ x.loading-screen {
   border-bottom: 1px solid black; */
 }
 
+/* Not used in active HTML */
 #particles-bg {
   position: fixed;
   left: 0;
@@ -275,6 +294,7 @@ x.loading-screen {
   border-bottom: 1px solid black; */
 }
 
+/* Not used in active HTML */
 #construction-banner {
   background: hsla(51, 100%, 67%, 0.938);
   /* border: 3px solid hsl(51, 48%, 45%); */
@@ -301,6 +321,7 @@ x.loading-screen {
   /* box-shadow: 1px 0px 10px 3px hsl(51, 100%, 67%, 0.5); */
 }
 
+/* Not used in active HTML */
 .block {
   position: relative;
   width:25vw;
@@ -309,6 +330,7 @@ x.loading-screen {
   background: linear-gradient(0deg, #000, #262626);
 }
 
+/* Not used in active HTML */
 .construction-banner-shadow {
   width: 550px;
   height: 3rem;
@@ -320,6 +342,7 @@ x.loading-screen {
   z-index: 400;
 }
 
+/* Not used in active HTML */
 .shadow {
 
   &:before, &:after {
@@ -360,6 +383,7 @@ x.loading-screen {
 }
 
 @keyframes shadow {
+/* Not used in active HTML */
   0% {
     background-position: 0 0;
   }
@@ -372,6 +396,7 @@ x.loading-screen {
 }
 
 @keyframes flash-background {
+/* Not used in active HTML */
   from {
     background: hsla(51, 100%, 67%, 0.938);
   }
@@ -380,6 +405,7 @@ x.loading-screen {
   }
 }
 
+/* Not used in active HTML */
 @media screen and (max-width: 768px) {
   #construction-banner {
     width: 90vw;
@@ -390,6 +416,7 @@ x.loading-screen {
 }
 
 .background-image {
+/* Not used in active HTML */
   position: fixed;
   left: 0;
   right: 0;
@@ -432,16 +459,17 @@ main {
 }
 
 .nav-bar {
+  display: none;
   position: fixed;
   top: 20px;
   right: 20px;
   /* right: calc(50vw - 150px); */
   z-index: 999;
   width: 300px;
-  display: flex;
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(5px);
+  /* mix-blend-mode: difference; */
 }
 
 .nav-bar ul {
@@ -464,6 +492,8 @@ main {
   text-decoration: none;
   color: #000000;
   padding: 1rem;
+  font-family: var(--primary-serif);
+  letter-spacing: 15%;
 }
 
 .nav-bar a:hover {
@@ -472,6 +502,7 @@ main {
 }
 
 .blue-section {
+/* Not used in active HTML */
   width: 500px;
   height: 80vh;
   background: rgba(94, 120, 153, 0.726);
@@ -482,6 +513,7 @@ main {
 }
 
 .blue-section * {
+/* Not used in active HTML */
   color: white;
 }
 
@@ -493,6 +525,7 @@ main {
 }
 
 .picture-frame {
+/* Not used in active HTML */
   position: fixed;
   width: 200px;
   scale: 1;
@@ -502,6 +535,7 @@ main {
 }
 
 .picture-frame-transparent {
+/* Not used in active HTML */
   opacity: 1;
   z-index: 3;
 }
@@ -516,6 +550,7 @@ main {
 }
 
 .hero-scroll-spacer  {
+/* Not used in active HTML */
   height: 100vh;
 }
 
@@ -535,6 +570,7 @@ main {
 }
 
 @keyframes rotate {
+/* Not used in active HTML */
   from {
     transform: rotate(0deg);
   }
@@ -680,6 +716,7 @@ main {
 
 
 .hero-section p {
+/* Not used in active HTML */
   margin: 1em 0;
   font-family: "Cutive Mono", "JetBrains Mono", monospace;
   font-size: 1.1em;
@@ -716,6 +753,7 @@ main {
 }
 
 .hero-section-links {
+/* Not used in active HTML */
   position: absolute;
   bottom: 5vh;
   display: flex;
@@ -726,6 +764,7 @@ main {
 }
 
 .hero-section-links a {
+/* Not used in active HTML */
   width: 35px;
   height: 35px;
   opacity: 0.5;
@@ -733,6 +772,7 @@ main {
 }
 
 .hero-section-links a img {
+/* Not used in active HTML */
   width: 100%;
   height: 100%;
 }
@@ -778,6 +818,7 @@ main {
 }
 
 .projects-section {
+/* Not used in active HTML */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -790,6 +831,7 @@ main {
 }
 
 .projects-section h1 {
+/* Not used in active HTML */
   font-family: "Crimson Text", "DM Serif", Georgia, 'Times New Roman', Times, serif;
   font-size: 4rem;
   font-weight: 600;
@@ -799,6 +841,7 @@ main {
 }
 
 .projects-container {
+/* Not used in active HTML */
   display: grid;
   place-items: center;
   /* grid-template-columns: repeat(10, 1fr);
@@ -810,6 +853,7 @@ main {
 }
 
 .project-card {
+/* Not used in active HTML */
   position: absolute;
   top: 0;
   width: 30vw;
@@ -824,6 +868,7 @@ main {
 #p3 { z-index: 1; }
 
 #box {
+/* Not used in active HTML */
   --width: 300px;
   --height: 300px;
   width: var(--width);
@@ -837,6 +882,7 @@ main {
 }
 
 #box::after {
+/* Not used in active HTML */
   border-radius: var(--border-radius);
   content: "";
   display: block;
@@ -846,29 +892,37 @@ main {
 }
 
 #box:active {
+/* Not used in active HTML */
   cursor: grabbing;
 }
 
 /* firefox doesn't seem to support the displacement filter stuff sadly, so this stuff is just compatibility-proofing */
+/* Not used in active HTML */
 @supports (backdrop-filter: url(#displacementFilter)) {
   #box {
+/* Not used in active HTML */
     backdrop-filter:  url(#displacementFilter) var(--backdrop-filter-basics) blur(1px);
   }
 }
 
+/* Not used in active HTML */
 @supports not (backdrop-filter: url(#displacementFilter)) {
   #box {
+/* Not used in active HTML */
     backdrop-filter: var(--backdrop-filter-basics);
   }
 }
 
+/* Not used in active HTML */
 @-moz-document url-prefix() {
   #box {
+/* Not used in active HTML */
     backdrop-filter: blur(5px) var(--backdrop-filter-basics) !important;
   }
 }
 
 #lens {
+/* Not used in active HTML */
   --radius: 100px;
   --backdrop-filter-basics: blur(0px) sepia(0) invert(0);
   position: fixed;
@@ -882,6 +936,7 @@ main {
 }
 
 #lens::after {
+/* Not used in active HTML */
   border-radius: var(--border-radius);
   content: "";
   display: block;
@@ -891,6 +946,7 @@ main {
 }
 
 #lens:active {
+/* Not used in active HTML */
   cursor: grabbing;
 }
 
@@ -904,6 +960,7 @@ section {
 }
 
 .cropped-section {
+/* Not used in active HTML */
   background: purple;
   padding: 10vh 10vw;
   box-sizing: border-box;
@@ -919,16 +976,19 @@ section {
 }
 
 #profile-img {
+/* Not used in active HTML */
   width: 200px;
   border-radius: 50%;
   /* clip-path: rect(0 1000px 1000px 0); */
 }
 
 .chromatic-aberration-section {
+/* Not used in active HTML */
   height: 100vh;
 }
 
 .chromatic-aberration {
+/* Not used in active HTML */
   color: rgba(255, 0, 255, 0.1);
   font-size: 4em;
   font-family: sans-serif;
@@ -936,12 +996,14 @@ section {
 }
 
 .variable-width-text-section {
+/* Not used in active HTML */
   height: 100vh;
   display: grid;
   place-items: center;
 }
 
 .variable-width-text span {
+/* Not used in active HTML */
   font-family: 'Roboto';
   /* font-size: 3em; */
   font-weight: 100;
@@ -953,6 +1015,7 @@ section {
 }
 
 @keyframes font-width {
+/* Not used in active HTML */
   from {
     font-weight: 100;
   }
@@ -962,6 +1025,7 @@ section {
 }
 
 #gradual-blur-box {
+/* Not used in active HTML */
   width: 300px;
   height: 300px;
   position: absolute;
@@ -973,6 +1037,7 @@ section {
 }
 
 .gradual-blur-div {
+/* Not used in active HTML */
   width: 100%;
   flex-grow: 1;
   margin-top: -3px;
@@ -981,6 +1046,7 @@ section {
 }
 
 .gradual-blur-section {
+/* Not used in active HTML */
   height: 100vh;
   /* background: linear-gradient(90deg, #85a8e1, #779dda, #6e95d5, #658cce, #5c85c9, #557ec2, #4f7bbe, #4a77ba, #4774b8, #4270b3); */
   background: linear-gradient(90deg, #8aaff5, #749dec, #6290e5, #5686da, #467dd5, #3d75ca, #326fc2, #316bbc, #2b66b4, #2862ac);
@@ -990,6 +1056,7 @@ section {
 }
 
 .gradual-blur-section::after {
+/* Not used in active HTML */
   display: none;
   width: 300%;
   height: 300%;
@@ -1003,6 +1070,7 @@ section {
 }
 
 .standing-on-rock-section {
+/* Not used in active HTML */
   /* background-image: url("public/images/rock.jpg"); */
   background-position: center top;
   background-repeat: no-repeat;
@@ -1016,10 +1084,12 @@ section {
 }
 
 .rock-background-img {
+/* Not used in active HTML */
   width: 100%;
 }
 
 .about-me-heading {
+/* Not used in active HTML */
   font-family: 'Roboto', 'DM Sans', serif;
   font-size: 22em;
   /* font-style: italic; */
@@ -1032,12 +1102,14 @@ section {
 }
 
 .next-section {
+/* Not used in active HTML */
   height: 100vh;
   width: 100vw;
   background: red;
 }
 
 .test-section {
+/* Not used in active HTML */
   height: 100vh;
   width: 100vw;
   background: green;
@@ -1045,6 +1117,7 @@ section {
 }
 
 .clipped-thing {
+/* Not used in active HTML */
   display: none;
   width: 300px;
   height: 300px;
@@ -1055,10 +1128,12 @@ section {
 }
 
 .clipped-thing:hover {
+/* Not used in active HTML */
   clip-path: path(evenodd, "M 0 0 L 300 0 L 300 300 L 0 300 Z M 150 10 L 290 150 L 150 290 L 10 150 Z");
 }
 
 .test-section-background {
+/* Not used in active HTML */
   position: absolute;
   top: 0;
   left: 0;
@@ -1072,10 +1147,12 @@ section {
 }
 
 .test-section-background:hover {
+/* Not used in active HTML */
   clip-path: path(evenodd, "M 0 0 L 1000 0 L 1000 1000 L 0 1000 Z M 600 100 L 1000 300 L 800 775 L 400 575 Z");
 }
 
 .test-frame {
+/* Not used in active HTML */
   position: absolute;
   top: 200px;
   left: 500px;
@@ -1085,5 +1162,6 @@ section {
 }
 
 .test-frame:hover {
+/* Not used in active HTML */
   rotate: 45deg;
 }
