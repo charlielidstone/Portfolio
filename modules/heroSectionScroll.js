@@ -131,7 +131,7 @@ const heroSectionScroll = {
         start: "top top",
         end: "bottom top",
         scrub: true,
-        pin: ".about-section",
+        // pin: ".about-background-section",
         // pin: ".hero-section",
         pinSpacing: false,
         // pinnedContainer: "#smooth-content",
