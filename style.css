@@ -79,6 +79,11 @@
   src: url('/public/fonts/Ranade_Complete/Fonts/TTF/Ranade-Variable.ttf');
 }
 
+@font-face {
+  font-family: "Suisse Intl";
+  src: url('/public/fonts/suisse-intl/SuisseIntlCondTrial.otf') format('opentype');
+}
+
 :root {
   --main-background: #0D0D0D;
   --main-background-light: #fdfdfd;
@@ -586,7 +591,7 @@ main {
   max-width: 300px;
   font-weight: 200;
   /* font-family: "Crimson Text", "Times New Romans", serif; */
-  font-family: "Ranade", "Roboto", sans-serif;
+  font-family: "Suisse Intl", "Ranade", "Roboto", sans-serif;
   text-transform: uppercase;
   font-style: normal;
   letter-spacing: 5%;
