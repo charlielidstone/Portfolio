@@ -461,14 +461,21 @@ main {
 
 @media screen and (max-width: 768px) {
   .hero-section {
-    width: 80vw;
-    left: 10vw;
+    width: 90vw;
+    left: 5vw;
     top: 15vh;
-    height: 70vh;
+    height: auto;
+    min-height: 70vh;
   }
 
   .blue-section {
-    width: 80vw;
+    width: 90vw;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .hero-section-title {
+    font-size: clamp(2.5rem, 12vw, 7rem);
   }
 }
 
@@ -778,4 +785,17 @@ section {
   height: 100vh;
   width: 100vw;
   background: red;
+}
+
+@media screen and (max-width: 768px) {
+  #main__title {
+    font-size: clamp(1.5rem, 8.5vw, 6em);
+    letter-spacing: 0.25em;
+  }
+
+  .beta-notification {
+    height: auto;
+    padding: 0.25rem 1rem 0.5rem;
+    font-size: 0.875em;
+  }
 }
