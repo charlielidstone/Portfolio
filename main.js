@@ -25,17 +25,17 @@ gsap.registerPlugin(ScrollSmoother);
 // const box = document.getElementById('box');
 // applyDragability(box);
 
-particles.render();
+// particles.render();
 // threeEffects.animate();
 
 // initVariableWidthText();
 
-mainTitleAnimation.run();
+// mainTitleAnimation.run();
 
 smoothScrolling.setup();
 
-heroSectionScroll.setup();
-projectsSectionScroll.setup();
-aboutSectionScroll.setup();
-ScrollTrigger.refresh();
-window.addEventListener("load", () => ScrollTrigger.refresh());
+// heroSectionScroll.setup();
+// projectsSectionScroll.setup();
+// aboutSectionScroll.setup();
+// ScrollTrigger.refresh();
+// window.addEventListener("load", () => ScrollTrigger.refresh());

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patua+One&family=Nova+Flat&family=Cutive+Mono&family=REM&family=Space+Mono&family=Grenze+Gotisch&family=Rye&family=Courier+Prime&family=Space+Mono&family=Lisu+Bosa&family=VT323:wght@400&family=Caveat:wght@500&family=Chokokutai&family=Handjet:wght@500&family=Lugrasimo&family=Lumanosimo&family=Permanent+Marker&family=Rowdies&family=Zeyada&family=Big+Shoulders+Inline+Text&family=Press+Start+2P&family=Kablammo&family=Moirai+One&family=Monoton&family=UnifrakturCook:wght@700&family=Croissant+One&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:ital,wght@0,100..900;1,100..900&family=Patua+One&family=Nova+Flat&family=Cutive+Mono&family=REM&family=Space+Mono&family=Grenze+Gotisch&family=Rye&family=Courier+Prime&family=Space+Mono&family=Lisu+Bosa&family=VT323:wght@400&family=Caveat:wght@500&family=Chokokutai&family=Handjet:wght@500&family=Lugrasimo&family=Lumanosimo&family=Permanent+Marker&family=Rowdies&family=Zeyada&family=Big+Shoulders+Inline+Text&family=Press+Start+2P&family=Kablammo&family=Moirai+One&family=Monoton&family=UnifrakturCook:wght@700&family=Croissant+One&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap">
   <link type="text/css" rel="stylesheet" href="/style.css">
   <title>Portfolio - Charlie Lidstone</title>
 </head>
@@ -21,78 +21,64 @@
     </defs>
   </svg>
   
-  <div id="intro"></div>
-  <section class="hero-section">
-    <div class="hero-section-background">
-      <!-- <canvas id="particles-bg"></canvas> -->
-      <div class="hero-section-content">
-        <h2>Hi there, I'm</h2>
-        <h1>Charlie Lidstone</h1>
-        <h2>Software Developer | UVic Engineering Student</h2>
-      </div>
-    </div>
-    <img class="hero-section-foreground-image" src="/public/images/rock-no-background-edited.png" alt="">
-
-  </section>
   
   <div id="smooth-wrapper">
   <div id="smooth-content">
 
-    <!-- <div class="hero-scroll-spacer"></div> -->
-
-    <section class="about-section">
-      <img class="about-section-background-img" src="/public/images/rock.jpg" />
-      <div id="about" class="about-section-content">
-        <div id="about"></div>
-        <h1 class="about-section-title">About me</h1>
-        <p>I’m Charlie Lidstone. Welcome to my portfolio!</p>
-        <p>I'm an engineering student at UVic. I've been programming for about 6 years, and I love creating stuff for the web.</p>
-        <p>I’m always looking for neat projects to be a part of. Find my contact info below.</p>
-        <p>You can check out some of the other stuff I've been working on at my <a href="https://github.com/charlielidstone" target="_blank">GitHub</a>.</p>
+    <div class="nav-bar">
+      <div class="menu-button">Menu<img src="/public/icons/hamburger-menu.svg" alt=""></div>
+    </div>
+    
+    <section class="hero-section">
+      <img src="public\images\hero-background-pattern-black.svg" alt="" class="hero-section-background-image">
+      <div class="hero-section-content">
+        <h2 id="hi-there">Hi there, I'm</h2>
+        <h1>Charlie Lidstone</h1>
+        <h2>Software Developer &bull; UVic Engineering Student</h2>
+        <div class="hero-links">
+          <a href="https://github.com/charlielidstone" target="_blank" rel="noopener noreferrer"><img src="public/icons/github-logo.svg" alt="GitHub"></a>
+          <a href="https://www.linkedin.com/in/charlielidstone/" target="_blank" rel="noopener noreferrer"><img src="public/icons/linkedin-logo.svg" alt="LinkedIn"></a>
+          <a id="view-cv">View CV<img src="public/icons/caret-right.svg" alt=""></a>
+        </div>
+        <div class="hero-location">
+          <img src="public/icons/pin.svg" alt="">
+          Victoria, BC (GMT-8) <span id="victoria-time"></span>
+        </div>
       </div>
     </section>
-    
-    <!-- <div id="projects"></div>
-    <section class="projects-section">
-      <canvas id="bg"></canvas>
-      <h1>Projects</h1>
-      <div class="projects-container">
-        <div id="p1" class="project-card">
-          <h2>Project 1</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur varius.</p>
-        </div>
-        <div id="p2" class="project-card">
-          <h2>Project 2</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur varius.</p>
-        </div>
-        <div id="p3" class="project-card">
-          <h2>Project 3</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur varius.</p>
-        </div>
-        <div id="p4" class="project-card">
-          <h2>Project 4</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur varius.</p>
-        </div>
-      </div>
-    </section> -->
 
-    <!-- <section class="test-section">
-      <div class="test-section-background"></div>
-      <img class="test-frame" src="/public/images/picture-frame-cropped.png" alt="">
-      <div class="clipped-thing">
+    <section class="about-section">
+      <div class="about-section-content">
+        <h1>About Me</h1>
+        <hr>
+        <p>I’m Charlie Lidstone. Welcome to my portfolio! I'm an engineering student at UVic. I've been programming for about 6
+          years, and I love creating stuff for the web. </p>
+        <p>I’m always looking for neat projects to be a part of. Find my contact info below. You can check out some of the other
+          stuff I've been working on at my GitHub.</p>
       </div>
-    </section> -->
-    
-    
-    <section style="height: 400vh"></section>
+    </section>
 
   </div>
   </div>
-
-  <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollSmoother.min.js"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/CustomEase.min.js"></script> -->
 
   <script type="module" src="/main.js"></script>
+
+  <script>
+    const victoriaTimeEl = document.getElementById('victoria-time');
+
+    const updateVictoriaTime = () => {
+      victoriaTimeEl.textContent = new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'America/Vancouver',
+        hour: 'numeric',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+      }).format(new Date());
+    };
+
+    updateVictoriaTime();
+    setInterval(updateVictoriaTime, 1000);
+  </script>
   
 </body>
 </html>
