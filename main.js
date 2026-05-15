@@ -34,7 +34,7 @@ gsap.registerPlugin(ScrollSmoother);
 
 smoothScrolling.setup();
 
-// heroSectionScroll.setup();
+heroSectionScroll.setup();
 // projectsSectionScroll.setup();
 // aboutSectionScroll.setup();
 // ScrollTrigger.refresh();
