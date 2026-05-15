@@ -14,6 +14,7 @@ const heroSectionScroll = {
         end: "bottom -5%",
         scrub: true,
         pin: true,
+        ease: "power4.in",
         pinSpacing: false,
       },
     });
