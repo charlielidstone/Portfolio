@@ -32,7 +32,7 @@ gsap.registerPlugin(ScrollSmoother);
 
 // mainTitleAnimation.run();
 
-// smoothScrolling.setup();
+smoothScrolling.setup();
 
 heroSectionScroll.setup();
 // projectsSectionScroll.setup();
