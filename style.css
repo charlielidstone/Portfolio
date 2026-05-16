@@ -106,7 +106,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: var(--main-background);
+  overflow-y: hidden;
 }
 
 ::selection {
@@ -197,7 +197,7 @@ x.loading-screen {
   /* background: url('public/images/blue-purple-grainy-gradient.png') no-repeat center center; */
   background-size: cover;
   box-shadow: inset 0px 0px 100vw 100vw black;
-  z-index: 1001;
+  z-index: 2;
   border-radius: 50%;
   animation: box-shadow 0.7s ease-out 1;
   animation-delay: 1s;
@@ -412,7 +412,11 @@ x.loading-screen {
     left: 5vw;
     padding: 10px 1.5em;
   }
-  
+
+  .shadow {
+    width: 90vw;
+    left: 5vw;
+  }
 }
 
 .background-image {
@@ -501,6 +505,19 @@ main {
   color: white;
 }
 
+.beta-notification {
+  width: 100vw;
+  height: 3rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #000000aa;
+  font-style: italic;
+}
+
 .blue-section {
 /* Not used in active HTML */
   width: 500px;
@@ -534,10 +551,24 @@ main {
   translate: 0 calc(var(--about-section-offset-top) + 34.5vw);
 }
 
-.picture-frame-transparent {
-/* Not used in active HTML */
-  opacity: 1;
-  z-index: 3;
+@media screen and (max-width: 768px) {
+  .hero-section {
+    width: 90vw;
+    left: 5vw;
+    top: 15vh;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .blue-section {
+    width: 90vw;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .hero-section-title {
+    font-size: clamp(2.5rem, 12vw, 7rem);
+  }
 }
 
 #about {
@@ -1108,60 +1139,15 @@ section {
   background: red;
 }
 
-.test-section {
-/* Not used in active HTML */
-  height: 100vh;
-  width: 100vw;
-  background: green;
-  position: relative;
-}
+@media screen and (max-width: 768px) {
+  #main__title {
+    font-size: clamp(1.5rem, 8.5vw, 6em);
+    letter-spacing: 0.25em;
+  }
 
-.clipped-thing {
-/* Not used in active HTML */
-  display: none;
-  width: 300px;
-  height: 300px;
-  background: blue;
-  /* Two sub-paths with matching command counts for smooth interpolation. */
-  clip-path: path(evenodd, "M 0 0 L 300 0 L 300 300 L 0 300 Z M 90 90 L 210 90 L 210 210 L 90 210 Z");
-  transition: clip-path 1s ease;
-}
-
-.clipped-thing:hover {
-/* Not used in active HTML */
-  clip-path: path(evenodd, "M 0 0 L 300 0 L 300 300 L 0 300 Z M 150 10 L 290 150 L 150 290 L 10 150 Z");
-}
-
-.test-section-background {
-/* Not used in active HTML */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('/public/images/Great_Wave_off_Kanagawa2.jpg') center no-repeat;
-  background-size: cover;
-  /* clip-path: rect(calc(200px + 10px) calc(500px + 400px - 10px) calc(200px + 475px - 10px) calc(500px + 10px)); */
-  clip-path: path(evenodd, "M 0 0 L 1000 0 L 1000 1000 L 0 1000 Z M 500 200 L 900 200 L 900 675 L 500 675 Z");
-  transition: clip-path 1s ease;
-}
-
-.test-section-background:hover {
-/* Not used in active HTML */
-  clip-path: path(evenodd, "M 0 0 L 1000 0 L 1000 1000 L 0 1000 Z M 600 100 L 1000 300 L 800 775 L 400 575 Z");
-}
-
-.test-frame {
-/* Not used in active HTML */
-  position: absolute;
-  top: 200px;
-  left: 500px;
-  width: 400px;
-  height: 475px;
-  transition: 1s ease;
-}
-
-.test-frame:hover {
-/* Not used in active HTML */
-  rotate: 45deg;
+  .beta-notification {
+    height: auto;
+    padding: 0.25rem 1rem 0.5rem;
+    font-size: 0.875em;
+  }
 }
