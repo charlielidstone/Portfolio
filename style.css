@@ -1,81 +1,105 @@
 @font-face {
   font-family: 'Old London';
-  src: url('public/fonts/old_london/OldLondon.ttf') format('truetype');
+  src: url('/fonts/old_london/OldLondon.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url("public/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+  src: url('/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DM Serif';
-  src: url('public/fonts/DM_Serif/DMSerifText-Regular.ttf') format('truetype');
+  src: url('/fonts/DM_Serif/DMSerifText-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DM Sans';
-  src: url('public/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
+  src: url('/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Trajan';
-  src: url('public/fonts/trajan/Trajan-Regular.ttf') format('truetype');
+  src: url('/fonts/Trajan/Trajan-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ARB 85 Poster Script JAN-39';
-  src: url('public/fonts/arb_85_poster_script_jan_39/ARB 85 Poster Script JAN-39 FRE.ttf') format('truetype');
+  src: url('/fonts/arb85-2/arb85.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'US Angel';
-  src: url('public/fonts/usangel/usangel.ttf') format('truetype');
+  src: url('/fonts/usangel/usangel.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Cloister Black';
-  src: url('public/fonts/cloister-black/CloisterBlack.ttf') format('truetype');
+  src: url('/fonts/cloister-black/CloisterBlack.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('public/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+  src: url('/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Fanwood';
-  src: url('public/fonts/fanwood/fanwood-master/webfonts/fanwood-webfont.ttf') format('truetype');
+  src: url('/fonts/fanwood/fanwood-master/webfonts/fanwood-webfont.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Ostrich Sans';
-  src: url('public/fonts/ostrich-sans/ostrich-sans-master/webfonts/ostrich-sans-black.ttf')
+  src: url('/fonts/ostrich-sans/ostrich-sans-master/webfonts/ostrich-sans-black.ttf')
+}
+
+@font-face {
+  font-family: 'Inria Serif';
+  src: url('/fonts/Inria_Serif/InriaSerif-Italic.ttf')
+}
+
+@font-face {
+  font-family: "Ranade";
+  src: url('/public/fonts/Ranade_Complete/Fonts/TTF/Ranade-Variable.ttf');
+}
+
+@font-face {
+  font-family: "Lastik";
+  src: url('public/fonts/lastik/Fonts/Lastik Free Font/TTF/LastikFreeFont-Free.ttf');
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url('/public/fonts/suisse-intl/SuisseIntlCondTrial.otf') format('opentype');
 }
 
 :root {
-  
+  --main-background: #000000;
+  --main-background-light: #fdfdfd;
+  --primary-serif: 'Lastik', 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
+  --primary-sans-serif: 'Ranade', 'Roboto', sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 html, body {
@@ -90,22 +114,22 @@ html, body {
   color: hsl(51, 47%, 19%);
 }
 
-x.loading-screen {
+.loading-screen {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: white;
+  background: var(--main-background-light);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
-  /* animation: fade-out 0.5s ease-out forwards; */
-  /* animation-delay: 1s; */
+  z-index: 1000;
+  animation: fade-out 0.5s ease-out forwards;
+  animation-delay: 1s;
 }
 
-.loading-screen {
+x.loading-screen {
   height: 100vh;
   grid-column: 1 / span 12;
   position: relative;
@@ -127,6 +151,7 @@ x.loading-screen {
   }
 }
 
+/* Not used in active HTML */
 #main__background {
   position: absolute;
   top: 0;
@@ -142,6 +167,7 @@ x.loading-screen {
   font-size: 3em;
 }
 
+/* Not used in active HTML */
 #shadow-thing {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -152,6 +178,7 @@ x.loading-screen {
   --shadow-color: white;
 }
 
+/* Not used in active HTML */
 #shadow-thing::after {
   content: '';
   position: absolute;
@@ -161,6 +188,7 @@ x.loading-screen {
   --shadow-color: white;
 }
 
+/* Not used in active HTML */
 .thing {
   content: '';
   position: fixed;
@@ -176,10 +204,11 @@ x.loading-screen {
   animation-fill-mode: forwards;
 }
 
+/* Not used in active HTML */
 .thing::after {
   content: '';
   position: absolute;
-  z-index: -1;
+  z-index: 1000;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -187,6 +216,7 @@ x.loading-screen {
   box-shadow: inset 0px 0px 100vw 100vw black;
 }
 
+/* Not used in active HTML */
 @keyframes box-shadow {
   0% {
     box-shadow: inset 0px 0px 70vw 70vw black;
@@ -196,6 +226,7 @@ x.loading-screen {
   }
 }
 
+/* Not used in active HTML */
 #main__title {
   display: flex;
   flex-direction: row;
@@ -204,42 +235,66 @@ x.loading-screen {
   text-transform: uppercase;
   width: fit-content;
   height: fit-content;
-  font-size: 6em;
+  font-size: 4em;
   letter-spacing: 0.5em;
   font-family: var(--primary-font);
-  display: none;
   transition: scale 1s;
+  clip-path: rect(0 100% 100% 0);
 }
 
+/* Not used in active HTML */
 #main__title span {
   text-align: center;
   cursor: default;
   user-select: none;
   text-shadow: var(--primary-text-shadow);
-  margin: 0 0.2em;
+  margin: -1rem 0.2em;
   line-height: 2;
 }
 
+/* Not used in active HTML */
 #main__title span:hover {
   text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
 }
 
+/* Not used in active HTML */
 .main__title-char-container {
   position: relative;
 }
 
+/* Not used in active HTML */
 #bg {
   position: fixed;
   left: 0;
   right: 0;
+  top: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  /* z-index: 1000; */
   display: block;
+  pointer-events: none;
   /* border-top: 1px solid black;
   border-bottom: 1px solid black; */
 }
 
+/* Not used in active HTML */
+#particles-bg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: block;
+  pointer-events: none;
+  /* border-top: 1px solid black;
+  border-bottom: 1px solid black; */
+}
+
+/* Not used in active HTML */
 #construction-banner {
   background: hsla(51, 100%, 67%, 0.938);
   /* border: 3px solid hsl(51, 48%, 45%); */
@@ -258,14 +313,15 @@ x.loading-screen {
   /* color: white; */
   border-radius: 100px;
   position: fixed;
-  top: 9px;
+  top: 20px;
   left: calc(50vw - 275px);
-  z-index: 999;
+  z-index: 500;
   backdrop-filter: blur(2px);
   animation: flash-background 0.3s ease-in-out infinite alternate;
   /* box-shadow: 1px 0px 10px 3px hsl(51, 100%, 67%, 0.5); */
 }
 
+/* Not used in active HTML */
 .block {
   position: relative;
   width:25vw;
@@ -274,17 +330,19 @@ x.loading-screen {
   background: linear-gradient(0deg, #000, #262626);
 }
 
+/* Not used in active HTML */
 .construction-banner-shadow {
   width: 550px;
   height: 3rem;
   box-sizing: border-box;
   max-width: 100vw;
   position: fixed;
-  top: 9px;
+  top: 20px;
   left: calc(50vw - 275px);
-  z-index: 1;
+  z-index: 400;
 }
 
+/* Not used in active HTML */
 .shadow {
 
   &:before, &:after {
@@ -319,12 +377,13 @@ x.loading-screen {
     width:calc(100% + 16px);
     height:calc(100% + 16px);    
     filter:blur(24px);
-    opacity:0.9;
+    opacity: 0.9;
   }
   
 }
 
 @keyframes shadow {
+/* Not used in active HTML */
   0% {
     background-position: 0 0;
   }
@@ -337,6 +396,7 @@ x.loading-screen {
 }
 
 @keyframes flash-background {
+/* Not used in active HTML */
   from {
     background: hsla(51, 100%, 67%, 0.938);
   }
@@ -345,6 +405,7 @@ x.loading-screen {
   }
 }
 
+/* Not used in active HTML */
 @media screen and (max-width: 768px) {
   #construction-banner {
     width: 90vw;
@@ -359,6 +420,7 @@ x.loading-screen {
 }
 
 .background-image {
+/* Not used in active HTML */
   position: fixed;
   left: 0;
   right: 0;
@@ -384,15 +446,34 @@ main {
   align-items: center;
 }
 
-.nav-bar {
+.small-screen-notification {
+  display: none;
   position: fixed;
-  bottom: 20px;
-  left: calc(50vw-150px);
+  inset: 0;
+  z-index: 2000;
+  background: var(--main-background-light);
+  padding: 3rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .small-screen-notification {
+    display: none;
+  }
+}
+
+.nav-bar {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  /* right: calc(50vw - 150px); */
   z-index: 999;
   width: 300px;
-  display: flex;
   align-items: center;
   justify-content: center;
+  backdrop-filter: blur(5px);
+  /* mix-blend-mode: difference; */
 }
 
 .nav-bar ul {
@@ -400,19 +481,27 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* gap: 1rem; */
-  background-color: white;
-  border: 1px solid black;
   width: fit-content;
+  outline: 1px solid #000000;
+  box-sizing: border-box;
 }
 
 .nav-bar li {
-  padding: 1rem;
   cursor: pointer;
 }
 
-.nav-bar li:hover {
-  background: rgb(79, 101, 87);
+.nav-bar a {
+  background-color: #ffffff;
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  padding: 1rem;
+  font-family: var(--primary-serif);
+  letter-spacing: 15%;
+}
+
+.nav-bar a:hover {
+  background: #000000;
   color: white;
 }
 
@@ -430,6 +519,7 @@ main {
 }
 
 .blue-section {
+/* Not used in active HTML */
   width: 500px;
   height: 80vh;
   background: rgba(94, 120, 153, 0.726);
@@ -440,23 +530,25 @@ main {
 }
 
 .blue-section * {
+/* Not used in active HTML */
   color: white;
 }
 
 .hero-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  /* background: #fffefb; */
-  z-index: 1;
-  /* padding: 0 10vw; */
-  box-sizing: border-box;
-  position: relative;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
 }
 
-.hero-section * {
-  z-index: 1;
+.picture-frame {
+/* Not used in active HTML */
+  position: fixed;
+  width: 200px;
+  scale: 1;
+  z-index: 0;
+  pointer-events: none;
+  translate: 0 calc(var(--about-section-offset-top) + 34.5vw);
 }
 
 @media screen and (max-width: 768px) {
@@ -479,57 +571,101 @@ main {
   }
 }
 
-.hero-section-title {
-  font-size: 7rem;
-  margin: 0 0 0em 0;
-  padding: 0.3em 0 0 0;
-  font-family: 'Ostrich Sans';
-  /* font-family: "Fanwood", "DM Serif", "Times New Roman", Georgia, Times, serif; */
-  font-weight: 100;
-  text-align: center;
-  color: #000000;
+#about {
+
 }
 
-.hero-section-subtitle {
-  font-size: 7rem;
-  margin: 0 0 0.5em 0;
-  padding: 0em 0 0 0;
-  font-family: 'Ostrich Sans';
-  /* font-family: "Fanwood", "DM Serif", "Times New Roman", Georgia, Times, serif; */
-  font-weight: 100;
-  text-align: center;
-  color: #bebdba;
+* {
+  /* --about-section-offset-top: -35vw; */
+  --about-section-offset-top: -200px;
 }
 
-.picture-frame {
-  position: absolute;
-  top: 15vh;
-  left: 40vw;
-  scale: 0.5;
-}
-
-
-
-.scene {
-  position: relative;
-  width: 100vw;
+.hero-scroll-spacer  {
+/* Not used in active HTML */
   height: 100vh;
 }
 
-.background {
+.about-section {
+  position: relative;
+  top: var(--about-section-offset-top);
+  width: 100vw;
+  height: 200vh;
+  background: var(--main-background);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* clip-path: rect(calc(var(--about-section-offset-top)*-1) 100vw 133.33vw 0); we can probably remove this */
+  transform-origin: 48% 57%;
+  /* animation: rotate 20s linear infinite; */
+}
+
+@keyframes rotate {
+/* Not used in active HTML */
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.about-section::after {
+  content: "";
   position: absolute;
-  inset: 0;
-  background: url('public/images/rock.jpg') center / cover;
-  mask-image: url('public/images/picture-frame-cropped.jpg');
-  mask-size: contain;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-image: url('public/images/picture-frame-cropped.jpg');
-  -webkit-mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
+  left: 0;
+  top: 0;
   width: 100%;
-  height: 100%;
+  height: 133.33vw;
+  box-shadow: inset 0 -60vw 1000px -200px var(--main-background); /* the second value is the one that controls how far up the shadow goes */
+}
+
+.about-section::before {
+  /* content: ""; */
+  position: absolute;
+  left: 0;
+  bottom: var(--about-section-offset-top);
+  width: 100%;
+  height: calc(var(--about-section-offset-top)*-1);
+  background: #010101aa;
+  z-index: 1;
+}
+
+.about-section-content {
+  perspective: 1000px;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 83vw;
+}
+
+.about-section-title {
+  font-family: "Crimson Text", "DM Serif", Georgia, 'Times New Roman', Times, serif;
+  font-size: 6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 11.52px;
+  margin-bottom: 2rem;
+}
+
+.about-section p {
+  margin: 2rem;
+  font-size: 1.2em;
+  max-width: 300px;
+  font-weight: 200;
+  /* font-family: "Crimson Text", "Times New Romans", serif; */
+  font-family: "Suisse Intl", "Ranade", "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 5%;
+}
+
+.about-section a {
+  color: white;
 }
 
 .frame {
@@ -541,6 +677,65 @@ main {
   pointer-events: none;
 }
 
+#fhole-path {
+  transform-box: fill-box;
+}
+
+.hero-section-background {
+  /* background-color: #f8f8f6; */
+  background-color: var(--main-background-light);
+  /* background-image:
+    linear-gradient(to right, rgba(16, 16, 16, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 16, 16, 0.12) 1px, transparent 1px),
+    radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0) 60%); */
+  background-size: 36px 36px, 36px 36px, 100% 100%;
+  background-position: 0 0, 0 0, center;
+  /* position: fixed; */
+  /* inset: 0; */
+  width: 100vw;
+  height: 100vh;
+  clip-path: url(#fhole);
+}
+
+.hero-section-foreground-image {
+  /* width: 105vw; */
+  width: 1400px;
+  position: absolute;
+  top: calc(var(--about-section-offset-top) - 300px);
+  left: calc((105vw - 1400px) * 0.5);
+  z-index: 99;
+  clip-path: inset(0 0 50% 0);
+  /* scale: 2; */
+}
+
+.about-section-background-img {
+  /* width: 105vw; */
+  width: 1400px;
+  position: absolute;
+  top: -300px;
+  /* top: calc(var(--about-section-offset-top) - 300px); */
+  left: calc((105vw - 1400px) * 0.5);
+  z-index: -1;
+  /* clip-path: rect(0 100vw 133vw 0); */
+  /* filter: sepia(0.5); */
+  /* scale: 2; */
+}
+
+@media screen and (min-width: 1300px) {
+  .hero-section-foreground-image {
+    width: 105vw;
+    top: calc(var(--about-section-offset-top) - 500px);
+    left: 0;
+  }
+
+  .about-section-background-img {
+    width: 105vw;
+    top: calc(var(--about-section-offset-top) - 300px);
+    left: 0;
+  }
+}
+
+/* 
 .hero-section-rock-background-img {
   position: fixed;
   top: 0;
@@ -548,32 +743,163 @@ main {
   width: 100%;
   z-index: 0;
   mask: url(#myMask);
-  /* clip-path: inset(
-    calc(50% - 150px)
-    calc(50% - 200px)
-    calc(50% - 150px)
-    calc(50% - 200px)
-  ); */
-}
+} */
+
 
 .hero-section p {
+/* Not used in active HTML */
   margin: 1em 0;
   font-family: "Cutive Mono", "JetBrains Mono", monospace;
   font-size: 1.1em;
 }
 
-.projects-section {
+.hero-section-content {
+  position: absolute;
+  inset: 0;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10vh 0;
+  z-index: 1;
+}
+
+.hero-section-content h1 {
+  font-size: 6em;
+  font-family: "Crimson Text", "Times New Romans", serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.hero-section-content h2 {
+  font-size: 1.5rem;
+  font-family: "Crimson Text", "Times New Romans", serif;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 23%;
+  margin: 0.2em;
+  text-align: center;
+  color: #505050;
+}
+
+.hero-section-links {
+/* Not used in active HTML */
+  position: absolute;
+  bottom: 5vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-section-links a {
+/* Not used in active HTML */
+  width: 35px;
+  height: 35px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.hero-section-links a img {
+/* Not used in active HTML */
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1500px) {
+  .hero-section-content h1 {
+    font-size: 4em;
+  }
+
+  .hero-section-content h2 {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 687px) {
+  .hero-section-foreground-image {
+    translate: 40px 0;
+    justify-self: center;
+    width: 1400px;
+  }
+
+  .about-section-background-img {
+    translate: 40px 0;
+    justify-self: center;
+    width: 1400px;
+  }
+
+  .hero-section-content h1 {
+    font-size: 3.4em;
+  }
+
+  .hero-section-content h2 {
+    font-size: 1em;
+  }
+/* 
+  .hero-section-foreground-image {
+    width: 1500px;
+  }
+
+  .about-section-background-img {
+    width: 1500px;
+  } */
+}
+
+.projects-section {
+/* Not used in active HTML */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--main-background);
+  color: #ffffff;
+  width: 100vw;
+  height: 200vh;
+  padding: 0;
+  position: relative;
 }
 
 .projects-section h1 {
-  font-family: 'DM Serif', serif;
-  font-size: 3em;
+/* Not used in active HTML */
+  font-family: "Crimson Text", "DM Serif", Georgia, 'Times New Roman', Times, serif;
+  font-size: 4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 11.52px;
+  margin-bottom: 5rem;
 }
 
+.projects-container {
+/* Not used in active HTML */
+  display: grid;
+  place-items: center;
+  /* grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr); */
+  /* gap: -1px; */
+  perspective: none;
+  width: 100vw;
+  position: relative;
+}
+
+.project-card {
+/* Not used in active HTML */
+  position: absolute;
+  top: 0;
+  width: 30vw;
+  height: 20vw;
+  background: #010101;
+  border: 1px solid #ffffff;
+  padding: 1rem;
+}
+
+#p1 { z-index: 3; } 
+#p2 { z-index: 2; }
+#p3 { z-index: 1; }
+
 #box {
+/* Not used in active HTML */
   --width: 300px;
   --height: 300px;
   width: var(--width);
@@ -587,6 +913,7 @@ main {
 }
 
 #box::after {
+/* Not used in active HTML */
   border-radius: var(--border-radius);
   content: "";
   display: block;
@@ -596,29 +923,37 @@ main {
 }
 
 #box:active {
+/* Not used in active HTML */
   cursor: grabbing;
 }
 
 /* firefox doesn't seem to support the displacement filter stuff sadly, so this stuff is just compatibility-proofing */
+/* Not used in active HTML */
 @supports (backdrop-filter: url(#displacementFilter)) {
   #box {
+/* Not used in active HTML */
     backdrop-filter:  url(#displacementFilter) var(--backdrop-filter-basics) blur(1px);
   }
 }
 
+/* Not used in active HTML */
 @supports not (backdrop-filter: url(#displacementFilter)) {
   #box {
+/* Not used in active HTML */
     backdrop-filter: var(--backdrop-filter-basics);
   }
 }
 
+/* Not used in active HTML */
 @-moz-document url-prefix() {
   #box {
+/* Not used in active HTML */
     backdrop-filter: blur(5px) var(--backdrop-filter-basics) !important;
   }
 }
 
 #lens {
+/* Not used in active HTML */
   --radius: 100px;
   --backdrop-filter-basics: blur(0px) sepia(0) invert(0);
   position: fixed;
@@ -632,6 +967,7 @@ main {
 }
 
 #lens::after {
+/* Not used in active HTML */
   border-radius: var(--border-radius);
   content: "";
   display: block;
@@ -641,12 +977,13 @@ main {
 }
 
 #lens:active {
+/* Not used in active HTML */
   cursor: grabbing;
 }
 
 section {
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -654,6 +991,7 @@ section {
 }
 
 .cropped-section {
+/* Not used in active HTML */
   background: purple;
   padding: 10vh 10vw;
   box-sizing: border-box;
@@ -665,20 +1003,23 @@ section {
   display: flex;
   align-items: start;
   justify-content: center;
-  clip-path: inset(10vh calc(50vw - 100px) calc(190vh - 200px) calc(50vw - 100px));
+  /* clip-path: inset(10vh calc(50vw - 100px) calc(190vh - 200px) calc(50vw - 100px)); */
 }
 
 #profile-img {
+/* Not used in active HTML */
   width: 200px;
   border-radius: 50%;
   /* clip-path: rect(0 1000px 1000px 0); */
 }
 
 .chromatic-aberration-section {
+/* Not used in active HTML */
   height: 100vh;
 }
 
 .chromatic-aberration {
+/* Not used in active HTML */
   color: rgba(255, 0, 255, 0.1);
   font-size: 4em;
   font-family: sans-serif;
@@ -686,12 +1027,14 @@ section {
 }
 
 .variable-width-text-section {
+/* Not used in active HTML */
   height: 100vh;
   display: grid;
   place-items: center;
 }
 
 .variable-width-text span {
+/* Not used in active HTML */
   font-family: 'Roboto';
   /* font-size: 3em; */
   font-weight: 100;
@@ -703,6 +1046,7 @@ section {
 }
 
 @keyframes font-width {
+/* Not used in active HTML */
   from {
     font-weight: 100;
   }
@@ -712,6 +1056,7 @@ section {
 }
 
 #gradual-blur-box {
+/* Not used in active HTML */
   width: 300px;
   height: 300px;
   position: absolute;
@@ -723,6 +1068,7 @@ section {
 }
 
 .gradual-blur-div {
+/* Not used in active HTML */
   width: 100%;
   flex-grow: 1;
   margin-top: -3px;
@@ -731,6 +1077,7 @@ section {
 }
 
 .gradual-blur-section {
+/* Not used in active HTML */
   height: 100vh;
   /* background: linear-gradient(90deg, #85a8e1, #779dda, #6e95d5, #658cce, #5c85c9, #557ec2, #4f7bbe, #4a77ba, #4774b8, #4270b3); */
   background: linear-gradient(90deg, #8aaff5, #749dec, #6290e5, #5686da, #467dd5, #3d75ca, #326fc2, #316bbc, #2b66b4, #2862ac);
@@ -740,6 +1087,7 @@ section {
 }
 
 .gradual-blur-section::after {
+/* Not used in active HTML */
   display: none;
   width: 300%;
   height: 300%;
@@ -753,6 +1101,7 @@ section {
 }
 
 .standing-on-rock-section {
+/* Not used in active HTML */
   /* background-image: url("public/images/rock.jpg"); */
   background-position: center top;
   background-repeat: no-repeat;
@@ -766,10 +1115,12 @@ section {
 }
 
 .rock-background-img {
+/* Not used in active HTML */
   width: 100%;
 }
 
 .about-me-heading {
+/* Not used in active HTML */
   font-family: 'Roboto', 'DM Sans', serif;
   font-size: 22em;
   /* font-style: italic; */
@@ -782,6 +1133,7 @@ section {
 }
 
 .next-section {
+/* Not used in active HTML */
   height: 100vh;
   width: 100vw;
   background: red;

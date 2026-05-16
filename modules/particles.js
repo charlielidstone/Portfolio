@@ -9,11 +9,19 @@ const spreadZ = 300;
 
 const spreadVOL = spreadX*spreadY*spreadZ;
 
+
 const particles = (function() {
+    const canvas = document.querySelector("#particles-bg")
+    
+    if (!canvas) {
+        console.warn("Canvas of form 'canvas#particles-bg' not found.");
+        return { render: function() {} };
+    }
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({
-        canvas: document.querySelector('#bg'),
+        canvas: canvas,
         alpha: true,
     });
     const pivot = new THREE.Group();
