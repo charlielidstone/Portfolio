@@ -84,6 +84,11 @@
   src: url('public/fonts/lastik/Fonts/Lastik Free Font/TTF/LastikFreeFont-Free.ttf');
 }
 
+@font-face {
+  font-family: "Suisse Intl";
+  src: url('/public/fonts/suisse-intl/SuisseIntlCondTrial.otf') format('opentype');
+}
+
 :root {
   --main-background: #ffffff;
   --main-background-light: #fdfdfd;
@@ -103,7 +108,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: #ffffff;
+  overflow-y: hidden;
 }
 
 ::selection {
@@ -111,8 +116,168 @@ html, body {
   color: hsl(51, 47%, 19%);
 }
 
-p a {
-  color: hsl(219, 50%, 37%);
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--main-background-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fade-out 0.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
+x.loading-screen {
+  height: 100vh;
+  grid-column: 1 / span 12;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.3);
+  }
+}
+
+/* Not used in active HTML */
+#main__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  font-family: monospace;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: #151515;
+  line-height: 0.8em;
+  font-size: 3em;
+}
+
+/* Not used in active HTML */
+#shadow-thing {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  box-shadow: inset calc(var(--shadow-x)) calc(var(--shadow-y)) 100px var(--shadow-color);
+  --shadow-x: 200px;
+  --shadow-y: 250px;
+  --shadow-color: white;
+}
+
+/* Not used in active HTML */
+#shadow-thing::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: inherit;
+  box-shadow: inset calc(var(--shadow-x)*-1) calc(var(--shadow-y)*-1) 100px var(--shadow-color);
+  --shadow-color: white;
+}
+
+/* Not used in active HTML */
+.thing {
+  content: '';
+  position: fixed;
+  width: 140vw;
+  aspect-ratio: 1 / 1;
+  /* background: url('public/images/blue-purple-grainy-gradient.png') no-repeat center center; */
+  background-size: cover;
+  box-shadow: inset 0px 0px 100vw 100vw black;
+  z-index: 2;
+  border-radius: 50%;
+  animation: box-shadow 0.7s ease-out 1;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+/* Not used in active HTML */
+.thing::after {
+  content: '';
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 100vw 100vw black;
+}
+
+/* Not used in active HTML */
+@keyframes box-shadow {
+  0% {
+    box-shadow: inset 0px 0px 70vw 70vw black;
+  }
+  100% {
+    box-shadow: inset 0px 0px 0vw 0vw black;
+  }
+}
+
+/* Not used in active HTML */
+#main__title {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  text-transform: uppercase;
+  width: fit-content;
+  height: fit-content;
+  font-size: 4em;
+  letter-spacing: 0.5em;
+  font-family: var(--primary-font);
+  transition: scale 1s;
+  clip-path: rect(0 100% 100% 0);
+}
+
+/* Not used in active HTML */
+#main__title span {
+  text-align: center;
+  cursor: default;
+  user-select: none;
+  text-shadow: var(--primary-text-shadow);
+  margin: -1rem 0.2em;
+  line-height: 2;
+}
+
+/* Not used in active HTML */
+#main__title span:hover {
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Not used in active HTML */
+.main__title-char-container {
+  position: relative;
+}
+
+/* Not used in active HTML */
+#bg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  /* z-index: 1000; */
+  display: block;
+  pointer-events: none;
+  /* border-top: 1px solid black;
+  border-bottom: 1px solid black; */
 }
 
 
@@ -235,6 +400,49 @@ p a {
   }
 }
 
+.background-image {
+/* Not used in active HTML */
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: block;
+  background: center no-repeat url('/public/images/Great_Wave_off_Kanagawa2.jpg');
+  background-size: cover;
+  width: 1200px;
+  height: 800px;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(0px);
+}
+
+main {
+  display: flex;
+  /* padding: 70px 0; */
+  flex-direction: column;
+  align-items: center;
+}
+
+.small-screen-notification {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: var(--main-background-light);
+  padding: 3rem;
+  text-align: center;
+}
+
+  .shadow {
+    width: 90vw;
+    left: 5vw;
+  }
+}
+
 .nav-bar {
   position: fixed;
   top: 0;
@@ -253,15 +461,167 @@ p a {
   font-family: var(--primary-sans-serif);
   font-size: 1.1rem;
   letter-spacing: 15%;
-  text-transform: uppercase;
+}
+
+.nav-bar a:hover {
+  background: #000000;
+  color: white;
+}
+
+.beta-notification {
+  width: 100vw;
+  height: 3rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #000000aa;
+  font-style: italic;
+}
+
+.blue-section {
+/* Not used in active HTML */
+  width: 500px;
+  height: 80vh;
+  background: rgba(94, 120, 153, 0.726);
+  backdrop-filter: blur(7px);
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 25px 0;
+}
+
+.blue-section * {
+/* Not used in active HTML */
+  color: white;
+}
+
+.hero-section {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+
+.picture-frame {
+/* Not used in active HTML */
+  position: fixed;
+  width: 200px;
+  scale: 1;
+  z-index: 0;
+  pointer-events: none;
+  translate: 0 calc(var(--about-section-offset-top) + 34.5vw);
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    width: 90vw;
+    left: 5vw;
+    top: 15vh;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .blue-section {
+    width: 90vw;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .hero-section-title {
+    font-size: clamp(2.5rem, 12vw, 7rem);
+  }
+}
+
+#about {
+
+}
+
+* {
+  /* --about-section-offset-top: -35vw; */
+  --about-section-offset-top: -200px;
+}
+
+.hero-scroll-spacer  {
+/* Not used in active HTML */
+  height: 100vh;
+}
+
+.about-section {
+  position: relative;
+  top: var(--about-section-offset-top);
+  width: 100vw;
+  height: 200vh;
+  background: var(--main-background);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* clip-path: rect(calc(var(--about-section-offset-top)*-1) 100vw 133.33vw 0); we can probably remove this */
+  transform-origin: 48% 57%;
+  /* animation: rotate 20s linear infinite; */
+}
+
+@keyframes rotate {
+/* Not used in active HTML */
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.about-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 133.33vw;
+  box-shadow: inset 0 -60vw 1000px -200px var(--main-background); /* the second value is the one that controls how far up the shadow goes */
+}
+
+.about-section::before {
+  /* content: ""; */
+  position: absolute;
+  left: 0;
+  bottom: var(--about-section-offset-top);
+  width: 100%;
+  height: calc(var(--about-section-offset-top)*-1);
+  background: #010101aa;
+  z-index: 1;
+}
+
+.about-section-content {
+  perspective: 1000px;
+  z-index: 1;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.nav-bar .menu-button img {
-  width: 1.5rem;
-  margin-left: 0.5rem;
+.about-section-title {
+  font-family: "Crimson Text", "DM Serif", Georgia, 'Times New Roman', Times, serif;
+  font-size: 6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 11.52px;
+  margin-bottom: 2rem;
+}
+
+.about-section p {
+  margin: 2rem;
+  font-size: 1.2em;
+  max-width: 300px;
+  font-weight: 200;
+  /* font-family: "Crimson Text", "Times New Romans", serif; */
+  font-family: "Suisse Intl", "Ranade", "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 5%;
 }
 
 .hero-section {
@@ -402,61 +762,15 @@ p a {
   margin-left: 0.3em;
 }
 
-.about-section {
-  height: 80vh;
-  position: relative;
-  z-index: 1;
-  background: #ffffff;
-  box-shadow: 0 0px 100px #00000036;
-  margin-top: 5vh;
-}
+@media screen and (max-width: 768px) {
+  #main__title {
+    font-size: clamp(1.5rem, 8.5vw, 6em);
+    letter-spacing: 0.25em;
+  }
 
-.about-section-content {
-  width: 50%;
-  padding: 5vw 0 0 5vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-section h1 {
-  font-family: var(--primary-serif);
-  font-size: 3.5rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 3%;
-  margin-bottom: 2rem;
-}
-
-section hr {
-  width: 50px;
-  height: 2px;
-  background-color: #000000;
-  border: none;
-  margin-bottom: 2rem;
-}
-
-section p {
-  font-family: var(--primary-sans-serif);
-  font-size: 1.05rem;
-  line-height: 1.8em;
-  max-width: 400px;
-  margin-top: 1rem;
-}
-
-.projects-section {
-  min-height: 100vh;
-  position: relative;
-  z-index: 1;
-  background: #ffffff;
-}
-
-.projects-section-content {
-  width: 100%;
-  padding: 5vw 0 0 5vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  .beta-notification {
+    height: auto;
+    padding: 0.25rem 1rem 0.5rem;
+    font-size: 0.875em;
+  }
 }
