@@ -346,6 +346,7 @@ p a {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s;
 }
 
 .hero-links a:hover {
@@ -364,7 +365,6 @@ p a {
   padding-right: 1.2rem;
   text-transform: uppercase;
   font-family: var(--primary-sans-serif);
-  transition: 0.2s;
 }
 
 #view-cv img {
