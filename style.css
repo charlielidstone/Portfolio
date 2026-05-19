@@ -106,6 +106,10 @@ html, body {
   background: #ffffff;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 ::selection {
   background: hsl(51, 100%, 67%);
   color: hsl(51, 47%, 19%);
@@ -244,7 +248,7 @@ p a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 2rem 3rem 2rem 5vw;
+  padding: 3rem 4rem 2rem 5vw;
   box-sizing: border-box;
   z-index: 99;
 }
@@ -260,7 +264,7 @@ p a {
   margin-right: auto;
 }
 
-.nav-bar .menu-button {
+.menu-button {
   font-family: var(--primary-sans-serif);
   font-size: 1.1rem;
   letter-spacing: 15%;
@@ -269,12 +273,101 @@ p a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  user-select: none;
 }
 
-.nav-bar .menu-button img {
+.menu-button img {
   width: 1.5rem;
   margin-left: 0.5rem;
 }
+
+.menu {
+  width: 40%;
+  height: 100%;
+  background: #ffffffd0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem 0 2rem 2rem;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+
+.menu-closed {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-top-matter {
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-top-matter .menu-logo {
+  font-size: 1.5rem;
+  font-family: var(--primary-sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 8%;
+}
+
+.menu .main-links {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 100%;
+  justify-content: center;
+  padding-left: 3rem;
+}
+
+.menu .main-links:hover .main-link {
+  color: #c2c2c2;
+}
+
+.menu .main-link {
+  font-family: var(--primary-serif);
+  font-size: 5rem;
+  text-decoration: none;
+  color: #000000;
+  padding: 1rem 0;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.menu .main-link:hover {
+  translate: 1rem 0;
+  color: #000000 !important;
+}
+
+.location {
+  text-transform: uppercase;
+  font-family: var(--primary-sans-serif);
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: nowrap;
+  letter-spacing: var(--label-letter-spacing);
+}
+
+.location img {
+  width: 1.1em;
+  margin-right: 0.3em;
+  translate: 0 1px;
+}
+
+#victoria-time {
+  margin-left: 0.3em;
+}
+
 
 .hero-section {
   height: 100vh;
@@ -394,24 +487,6 @@ p a {
 
 .hero-location {
   margin-top: auto;
-  text-transform: uppercase;
-  font-family: var(--primary-sans-serif);
-  font-size: 1.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-wrap: nowrap;
-  letter-spacing: var(--label-letter-spacing);
-}
-
-.hero-location img {
-  width: 1.1em;
-  margin-right: 0.3em;
-  translate: 0 1px;
-}
-
-#victoria-time {
-  margin-left: 0.3em;
 }
 
 .about-section {

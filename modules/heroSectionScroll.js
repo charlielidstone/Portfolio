@@ -17,6 +17,17 @@ const heroSectionScroll = {
         ease: "power4.in",
         pinSpacing: false,
       },
+    })
+    
+    gsap.from(".nav-bar .small-logo", {
+      opacity: 0,
+      duration: 0.4,
+      scrollTrigger: {
+        trigger: ".about-section",
+        start: "top top",
+        scrub: false,
+        toggleActions: "play none none reverse",
+      },
     });
   },
 };

@@ -29,9 +29,29 @@
    -->
 
   <div class="nav-bar">
-    <div class="small-logo">C.L.</div>
-    <div class="menu-button">Menu<img src="/public/icons/hamburger-menu.svg" alt=""></div>
+    <!-- <div class="small-logo">C.L.</div> -->
+    <div id="menu-open" class="menu-button">Menu<img src="/public/icons/hamburger-menu.svg" alt=""></div>
   </div>
+
+  <div id="menu" class="menu menu-closed">
+    <div class="menu-top-matter">
+      <div class="menu-logo">Charlie Lidstone</div>
+      <div id="menu-close" class="menu-button">Close<img src="/public/icons/cross.svg" alt="">
+      </div>
+    </div>
+    <div class="main-links">
+      <a class="main-link" href="#top">Home</a>
+      <a class="main-link" href="#about">About</a>
+      <a class="main-link" href="#projects">Projects</a>
+      <a class="main-link" href="#contact">Contact</a>
+    </div>
+    <div class="menu-location location">
+      <img src="public/icons/pin.svg" alt="">
+      Victoria, BC (GMT-8) <span class="victoria-time"></span>
+    </div>
+  </div>
+
+  <div id="top"></div>
   
   <div id="smooth-wrapper">
   <div id="smooth-content">
@@ -47,14 +67,14 @@
           <a href="https://www.linkedin.com/in/charlielidstone/" target="_blank" rel="noopener noreferrer"><img src="public/icons/linkedin-logo.svg" alt="LinkedIn"></a>
           <a id="view-cv">View CV<img src="public/icons/caret-right.svg" alt=""></a>
         </div>
-        <div class="hero-location">
+        <div class="hero-location location">
           <img src="public/icons/pin.svg" alt="">
           Victoria, BC (GMT-8) <span id="victoria-time"></span>
         </div>
       </div>
     </section>
 
-    <section class="about-section">
+    <section id="about" class="about-section">
       <div class="about-section-content">
         <h1>About Me</h1>
         <hr>
@@ -78,7 +98,7 @@
           </div>
     </section> -->
 
-    <footer>
+    <footer id="contact">
       
     </footer>
 
@@ -88,20 +108,43 @@
   <script type="module" src="/main.js"></script>
 
   <script>
-    const victoriaTimeEl = document.getElementById('victoria-time');
+    const victoriaTimeElements = document.getElementsByClassName('victoria-time');
 
     const updateVictoriaTime = () => {
-      victoriaTimeEl.textContent = new Intl.DateTimeFormat('en-CA', {
-        timeZone: 'America/Vancouver',
-        hour: 'numeric',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: true
-      }).format(new Date());
+      for (const victoriaTimeEl of victoriaTimeElements) {
+        victoriaTimeEl.textContent = new Intl.DateTimeFormat('en-CA', {
+          timeZone: 'America/Vancouver',
+          hour: 'numeric',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: true
+        }).format(new Date());
+      }
     };
 
     updateVictoriaTime();
     setInterval(updateVictoriaTime, 1000);
+  </script>
+
+  <script>
+    const menuOpenButton = document.getElementById("menu-open");
+    const menuCloseButton = document.getElementById("menu-close");
+    const menu = document.getElementById("menu");
+
+    menuOpenButton.addEventListener("click", () => {
+      menu.classList.remove("menu-closed");
+    });
+
+    menuCloseButton.addEventListener("click", () => {
+      menu.classList.add("menu-closed");
+    });
+
+    const mainLinks = document.getElementsByClassName("main-link");
+    for (const mainLink of mainLinks) {
+      mainLink.addEventListener("click", () => {
+        menu.classList.add("menu-closed");
+      });
+    }
   </script>
   
 </body>
