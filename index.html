@@ -153,6 +153,7 @@
     for (const mainLink of mainLinks) {
       mainLink.addEventListener("click", () => {
         menu.classList.add("menu-closed");
+        menu.classList.remove("no-doc-scroll");
       });
     }
   </script>
