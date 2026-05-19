@@ -1,3 +1,4 @@
+import loader from "./modules/loader.js";
 import themes from "./modules/themes.js";
 import menu from "./modules/menu.js";
 import menuAnimation from "./modules/menuAnimation.js";
@@ -41,7 +42,8 @@ gsap.registerPlugin(ScrollSmoother);
 // themes.setup();
 // menu.setup();
 // menuAnimation.setup();
-heroTitleAnimation.setup();
+heroTitleAnimation.prepare();
+loader.setup(() => heroTitleAnimation.animate());
 heroSectionScroll.setup();
 // projectsSectionScroll.setup();
 // aboutSectionScroll.setup();

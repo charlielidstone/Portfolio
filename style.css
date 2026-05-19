@@ -407,6 +407,7 @@ p a {
   height: 120vh;
   object-fit: cover;
   opacity: 0.03;
+  scale: 0.95;
   pointer-events: none;
 }
 
@@ -579,3 +580,49 @@ footer {
   background: #000000;
 }
 .main-link-clip { overflow: hidden; }
+
+/* -- loader ------------------------------------------------ */
+
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: var(--main-background, #ffffff);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3rem 4rem;
+  box-sizing: border-box;
+}
+
+.loader-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.loader-name {
+  font-family: var(--primary-sans-serif);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: var(--label-letter-spacing);
+}
+
+.loader-counter {
+  font-family: var(--primary-serif);
+  font-size: 1rem;
+}
+
+.loader-bar-track {
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.loader-bar {
+  height: 100%;
+  width: 0%;
+  background: #000000;
+}
