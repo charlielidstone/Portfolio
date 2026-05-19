@@ -1,3 +1,5 @@
+import themes from "./modules/themes.js";
+import menu from "./modules/menu.js";
 import mainTitleAnimation from "./modules/mainTitleAnimation.js";
 import heroSectionScroll from "./modules/heroSectionScroll.js";
 import aboutSectionScroll from "./modules/aboutSectionScroll.js";
@@ -32,8 +34,10 @@ gsap.registerPlugin(ScrollSmoother);
 
 // mainTitleAnimation.run();
 
-smoothScrolling.setup();
+// smoothScrolling.setup();
 
+// themes.setup();
+menu.setup();
 heroSectionScroll.setup();
 // projectsSectionScroll.setup();
 // aboutSectionScroll.setup();
