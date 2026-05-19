@@ -8,6 +8,7 @@ const heroSectionScroll = {
   setup: function() {
     gsap.to(".hero-section", {
       scale: 0.95,
+      filter: "blur(10px)",
       scrollTrigger: {
         trigger: ".hero-section",
         start: "top top",
