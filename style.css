@@ -343,6 +343,18 @@ p a {
   transition: 0.2s;
 }
 
+@media screen and (max-width: 1500px) {
+  .menu .main-link {
+    font-size: 3.5em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .menu .main-link {
+    font-size: 2.5em;
+  }
+}
+
 .menu .main-link:hover {
   translate: 1rem 0;
   color: #000000 !important;
