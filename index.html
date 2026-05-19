@@ -45,9 +45,16 @@
       <a class="main-link" href="#projects">Projects</a>
       <a class="main-link" href="#contact">Contact</a>
     </div>
-    <div class="menu-location location">
-      <img src="public/icons/pin.svg" alt="">
-      Victoria, BC (GMT-8) <span class="victoria-time"></span>
+    <div class="menu-bottom-matter">
+      <div class="menu-location location">
+        <img src="public/icons/pin.svg" alt="">
+        Victoria, BC (GMT-8) <span class="victoria-time"></span>
+      </div>
+      <div class="menu-socials">
+        <a href="https://github.com/charlielidstone" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/charlielidstone/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:charlie.lidstone@gmail.com">Email</a>
+      </div>
     </div>
   </div>
 
@@ -69,7 +76,7 @@
         </div>
         <div class="hero-location location">
           <img src="public/icons/pin.svg" alt="">
-          Victoria, BC (GMT-8) <span id="victoria-time"></span>
+          Victoria, BC (GMT-8) <span class="victoria-time"></span>
         </div>
       </div>
     </section>
@@ -130,13 +137,16 @@
     const menuOpenButton = document.getElementById("menu-open");
     const menuCloseButton = document.getElementById("menu-close");
     const menu = document.getElementById("menu");
+    const body = document.body;
 
     menuOpenButton.addEventListener("click", () => {
       menu.classList.remove("menu-closed");
+      menu.classList.add("no-doc-scroll");
     });
 
     menuCloseButton.addEventListener("click", () => {
       menu.classList.add("menu-closed");
+      menu.classList.remove("no-doc-scroll");
     });
 
     const mainLinks = document.getElementsByClassName("main-link");

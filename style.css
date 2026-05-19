@@ -106,8 +106,8 @@ html, body {
   background: #ffffff;
 }
 
-body.no-scroll {
-  overflow: hidden;
+:root:has(.no-doc-scroll) {
+  overflow:hidden;
 }
 
 ::selection {
@@ -282,7 +282,7 @@ p a {
 }
 
 .menu {
-  width: 40%;
+  width: 100%;
   height: 100%;
   background: #ffffffd0;
   position: fixed;
@@ -294,7 +294,7 @@ p a {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 3rem 0 2rem 2rem;
+  padding: 3rem 3rem 3rem 2rem;
   box-sizing: border-box;
   transition: 0.2s;
 }
@@ -307,7 +307,7 @@ p a {
 .menu-top-matter {
   width: 100%;
   box-sizing: border-box;
-  padding-right: 4rem;
+  padding-right: 1rem;
   display: flex;
   justify-content: space-between;
 }
@@ -345,6 +345,28 @@ p a {
 .menu .main-link:hover {
   translate: 1rem 0;
   color: #000000 !important;
+}
+
+.menu-bottom-matter {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-socials {
+  display: flex;
+  gap: 7rem;
+}
+
+.menu-socials a {
+  font-family: var(--primary-sans-serif);
+  font-size: 1.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  letter-spacing: var(--label-letter-spacing);
+  transition: 0.2s;
 }
 
 .location {
@@ -394,7 +416,7 @@ p a {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 3rem 0 2rem 2rem;
+  padding: 3rem 0 3rem 2rem;
   box-sizing: border-box;
 }
 
