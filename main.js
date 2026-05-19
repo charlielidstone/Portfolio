@@ -37,7 +37,7 @@ gsap.registerPlugin(ScrollSmoother);
 // smoothScrolling.setup();
 
 // themes.setup();
-menu.setup();
+// menu.setup();
 heroSectionScroll.setup();
 // projectsSectionScroll.setup();
 // aboutSectionScroll.setup();

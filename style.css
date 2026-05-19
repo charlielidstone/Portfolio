@@ -1,4 +1,4 @@
-@font-face {
+﻿@font-face {
   font-family: 'Old London';
   src: url('/fonts/old_london/OldLondon.ttf') format('truetype');
   font-weight: normal;
@@ -244,9 +244,20 @@ p a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 2rem 3rem;
+  padding: 2rem 3rem 2rem 5vw;
   box-sizing: border-box;
   z-index: 99;
+}
+
+.small-logo {
+  font-family: var(--primary-serif);
+  font-size: 1.5rem;
+  letter-spacing: 3%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
 }
 
 .nav-bar .menu-button {
@@ -446,18 +457,9 @@ section p {
   margin-top: 1rem;
 }
 
-.projects-section {
-  min-height: 100vh;
+footer {
   position: relative;
-  z-index: 1;
-  background: #ffffff;
-}
-
-.projects-section-content {
-  width: 100%;
-  padding: 5vw 0 0 5vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  width: 100vw;
+  height: 60vh;
+  background: #000000;
 }
