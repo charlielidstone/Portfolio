@@ -24,10 +24,8 @@
 
   <svg aria-hidden="" style="position:absolute;width:0;height:0;overflow:hidden">
     <defs>
-      <clipPath id="fhole" clipPathUnits="userSpaceOnUse">
-        <path id="fhole-path" clip-rule="evenodd" 
-          d="M -9999,-9999 H 9999 V 9999 H -9999 Z M -150,-0 H 300 V 300 L -150 300 Z"
-        ></path>
+      <clipPath id="fhole" clipPathUnits="objectBoundingBox">
+        <path id="fhole-path" d="M 0.59,0 L 1,0 L 1,1 L 0.5,1 Z"></path>
       </clipPath>
     </defs>
   </svg>
@@ -37,7 +35,6 @@
   </div>
 
   <div class="construction-banner-shadow shadow"></div>
-  
 
   <div class="nav-bar">
     <!-- <div class="small-logo">C.L.</div> -->
@@ -88,6 +85,11 @@
         <div class="hero-location location">
           <img src="public/icons/pin.svg" alt="">
           Victoria, BC (GMT-8) <span class="victoria-time"></span>
+        </div>
+      </div>
+      <div id="hero-about-image-wrapper">
+        <div id="hero-about-image-container">
+          <img id="hero-about-image" src="/public/images/rock.jpg" alt="">
         </div>
       </div>
     </section>

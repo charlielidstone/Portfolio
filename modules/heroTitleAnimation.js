@@ -24,6 +24,7 @@ const heroTitleAnimation = {
     // Set every animated element to its start state immediately.
     gsap.set(h1.querySelectorAll(".char"), { y: "110%" });
     gsap.set(["#hi-there", ".hero-section-content h2:not(#hi-there)", ".hero-links", ".hero-location"], fadeUpInitial);
+    gsap.set("#fhole-path", { attr: { d: "M 1,0 L 1,0 L 1,1 L 1,1 Z" } });
   },
 
   // Call after the loader exits — runs the actual animation from the already-hidden state.
@@ -35,10 +36,11 @@ const heroTitleAnimation = {
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
     tl.to(".hero-section-background-image", { scale: 1, duration: 1.5 }, 0);
+    tl.to("#fhole-path", { attr: { d: "M 0.59,0 L 1,0 L 1,1 L 0.5,1 Z" }, duration: 1.2, ease: "power3.inOut" }, 0);
     tl.to("#hi-there", { ...fadeUp, duration: 0.5 }, 0);
-    tl.to(h1.querySelectorAll(".char"), { y: "0%", duration: 0.7, stagger: 0.04 }, 0.1);
+    tl.to(h1.querySelectorAll(".char"), { y: "0%", duration: 0.7, stagger: 0.02 }, 0.1);
     tl.to(".hero-section-content h2:not(#hi-there)", fadeUp, 0.45);
-    tl.to(".hero-links",   fadeUp, 0.6);
+    tl.to(".hero-links", fadeUp, 0.6);
     tl.to(".hero-location", fadeUp, 0.75);
   },
 };
