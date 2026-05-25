@@ -589,7 +589,7 @@ x.loading-screen {
   display: flex;
   justify-self: start;
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
 }
 
 .hero-links a {
