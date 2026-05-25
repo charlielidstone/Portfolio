@@ -93,10 +93,11 @@
   --main-background: #ffffff;
   --main-background-light: #fdfdfd;
   --primary-serif: 'Lastik', 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
+  --default-serif: 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
   --primary-sans-serif: 'Inter', 'Noto Sans JP', 'Roboto', sans-serif;
   --primary-heading-sans-serif: "Anton", 'Ranade', 'Roboto', sans-serif;
 
-  --label-letter-spacing: 12%;
+  --label-letter-spacing: 15%;
 }
 
 * {
@@ -296,7 +297,12 @@ x.loading-screen {
 }
 
 .nav-bar .menu-button {
-  
+  cursor: pointer;
+}
+
+.nav-bar .menu-button img {
+  translate: 0 2.5px;
+  margin-left: 0.3rem;
 }
 
 .nav-bar a:hover {
@@ -479,7 +485,7 @@ x.loading-screen {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 3rem 0 2rem 2rem;
+  padding: 2rem;
   box-sizing: border-box;
 }
 
@@ -487,25 +493,77 @@ x.loading-screen {
   margin-bottom: auto;
 }
 
+.hero-logo {
+  font-size: 1.5em;
+  font-family: var(--primary-heading-sans-serif);
+  font-weight: bold;
+}
+
 .hero-sub-heading {
   font-family: var(--primary-sans-serif);
   font-weight: 400;
-  font-size: 1em;
+  font-size: 0.8em;
   text-wrap: nowrap;
   text-transform: uppercase;
   letter-spacing: var(--label-letter-spacing);
+  position: relative;
 }
+/* 
+.hero-sub-heading::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: hsl(51, 100%, 80%);
+  transform: scaleY(0);
+  transition: transform 0.1s ease-out;
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: 0 0 10px hsl(51, 100%, 80%);
+  cursor: default;
+}
+
+.hero-sub-heading:hover::before {
+  transform: scaleY(1);
+} */
 
 .hero-section-content h1 {
   max-width: 50%;
   font-size: 9rem;
   line-height: 1em;
-  margin: 2rem 0 1rem 0;
+  margin: 1.4rem 0;
   font-family: 'Anton';
   text-transform: uppercase;
   font-weight: 400;
   /* letter-spacing: 3%; */
   line-height: 0.9em;
+}
+
+.hero-h1-word {
+  display: flex;
+}
+
+.hero-h1-char {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  cursor: default;
+  overflow: visible;
+}
+
+.hero-h1-char.hovered {
+  width: 0;
+  font-family: var(--primary-serif);
+  font-weight: 100;
+  color:hsl(51, 100%, 40%);
+  font-style: italic;
+  font-size: 1em;
+  position: relative;
+  right: 20px;
+  top: 15px;
+  z-index: 9;
 }
 
 @media screen and (min-width: 1400px) {
@@ -531,11 +589,12 @@ x.loading-screen {
   display: flex;
   justify-self: start;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .hero-links a {
-
+  color: #000000;
+  text-decoration: none;
 }
 
 .hero-links a:hover {
