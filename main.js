@@ -3,6 +3,8 @@ import heroSectionScroll from "./modules/heroSectionScroll.js";
 import aboutSectionScroll from "./modules/aboutSectionScroll.js";
 import projectsSectionScroll from "./modules/projectsSectionScroll.js";
 import smoothScrolling from "./modules/smoothScrolling.js";
+import headerMorph from "./modules/headerMorph.js";
+import heroH1Morph from "./modules/heroH1Morph.js";
 
 import particles from "./modules/particles.js";
 // import initVariableWidthText from "./modules/variableWidthText.js";
@@ -14,13 +16,12 @@ import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
-
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 
 gsap.registerPlugin(CustomEase);
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollSmoother);
+gsap.registerPlugin(MorphSVGPlugin);
 
 // const box = document.getElementById('box');
 // applyDragability(box);
@@ -35,6 +36,8 @@ gsap.registerPlugin(ScrollSmoother);
 smoothScrolling.setup();
 
 heroSectionScroll.setup();
+headerMorph.setup();
+heroH1Morph.setup();
 // projectsSectionScroll.setup();
 // aboutSectionScroll.setup();
 // ScrollTrigger.refresh();

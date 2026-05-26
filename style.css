@@ -507,6 +507,7 @@ x.loading-screen {
   text-transform: uppercase;
   letter-spacing: var(--label-letter-spacing);
   position: relative;
+  cursor: default;
 }
 /* 
 .hero-sub-heading::before {
@@ -547,6 +548,7 @@ x.loading-screen {
 
 .hero-h1-char {
   display: inline-block;
+  flex-shrink: 0;
   text-align: center;
   vertical-align: top;
   cursor: default;
@@ -554,15 +556,7 @@ x.loading-screen {
 }
 
 .hero-h1-char.hovered {
-  width: 0;
-  font-family: var(--primary-serif);
-  font-weight: 100;
-  color:hsl(51, 100%, 40%);
-  font-style: italic;
-  font-size: 1em;
-  position: relative;
-  right: 20px;
-  top: 15px;
+  color: hsl(51, 100%, 40%);
   z-index: 9;
 }
 

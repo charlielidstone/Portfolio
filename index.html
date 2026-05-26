@@ -32,6 +32,7 @@
       <div class="hero-section-content">
         <div class="hero-top-matter">
           <div class="hero-logo">CL</div>
+          </svg>
         </div>
         <h2 id="hi-there" class="hero-sub-heading">Hi there, I'm</h2>
         <h1>Charlie Lidstone</h1>
@@ -78,50 +79,6 @@
   </div>
 
   <script type="module" src="/main.js"></script>
-
-  <script>
-    const heroH1 = document.querySelector('.hero-section-content h1');
-    if (heroH1) {
-      const words = heroH1.textContent.trim().split(' ');
-      heroH1.innerHTML = words.map(word =>
-        `<span class="hero-h1-word">${
-          word.split('').map(char => `<span class="hero-h1-char">${char}</span>`).join('')
-        }</span>`
-      ).join(' ');
-
-      // Lock width and height to Anton-rendered values so font changes on hover don't shift layout
-      requestAnimationFrame(() => {
-        heroH1.querySelectorAll('.hero-h1-char').forEach(span => {
-          const rect = span.getBoundingClientRect();
-          span.style.width = rect.width + 'px';
-          span.style.height = rect.height + 'px';
-        });
-      });
-
-      // Track the active char in JS so priority logic doesn't depend on reading the class mid-event
-      let currentHovered = null;
-
-      heroH1.querySelectorAll('.hero-h1-char').forEach(span => {
-        span.addEventListener('mouseenter', e => {
-          const stack = document.elementsFromPoint(e.clientX, e.clientY)
-            .filter(el => el.classList.contains('hero-h1-char'));
-
-          // sans-serif (not current) beats serif (current) when both are under the cursor
-          const winner = stack.find(el => el !== currentHovered) ?? span;
-
-          if (winner === currentHovered) return;
-          currentHovered?.classList.remove('hovered');
-          winner.classList.add('hovered');
-          currentHovered = winner;
-        });
-      });
-
-      heroH1.addEventListener('mouseleave', () => {
-        currentHovered?.classList.remove('hovered');
-        currentHovered = null;
-      });
-    }
-  </script>
 
   <script>
     const victoriaTimeEl = document.getElementById('victoria-time');
