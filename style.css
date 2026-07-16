@@ -729,8 +729,7 @@ x.loading-screen {
 
 .hero-location img {
   width: 1.1em;
-  margin-right: 0.5em;
-  translate: 0 -1px;
+  margin-right: 0.5em;;
 }
 
 #victoria-time {
