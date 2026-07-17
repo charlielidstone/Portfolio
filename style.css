@@ -659,7 +659,6 @@ x.loading-screen {
   font-family: 'Anton';
   text-transform: uppercase;
   font-weight: 400;
-  /* letter-spacing: 3%; */
   line-height: 0.9em;
 }
 
@@ -729,7 +728,7 @@ x.loading-screen {
 
 .hero-location img {
   width: 1.1em;
-  margin-right: 0.5em;;
+  margin-right: 0.5em;
 }
 
 #victoria-time {
